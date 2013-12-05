@@ -1,0 +1,100 @@
+/*
+- UI IE Styles
+- v1.0 29/04/13
+- Antony McEvoy
+- Antony.McEvoy@open.ac.uk
+- Information Technology
+*/
+
+#int-controlBar
+{
+	padding: .5em 0;
+}
+/*toggle switches*/
+.int-radioSwitch .int-slideButton, .int-checkToggle .int-slideButton, .int-checkToggle p span {
+	display: none;
+}
+.int-radioSwitch, .int-checkToggle
+{
+    background: none;
+    border: none;
+    font-weight: normal;
+    color: #333;
+    text-align: left;
+    position: relative;
+    clear: both;
+    height: auto;
+}
+.int-checkToggle
+{
+    text-align: left;
+    height: auto;
+    display:inline;
+    margin-left: 0;
+    padding: 0.4em 0;
+    margin-right: 1em;
+    width: auto !important;
+}
+.int-checkToggle label
+{
+    float: left;
+    width: auto;
+}
+.int-checkToggle input
+{
+      position: relative;
+      width: auto; 
+      vertical-align: middle;
+      filter: alpha(opacity=100);
+}
+.int-checkToggle p 
+{
+    line-height:normal;
+    color: #333;
+    font-weight: normal;
+    padding: 0; 
+    left: auto;
+    display: inline;
+    position: relative;
+}
+
+.int-radioSwitch input
+{
+    position:relative;
+    filter: alpha(opacity=100);  
+}
+.int-radioSwitch label
+{
+    float: none;
+    width: auto;
+    height: auto;
+    margin-right: .5em;
+}
+.int-radioSwitch .int-slideButton
+{
+    background: none;
+    border: 0;  
+}
+.int-checkToggle .int-slideButton
+{
+    display: none;   
+}
+.int-checkToggle input:focus ~ .int-slideButton, .int-radioSwitch input:focus + label {
+	outline: inherit;
+}
+.int-checkToggle, .int-radioSwitch
+{
+	display: inherit;
+	height: inherit;
+}
+.int-radioSwitch[class*="int-radioSwitch"] label, .int-radioSwitch[class*="int-radioSwitch"] .int-slideButton
+{
+	width: auto;
+}
+.int-inline .int-radioSwitch label
+{
+	margin-right: 1em;
+	display: inline-block;
+    float: none;
+    white-space: nowrap;  
+}

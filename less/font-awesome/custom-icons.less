@@ -1,0 +1,13 @@
+/* JQuery UI /datatables and custom icon replacements using Font Awesome*/
+
+.ui-icon-closethick:before { content: @remove; }
+.paginate_enabled_previous:before, .paginate_disabled_previous:before { content: @chevron-left; }
+.ui-icon-triangle-1-e:before, .ui-menu .ui-icon-carat-1-e:before, .paginate_enabled_next:after, .paginate_disabled_next:after { content: @chevron-right; }
+.ui-icon-triangle-1-s:before { content: @chevron-down; }
+.ui-spinner .ui-icon-triangle-1-s:before, /*Data tables*/.ColVis_MasterButton span:after { content: @caret-down; }
+.ui-spinner .ui-icon-triangle-1-n:before { content: @caret-up; }
+.ui-icon-circle-triangle-w:before  { content: @caret-left; }
+.ui-icon-circle-triangle-e:before, #a2z li.enabled:before { content: @caret-right; }
+.int-sortableTable th.header:after, .sorting:after { content: @sort; }
+.int-sortableTable th.headerSortDown:after, .sorting_desc:after, .sorting_desc_disabled:after { content: @sort-down; }
+.int-sortableTable th.headerSortUp:after, .sorting_asc:after , .sorting_asc_disabled:after { content: @sort-up; }

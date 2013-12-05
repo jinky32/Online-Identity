@@ -1,0 +1,49 @@
+﻿/*
+- UI IE8 Styles
+- v1.0 08/11/13
+- Antony McEvoy
+- Antony.McEvoy@open.ac.uk
+- Information Technology
+*/
+
+body
+{
+	background: #1f536b;
+}
+.int-vantageLogo
+{
+    background: #2c637d;
+}
+.int-vantageIcon
+{
+    background-image: url(../img/vantageicon.png);
+}
+.ui-datepicker .ui-datepicker-prev span
+{
+    left: .5em;  
+}
+.ui-datepicker .ui-datepicker-next span
+{
+    right: -.7em;
+}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span
+{
+    line-height: 1.6em;
+}
+.ui-dialog .ui-dialog-titlebar-close
+{
+    right: 0.2em;
+}
+.int-striped
+{
+    background-color: #FFFFFF;
+}
+/*Data tables*/
+.dataTable .odd
+{
+	background-color: #f8f8f8;
+}
+.dataTable .even
+{
+	background-color: #fff;
+}

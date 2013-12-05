@@ -1,0 +1,77 @@
+﻿/*
+- UI Print Styles
+- v1.0 24/05/13
+- Antony McEvoy
+- Antony.McEvoy@open.ac.uk
+- Information Technology
+*/
+
+@charset "UTF-8";
+html
+{
+	background: none;
+	margin: 1.5cm .8cm;
+	max-width: 100%;
+}
+body
+{
+	font-size: 12pt;
+	font-family: Cambria, Georgia, Times, ‘Times New Roman’, serif;
+    color: #000;
+}
+.int-skip, .int-headerWrap ul, nav.int-primary, div#int-region2, .int-button, #int-controlBar
+{
+	display: none;
+}
+div#int-region1, div#int-content
+{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+h1, h2, h3, h4 {
+   page-break-after: avoid;
+}
+h1, .int-jumpLinks
+{
+	border-bottom: 1px solid #000;
+}
+.int-title h1
+{
+	border: 0;
+}
+img
+{
+   max-width: 100% !important;
+}
+fieldset, ul, li, img, .int-row
+{
+   page-break-inside: avoid;
+}
+.int-row
+{
+	margin: 1em 0;
+}
+input[type="text"], textarea, select
+{
+	width: 100%;
+}
+.int-jumpLinks
+{
+	padding-bottom: 1em;
+	list-style: none;
+	padding: 0 0 1em 0;
+}
+.int-stacked label
+{
+	display: block;
+}
+/*docs*/
+div.int-component, div.example
+{
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: #fff;
+}

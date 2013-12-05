@@ -1,0 +1,2155 @@
+
+/*
+- UI Styles
+- v1.0 11/11/13
+- Antony McEvoy
+- Antony.McEvoy@open.ac.uk
+- Information Technology
+*/
+
+/* Headings
+..........................................................*/
+h1, h2, h3, h4, h5, h6 {
+	line-height:1.2;
+	.text-shadow(0 1px 0 @general-shadows);
+}
+h1 {
+	font-size:@font-size-base*1.85;
+	font-weight:normal;
+	color: @headings;
+	padding: 0;
+	margin: .5em 0 1em;
+}
+h2, h3, h4, h5, h6, legend {
+	font-weight:normal;
+	margin: 1em 0 .5em 0;
+	color: @headings;
+}
+h2 {
+	font-size:@font-size-base*1.7;
+}
+h3, legend {
+	font-size:@font-size-base*1.6;
+}
+h4 {
+	font-size:@font-size-base*1.4;
+}
+h5 {
+	font-size:@font-size-base*1.3;
+}
+h6 {
+	font-size:@font-size-base*1.2;
+}
+.int-title h1 {
+	font-size: @font-size-base*1.5;
+	border-bottom: 0;
+	.text-shadow(none);
+}
+[class*="int-col"] > h1:first-child, [class*="int-col"] > h2:first-child, [class*="int-col"] > h3:first-child, [class*="int-col"] > h4:first-child, [class*="int-col"] > h5:first-child, [class*="int-col"] > h6:first-child
+{
+	margin-top: .5em;
+}
+/* Inline Header
+..........................................................*/
+.int-inlineHeader:before, .int-inlineHeader:after
+{
+                display: table;
+                line-height: 0;
+                content: "";
+}
+.int-inlineHeader:after
+{
+                clear: both
+}
+.int-inlineHeader
+{              
+                margin: 0 0 2em;
+}
+.int-inlineHeader h1:first-child, .int-inlineHeader h2:first-child
+{
+                margin: .5em 0 0 0;
+}
+.int-inlineHeader *
+{
+                display: inline-block;
+}
+.int-inlineHeader .int-right
+{
+                float: right;
+                margin: 1em 0 0
+}
+/* Paragraphs and inline styles
+..........................................................*/
+p, .int-toggler div.int-togglerContentActive p {
+	margin:1em 0;
+}
+strong {
+	font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+/* Text Alignment
+..........................................................*/
+.int-center
+{
+    text-align: center;
+}
+.int-right
+{
+    text-align: right;
+}
+
+/* Links
+..........................................................*/
+a {
+	color: @anchor-font;
+	.text-decoration-default;
+	&:focus{
+		.outline-default;
+		color: @anchor-hover-font;
+		.text-decoration-underline;
+	}
+	&:link, &:visited {
+		color: @anchor-font;
+	}
+    &:hover {
+			color: @anchor-hover-font;
+			.text-decoration-underline;
+    }
+}
+
+
+a[href*="tel"] {
+    white-space: nowrap;
+}   
+.int-headerWrap a, .int-headerWrap a:link, .int-headerWrap a:visited
+{
+	color: @main-title-font;
+	display: inline;
+}
+.int-headerWrap, .int-headerWrap a:hover, .int-headerWrap a:focus
+{
+	color: @main-title-hover-font;
+}
+.int-headerWrap a.int-skip
+{
+	display:block;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	text-indent:-5000em;
+}
+a.int-skip:focus, a.int-skip:active 
+{
+    .color-and-background-color(@button-hover-font,@gradient-background);
+	width:auto;
+	height:auto;
+	text-indent:0;
+	position:absolute;
+    .position-left-top(1em,1em);
+	z-index:99;
+	padding:1em;
+	margin:0;
+	border:2px solid @input-focused-border;
+	.text-decoration-default;
+}
+.int-content a
+{
+    .word-wrap-break-word;
+}
+/* Global
+..........................................................*/
+a.int-button, i[class^="int-icon-"], i[class*=" int-icon-"], .int-checkToggle, .int-radioSwitch
+{
+	.user-select-default;
+}
+[class*="int-height"]
+{
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+}
+.int-height100
+{
+            height: 100px;
+}
+.int-height150
+{
+            height: 150px;
+}
+.int-height200
+{
+            height: 200px;
+}
+.int-height250
+{
+            height: 250px;
+}
+.int-height300
+{
+            height: 300px;            
+}
+.int-height350
+{
+            height: 350px;
+}
+.int-height400
+{
+            height: 400px;            
+}
+.int-height450
+{
+            height: 450px;
+}
+.int-height500
+{
+            height: 500px;            
+}
+
+/*Colour scale
+..........................................................*/
+.int-blueBlock
+{
+    background: @solid-color-blue;
+}
+.int-greenBlock
+{
+    background: @solid-color-green;
+}
+.int-yellowBlock
+{
+    background: @solid-color-yellow;
+}
+.int-darkOrangeBlock
+{
+    background: @solid-color-dark-orange;
+}
+.int-purpleBlock
+{
+    background: @solid-color-purple;
+}
+.int-blueBlock, .int-greenBlock, .int-yellowBlock, .int-darkOrangeBlock, .int-purpleBlock
+{
+    text-indent: -5000em;
+}
+/*Floats
+..........................................................*/
+.int-floatLeft
+{
+            float: left;
+}
+.int-floatRight
+{
+            float: right;
+}
+/*Breadcrumb
+..........................................................*/
+.int-breadcrumb {
+	background: @form-feature-background;
+	padding: .8em;
+	font-size: @font-size-base*0.9;
+	border-bottom: 1px solid @general-border;
+	.box-shadow(inset 0 1px 1px 0 rgba(0,0,0,0.2));
+	li {
+		display: inline;
+		a {
+			display: inline-block;
+		}
+	}
+	li.int-active a {
+    color: @default-font;
+    cursor: default;
+    .text-decoration-default;
+    .outline-0; 
+	}
+	span {
+		margin: 0 .3em;
+		display: inline-block;
+	}
+}
+
+/* Jump links
+..........................................................*/
+ol.int-jumpLinks {
+	padding: 0 0 1em 0;
+	margin: 0;
+	border-bottom: 1px solid @input-border;
+	width: 100%;
+	li {
+		display: inline;
+		margin: 0;	
+		padding: 0 .8em 0 0;
+		line-height: @line-height-base;
+	a {
+		display: inline;
+		}
+	}
+}
+
+/*Wizard
+..........................................................*/
+.int-wizard:before, .int-wizard:after
+{
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.int-wizard:after
+{
+       clear: both;
+}
+.int-formFeature > .int-wizard:first-child, .int-innerFeature > .int-wizard:first-child
+{
+       margin: 0;
+}
+.int-wizard
+{
+       margin: 1em 0;
+       width: 100%;
+}
+.int-wizard li
+{
+       float: left;
+       display: block;
+       margin-left: 2%;
+       .box-sizing-default;
+       border-top: 3px solid @button-background;
+       padding: 1em;
+       white-space: no-wrap;
+}
+.int-wizard li:first-child
+{
+       margin-left: 0;
+}
+.int-wizard li:hover
+{
+       border-color: @input-focused-border;
+}
+.int-wizard .int-selected, .int-wizard .int-selected:hover
+{
+       border-color: @bt-grn-border;
+}
+.int-wizard .int-unavailable *
+{
+       color: @disabled-font-2;
+}
+.int-wizard .int-unavailable:hover
+{
+       border-color: @bt-red-border;
+       cursor: not-allowed;
+}
+.int-wizard.int-2steps li
+{
+       width: 49%;
+}
+.int-wizard.int-3steps li
+{
+       width: 32%;
+}
+.int-wizard.int-4steps li
+{
+       width: 23.5%;
+}
+.int-wizard.int-5steps li
+{
+       width: 18.4%;
+}
+.int-wizard.int-6steps li
+{
+       width: 15%;
+}
+.int-wizard h4:first-child
+{
+       margin: 0;
+}
+.int-wizard [class*="int-icon"], .int-wizard .int-unavailable [class*="int-icon"]
+{
+       color: @button-background;
+}
+.int-wizard .int-selected [class*="int-icon"], .int-wizard .int-previouslySelected [class*="int-icon"]
+{
+       color: @bt-grn-border;
+}
+.int-wizard .int-unavailable:hover [class*="int-icon"]
+{
+       color: @bt-red-border;
+}
+
+
+/*Lists
+..........................................................*/
+.int-bulletList, .int-numberedList
+{
+    margin: 1em 1.5em;
+    font-size: @font-size-base;
+    line-height: @line-height-base*1.6;
+}
+.int-bulletList ul, .int-numberedList ol
+{
+    margin-left: 1.5em;
+}
+.int-bulletList {
+    list-style: disc;   
+	ul {
+		list-style: circle;
+		ul {
+			list-style: square;
+		}
+	}
+}
+.int-numberedList {
+    list-style: decimal;
+	ol {
+		list-style: lower-alpha;
+		ol {
+			list-style: lower-roman;
+		}
+	}
+}
+dt {
+    font-weight: bold;
+    color: (@headings - #0b2023 + #000400);//#143748;
+}
+/*Ruled list
+..........................................................*/
+.ruledList li
+{
+                border-top: 1px solid @button-background;
+                padding: 0.7em 0;
+}
+.ruledList li:last-child
+{
+                padding-bottom: 0;
+}
+/*Rules
+..........................................................*/
+hr {
+    margin: .8em 0;
+	border-width: 1px;
+	border-style: solid;
+	border-left: 0;
+    border-right: 0;
+	border-top-color: @general-grey-border;
+	border-bottom-color: @general-border;
+    clear: both;
+}
+hr.int-dashed {
+	border-style: dashed;
+}
+.int-formFeature hr {
+	border-top-color: @button-border;
+}
+.int-formFeature .int-innerFeature hr {
+	border-top-color: @general-grey-border;
+}
+.int-row hr {
+    clear: both
+}
+/*Tear off / Perforation*/
+[class*="int-tearOff"] {
+    .color-and-background-color(@alert-font,@alert-background);
+	padding: .8em;
+	.text-shadow(0 1px 0 rgba(255,255,255,0.5));
+}
+[class*="int-tearOff"] hr.int-perforation {
+    .margin-left-right(-.8em,-.8em);
+	position: relative;
+}
+[class*="int-tearOff"].int-bottom {
+	margin-top: -1em;
+	padding-bottom: 1em;
+}
+[class*="int-tearOff"].int-top {
+	margin-bottom: -1em;
+	padding-top: 1em;
+}
+[class*="int-tearOff"].int-top hr.int-perforation {
+	background: url("../img/perforationYellowTop.png") repeat-x center;
+    .margin-top-bottom(.8em,-1em);
+}
+[class*="int-tearOff"].int-bottom hr.int-perforation {
+	background: url("../img/perforationYellowBottom.png") repeat-x center;
+	margin-top: -1em;
+}
+.int-tearOffGreen {
+	background: @success-background;
+	color: @success-font;
+}
+.int-tearOffGreen.int-top hr.int-perforation {
+	background: url("../img/perforationGreenTop.png") repeat-x center;
+}
+.int-tearOffGreen.int-bottom hr.int-perforation {
+	background: url("../img/perforationGreenBottom.png") repeat-x center;
+}
+.int-tearOffBlue {
+	background: @info-background;
+	color: @info-font;
+}
+.int-tearOffBlue.int-top hr.int-perforation {
+	background: url("../img/perforationBlueTop.png") repeat-x center;
+}
+.int-tearOffBlue.int-bottom hr.int-perforation {
+	background: url("../img/perforationBlueBottom.png") repeat-x center;
+}
+hr.int-perforation {
+	border: 0;
+	background: url("../img/perforation.png") repeat-x center;
+	height: 9px;
+}
+.int-formFeature hr.int-perforation {
+	background: url("../img/perforation2.png") repeat-x left center;
+    .margin-left-right(-.8em,-.8em);
+}
+.int-innerFeature hr.int-perforation {
+	background: url("../img/perforation.png") repeat-x left center;
+    .margin-left-right(-1em,-1em);
+}
+/* Buttons
+..........................................................*/
+.int-headerWrap a.int-button, .int-button, .int-pagination a, .int-alphabet a, .ui-button, /*Data tables*/.ColVis_MasterButton, [class*="paginate"] [class*="paginate"], .paging_full_numbers a.paginate_button
+{
+	position: relative;
+	text-align: center;
+	font-weight: normal;
+	.text-shadow(0 1px 1px rgba(255, 255, 255, 0.9));
+	background: @button-background url(../img/button-bg.png) repeat-x left top;
+	border: 1px solid @button-border;
+	color: @default-font;
+	display: inline-block;
+	.box-shadow(0 1px 0 @general-shadows);
+	.border-radius-default;
+	cursor: pointer;
+	.outline-0;
+	line-height: normal;
+    font-size: @font-size-base;
+	margin: 0;
+    .text-decoration-default;
+}
+.int-button, a.int-button {
+    color: @default-font;
+    vertical-align: middle;
+    font-family: Helvetica, Arial, sans-serif;
+}
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner
+{
+    padding: 0;
+    border: 0;
+}
+a.int-button:hover {
+	color: @button-hover-font;
+	.text-decoration-default;
+}
+.int-button, /*Data tables*/.ColVis_MasterButton
+{
+	padding: .4em .7em;
+}
+.int-headerWrap .int-button, #int-pageControlBar .int-button, .ui-dialog .int-inlineControlBar .int-button, .int-large .int-button, .int-large.int-button, .ui-dialog .ui-button 
+{
+	padding: .6em .7em;
+}
+.int-large .int-inputPrepend .int-button, .int-large .int-inputAppend .int-button
+{
+    font-size: @font-size-base*1.1;
+    padding: 0 .7em;
+    line-height: @line-height-base*1.2; 
+}
+.int-headerWrap a.int-button:hover, .int-button:hover, .int-pagination a:hover, .int-alphabet a:hover, .ui-button:hover, [class*="paginate"] [class*="paginate_enabled"]:hover, .paging_full_numbers a.paginate_button:hover
+{
+	background: @gradient-background;
+	color: @button-hover-font;
+    .box-shadow2(0 1px 1px rgba(0,0,0,0.3), 0 0 2px rgba(0,0,0,0.1));
+	border-color: @button-hover-border;
+	.text-decoration-default;
+}
+.int-button:active, .int-pagination a:active, .int-alphabet a:active, .ui-button:active, .ColVis_MasterButton:active, [class*="paginate"] [class*="paginate_enabled"]:active, .paging_full_numbers a.paginate_active
+{
+	border-color: @button-hover-border @button-hover-2-border @general-border;
+	.box-shadow(inset 0 2px 2px 0px rgba(0,0,0,0.3));
+	background: @button-background;
+    .text-decoration-default;	
+}
+/* Colour buttons*/
+.int-button.int-blue, .int-button.int-orange, .int-button.int-green, .int-button.int-red, .int-button.int-black
+{
+	.text-shadow(none);    
+}
+/* Blue button*/
+.int-button.int-blue{
+    .coloured-button-base(@bt-blu-background,@string-blue,@bt-blu-border,@bt-blu-font);
+	.coloured-button-hover(@bt-blu-background-hover,@bt-blu-border-hover,@bt-blu-font);
+	.coloured-button-active(@bt-blu-background,@bt-blu-border-active1,@bt-blu-border-active2,@general-border);
+}
+/* Orange button*/
+.int-button.int-orange{
+    .coloured-button-base(@bt-ong-background,@string-orange,@bt-ong-border,@bt-ong-font);
+	.coloured-button-hover(@bt-ong-background-hover,@bt-ong-border-hover,@bt-ong-font);
+	.coloured-button-active(@bt-ong-background,@bt-ong-active-border1,@bt-ong-active-border2,@general-border);
+}
+/* Green button*/
+.int-button.int-green{
+    .coloured-button-base(@bt-grn-background,@string-green,@bt-grn-border,@bt-grn-font);
+	.coloured-button-hover(@bt-grn-hover,@bt-grn-hover-border,@bt-grn-font);
+	.coloured-button-active(@bt-grn-background,@bt-grn-active-border1,@bt-grn-active-border2,@general-border);
+}
+/* Red button*/
+.int-button.int-red{
+    .coloured-button-base(@bt-red-background,@string-red,@bt-red-border,@bt-red-font);
+	.coloured-button-hover(@bt-red-hover,@bt-red-hover-border,@bt-red-font);
+    .coloured-button-active(@bt-red-background,@bt-red-active-border1,@bt-red-active-border2,@general-border);
+}
+
+/* Black button*/
+.int-button.int-black{
+    .coloured-button-base(@bt-blk-background,@string-black,@bt-blk-border,@bt-blk-font);
+    .coloured-button-hover(@bt-blk-hover,@bt-blk-hover-border,@bt-blk-font);
+    .coloured-button-active(@bt-blk-background,@bt-blk-active-border1,@bt-blk-active-border2,@general-border);
+}
+.int-button:focus, a.int-button:focus, .int-pagination a:focus, .int-alphabet a:focus, .ui-button:focus, .ColVis_Button:focus, [class*="paginate"] [class*="paginate_enabled"]:focus, .paging_full_numbers a.paginate_button:focus {
+	.outline-0;
+	border-color: @input-focused-border;
+    .text-decoration-default;
+}
+.int-buttonGroup {
+    .position-vertical-align-display(relative,middle,inline-block);
+    white-space: nowrap;
+}
+.int-buttonGroup > .int-button {
+	.border-radius(0);
+	margin-left: -5px; 
+	&:first-child {
+		.border-radius(3px 0 0 3px);
+		margin-left: 0;
+	}
+}
+
+.int-buttonGroup > .int-button:last-child, .int-inputAppend .int-button:last-child {
+	.border-radius(0 3px 3px 0);
+}
+.int-buttonGroup > :first-child.int-singleButton, .int-buttonGroup > :last-child.int-singleButton {
+	.border-radius-default;
+}
+.int-inputAppend .int-button, .int-inputPrepend .int-button {
+	vertical-align: middle;
+	margin: 0;
+	display: table-cell;
+	.border-radius(0);
+	white-space: nowrap;
+	width: 1%;
+	position: inherit;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.int-inputPrepend .int-button:first-child
+{
+	.border-radius(3px 0 0 3px);
+}
+.int-inputAppend .int-button [class*="int-icon"], .int-inputPrepend .int-button [class*="int-icon"] {
+	font-size: @font-size-base;
+	line-height: @line-height-base*1.2;
+}
+.int-inputAppend.int-buttonGroup {
+    display: inline;
+}
+.int-prefix, .int-postfix {
+    .color-and-background-color(@default-font,@table-row-background);
+	padding: 0 .7em;
+	text-align: center;
+	font-weight: normal;
+	.text-shadow(0 1px 1px rgba(255, 255, 255, 0.9));
+	border: 1px solid @button-border;
+	.box-shadow(0 1px 0 @general-shadows);
+	font-size: @font-size-base;
+	line-height: @line-height-base*1.2;	
+	vertical-align: middle;
+	margin: 0;
+	white-space: nowrap;
+	display: table-cell;
+	width: 1%;
+}
+.int-prefix {
+	.border-radius(3px 0 0 3px);
+}
+.int-postfix {
+	.border-radius(0 3px 3px 0);
+}
+tr .int-button {
+    padding: 4px 7px;
+    vertical-align: middle;
+}
+tr .int-button [class*="int-icon"] {
+    .text-decoration-default;
+    /*vertical-align: text-bottom;*//* Issue */
+    width: .8em;
+    vertical-align: baseline;
+}
+
+
+/*Switch Button*/
+.int-button.int-selected {
+    background: #DCDDDE;
+    border-bottom-color: @general-border;
+    border-left-color: @button-hover-2-border;
+    border-right-color: @button-hover-2-border;
+    border-top-color: @disabled-background;
+    .box-shadow (inset 0px 2px 2px 0px rgba(0, 0, 0, 0.3));
+    .text-decoration-default;
+}
+
+.int-buttonGroup input:first-child + label.int-button {
+border-radius: 3px 0 0 3px;
+margin-left: 0;
+}
+
+input:focus + label.int-button {
+border-color: @input-focused-border;
+}
+/*radios labeled as buttons*/
+input[type="radio"]:focus + label.int-button {
+border-color: @input-focused-border;
+}
+/*end of radios labeled as buttons*/
+
+.int-button::-moz-focus-inner {
+padding: 0;
+border: 0;
+}
+
+/*@-moz-document url-prefix() {
+li a.int-button, label.int-button;
+
+{
+line-height: normal!important;
+}
+
+}*/
+
+.int-inlineControlBar {
+display: block;
+}
+
+[class*="ControlBar"] .int-checkMenu .ui-menu-item {
+display: inline;
+}
+
+/* Button with Drop Down/Up Menu
+..........................................................*/
+.int-dropUp, .int-dropDown
+{
+    display: inline;
+}
+.int-dropUp, .int-dropDown, .int-dropDownContent {
+    position: relative;
+}
+.int-dropDown [class*="int-icon"], .int-dropButton [class*="int-icon"]
+{
+    line-height: @line-height-base;
+    vertical-align: middle;    
+}
+.int-dropUp [class*="int-icon"]
+{
+    line-height: @line-height-base;
+    vertical-align: baseline;    
+}
+.int-dropMenu, .int-dropContent, div.ColVis_collection {
+    .color-and-background-color(@default-font,@menu-background);
+	.border-radius-default;
+    border: 1px solid @menu-border;
+	.box-shadow(0 0px 19px -3px rgba(0, 0, 0, 0.3));
+    position: absolute;
+    z-index: 99999;
+    display: block;
+}
+.int-dropMenu, div.ColVis_collection
+{
+    margin-top: 0;
+    width: 200px;
+    position: absolute;
+    z-index: 99999;
+    left: 0;
+}
+div.ColVis_collection
+{
+	width: 200px !important;
+}
+/*.int-dropDown .int-dropMenu
+{
+    .position-left-top(0,2.2em);
+}
+.int-dropUp .int-dropMenu {
+    bottom: 2em;
+}*/
+/*.int-dropUp [class*="int-icon"], .int-dropDown [class*="int-icon"]
+{
+    margin-left: .15em;
+}*/
+.int-dropMenu a {
+    padding: .3em 3%;
+    display: block;
+    margin: .1em 0;
+}
+.int-dropMenuDivider {
+    border-bottom: 1px solid @button-border;
+    margin: 0;
+	&:hover {
+    background-color: @menu-background;
+	}
+}
+
+
+/*NEW DROP MENU AND DROP CONTENT STYLES*/
+.int-dropDiv {
+    width: 100%;
+    padding: .8em;
+    .box-sizing-default;
+    background-color: @white;
+    .border-radius-default;
+    border: 1px solid @menu-border;
+    .box-shadow (0 0px 19px -3px rgba(0, 0, 0, 0.3));
+    position: absolute;
+    z-index: 999999999999999999999999999999999999999;
+    display: block;
+}
+
+.int-dropMenu {
+    position: absolute;
+    margin-top: .2em;
+}
+
+/* Appends and button groups*/
+.int-inputAppend .int-dropMenu
+{
+    margin-left: -.4em;
+}
+.int-inputAppend .int-button, .int-inputAppend .int-dropMenu {
+    margin-left: -.4em;
+}
+.int-inputAppend .int-dropDown .int-button
+{
+	.border-radius(0 3px 3px 0);
+}
+.int-buttonGroup .int-dropDown
+{
+    margin-left: -2px;
+}
+.int-buttonGroup .int-dropDown:first-child
+{
+    margin-left: 0;
+}
+.int-inputAppend .int-buttonGroup
+{
+    margin-top: -2px;
+}
+.int-inputAppend .int-buttonGroup > .int-dropDown:first-child .int-button
+{
+	.border-radius(0);
+}
+.int-inputAppend .int-buttonGroup:last-child.int-dropDown .int-button
+{
+	.border-radius(0 3px 3px 0);
+}
+.int-inputAppend .int-buttonGroup > .int-button:first-child
+{
+    margin-left: -.4em;
+	.border-radius(0);
+}
+/*Drop Content*/
+.int-dropContent {
+    width: 100%;
+    .position-left-top(0,2.5em);
+    padding: .8em;
+	.box-sizing-default;
+}
+
+/* Button for CheckAll and Drop Down Menu
+..........................................................*/
+.int-checkMenu {
+    .position-vertical-align-display(relative,middle,table);
+    white-space: nowrap;
+}
+.int-checkMenu > .int-button {
+	.border-radius(0);
+}
+.int-checkMenu > a.int-button {
+	.border-radius(0 3px 3px 0);
+	&:first-child {
+		.border-radius(3px 0 0 3px);
+	}
+}
+
+.int-checkMenu > .int-checkContainer + .int-button {
+    margin-left: -1px;
+}
+.int-checkMenu [class*="int-icon"]
+{
+    margin: 0;    
+}
+.int-checkMenu .int-checkContainer
+{
+	.box-shadow(0 1px 0 @general-shadows);
+	.border-radius(3px 0 0 3px);
+    vertical-align: middle;
+    padding: 0 .7em;
+    background: @button-background url(../img/button-bg.png) repeat-x left top;
+    border: 1px solid @button-border;
+    display: table-cell;
+    line-height: @line-height-base*1.2;
+    margin: 0;
+}
+.int-checkMenu .int-dropMenu
+{
+    top: 2.3em;    
+}
+/*Pagination/alphabet
+..........................................................*/
+.int-pagination, .int-alphabet
+{
+	padding: .8em;
+	border-top: 1px solid @general-border;
+	border-bottom: 1px solid @general-grey-border;
+	background: @form-feature-background;
+	margin: .5em 0;
+}
+.int-pagination li, .int-alphabet li
+{
+	display: inline;
+	vertical-align: middle;
+}
+.int-pagination a, .int-alphabet a, [class*="paginate"] [class*="paginate"]
+{
+	padding: .4em .9em;
+	line-height: @line-height-base*1.5;
+	width: auto;
+	height: 19px;
+}
+.int-pagination .int-disabled a, .int-alphabet .int-disabled a, .int-button[disabled], .int-button.int-disabled, .paging_full_numbers a.paginate_button_disabled
+{
+	cursor: not-allowed;
+	background: transparent;
+    color: @disabled-font-2;
+	border-color: @button-border; 
+}
+.int-pagination .int-disabled a:hover, .int-alphabet .int-disabled a:hover, .int-button[disabled]:hover, .int-button.int-disabled:hover, .paging_full_numbers a.paginate_button_disabled:hover
+{
+	border-color: @button-border;
+	.text-decoration-default;
+	.box-shadow(0 1px 0 @general-shadows);
+    color: @disabled-font-2;
+}
+.paging_full_numbers a.paginate_button_disabled:hover
+{
+	background: transparent;
+}
+.int-pagination .int-disabled a:focus, .int-alphabet .int-disabled a:focus, .int-button[disabled]:focus, .int-button.int-disabled:focus, .paging_full_numbers a.paginate_button_disabled:focus
+{
+	border-color: @button-border;
+}
+.int-pagination .int-active a, .int-alphabet .int-active a
+{
+	background: @button-background;
+	.box-shadow(inset 0 2px 2px 0px rgba(0,0,0,0.3));
+	border-color: @button-hover-border @button-hover-2-border @general-border;
+}
+/* Button Bar
+..........................................................*/
+.int-buttonBar
+{
+	padding: .5em 0 0;
+	margin: 0;
+	display: block;
+	.box-sizing-default;
+}
+/* Tooltips
+..........................................................*/
+.tipsy {
+    font-size: @font-size-base;
+    position: absolute;
+    padding: 5px;
+    z-index: 9000000;
+}
+.tipsy-inner {
+    .color-and-background-color(@tooltip-font,@tooltip-background);
+    max-width: 300px;
+    padding: .4em;
+    text-align: center;
+	.border-radius-default;
+}
+.tipsy-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: @line-height-base*0;
+    border: 5px dashed @general-border;
+}
+.tipsy-arrow-n
+{
+    border-bottom-color: @tooltip-border;
+}
+.tipsy-arrow-s
+{
+    border-top-color: @tooltip-border;
+}
+.tipsy-arrow-e
+{
+    border-left-color: @tooltip-border;
+}
+.tipsy-arrow-w
+{
+    border-right-color: @tooltip-border;
+}
+.tipsy-n .tipsy-arrow
+{
+    .position-left-top(50%,0);
+    margin-left: -5px;
+    border-bottom-style: solid;
+    border-top: none;
+	border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-nw .tipsy-arrow
+{
+    .position-left-top(10px,0);
+    border-bottom-style: solid;
+    border-top: none;
+	border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-ne .tipsy-arrow {
+    top: 0;
+    right: 10px;
+    border-bottom-style: solid;
+    border-top: none;
+	border-left-color: transparent;
+    border-right-color: transparent;	
+}
+.tipsy-s .tipsy-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-top-style: solid;
+    border-bottom: none;
+	border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-sw .tipsy-arrow {
+    bottom: 0;
+    left: 10px;
+    border-top-style: solid;
+    border-bottom: none;
+	border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-se .tipsy-arrow {
+    bottom: 0;
+    right: 10px;
+    border-top-style: solid;
+    border-bottom: none;
+	border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tipsy-e .tipsy-arrow {
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    border-left-style: solid;
+    border-right: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+.tipsy-w .tipsy-arrow {
+    .position-left-top(0,50%);
+    margin-top: -5px;
+    border-right-style: solid;
+    border-left: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+/*Forms
+..........................................................*/
+fieldset {
+   .padding-0;
+    margin: 1.5em 0 1em;
+}
+legend {
+    white-space: normal; 
+    width: 100%;
+    margin: 1em 0 .5em 0;
+	span {
+		display:block;
+		width: 100%;
+		line-height: 1.4;
+	}
+}
+.int-row {
+	padding: 4px;
+	.box-sizing-default;
+}
+label, input {
+	vertical-align: middle;
+}
+label, .int-label, .int-readOnlyText {
+	padding: .4em 0;
+	display: inline-block;
+	margin: 0;
+}
+.int-label.int-alignTop {
+	vertical-align: top;
+}
+.int-stacked
+{
+	display: inline-block;
+	label {
+		display: block;
+	}
+}
+
+.int-inline label
+{
+	vertical-align: top;
+	display: inline-block;
+	margin-right: 1em;
+}
+/* Form controls
+..........................................................*/
+input[type="text"], input[type="search"], textarea, input.int-comboboxInput
+{
+    font-family: Helvetica, Arial, Sans-Serif Serif;
+	border: 1px solid @input-border;
+	padding: .41em .4em;
+	color: @default-font;
+	font-size: 99%;
+	line-height: @line-height-base*1.2;
+	margin: 0;
+}
+input[type="text"]:hover, input[type="search"]:hover, textarea:hover, input.int-comboboxInput:hover, .int-inputAppend input[type="text"]:hover, .int-inputPrepend input[type="text"]:hover
+{
+	.box-shadow(inset 0 1px 2px 0px rgba(0,0,0,0.3));
+	border-color: @button-border;
+	.outline-0;
+}
+input[type="text"]:focus, input[type="search"]:focus, textarea:focus, input.int-comboboxInput:focus, .int-inputAppend input[type="text"]:focus, .int-inputPrepend input[type="text"]:focus
+{
+    .box-shadow2(0 0 5px @input-focused-box-shadow, inset 0 1px 3px 0px rgba(0,0,0,0.3));
+	border-color: @input-focused-border;
+	.outline-0;
+}
+select
+{
+	font-size: @font-size-base-pc;
+	line-height: @line-height-base;
+	border: 1px solid @input-border;
+	color: @default-font;
+	padding: .3em;
+	margin: 0;
+	.outline-0;
+	&:focus
+	{
+		//.box-shadow(0 0 5px #007eff);
+        //obsolete?
+		border-color: @input-focused-border;
+	}
+}
+
+input[type="radio"], input[type="checkbox"]
+{
+	padding: 0;
+	margin: 0;
+}
+input[type="radio"]:focus, input[type="checkbox"]:focus {
+	.outline-default;
+}
+input[type="text"], input[type="search"], textarea, select, input.int-comboboxInput {
+	.box-sizing-default;
+	width: 100%;
+}
+input[type="text"][disabled]:hover, input[type="search"][disabled]:hover, input[type="radio"][disabled]:hover, input[type="checkbox"][disabled]:hover, textarea[disabled]:hover, input[type="text"][readonly]:hover, textarea[readonly]:hover, input[type="text"][readonly]:focus, textarea[readonly]:focus
+{
+	.box-shadow(none);
+	border-color: @input-border;
+	cursor: not-allowed;
+	.text-decoration-default;
+}
+input[type="text"][readonly], textarea[readonly] {
+    background: @input-readonly-background;   
+}
+.int-inputAppend, .int-inputPrepend {
+	margin: 0;
+	display: table;
+	input[type="text"] {
+		vertical-align: middle;
+		display: table-cell;
+		margin: 0;
+		padding: .4em;
+		line-height: @line-height-base*1.2;
+		.box-shadow(0 1px 0 white);
+	}
+}
+.int-large label, .int-large .int-label {
+	padding: .65em 0;
+}
+.int-large .int-inputAppend input[type="text"], .int-large .int-inputPrepend input[type="text"]
+{
+	padding: .65em .4em;
+	line-height: @line-height-base;
+	font-size: @font-size-base*1.1;
+}
+.int-watermark.tipped
+{
+    color: @disabled-font;
+}
+
+/* Check Box and Radio Groups
+..........................................................*/
+.int-checkboxGroupLabel, .int-radioGroupLabel
+{
+                font-size: 1.1em;
+                margin: 0 0 1em 0;
+                color: @default-font;
+                padding: 0;
+                line-height: 1;
+}
+.int-checkboxGroup label, .int-radioGroup label
+{
+                padding: .4em;
+}
+.int-checkboxGroup[class*="int-height"] label:hover, .int-radioGroup[class*="int-height"] label:hover
+{
+                background: @form-feature-background;
+}
+.int-checkboxGroup[class*="int-height"], [class*="int-height"].int-checkboxGroup, .int-radioGroup[class*="int-height"], [class*="int-height"].int-radioGroup
+{
+                border: 1px solid @button-background;
+                margin-top: 0;
+                .box-sizing-default;
+}
+.int-checkboxGroupLabel + .int-formFeature, .int-radioGroupLabel + .int-formFeature
+{
+                border: 0;
+                margin-top: 0;
+}
+/*checkboxGroup and radio group errors*/
+.int-error .int-checkboxGroup[class*="int-height"], .int-error .int-radioGroup[class*="int-height"]
+{ 
+                border-color: @error-font;
+}
+.int-error .int-checkboxGroup[class*="int-height"] label:hover, .int-error .int-radioGroup[class*="int-height"] label:hover
+{
+                background: @pale-red-background;
+}
+/* Form validation
+..........................................................*/
+.int-required, .int-requiredAsterisk
+{
+    color: @error-font;
+    font-weight: bold;
+}
+.int-requiredAsterisk
+{
+    margin-left: .2em;
+    font-size: @font-size-base*1.4;
+    vertical-align: text-top;
+}
+a.int-help {
+    .text-decoration-default;
+    display: inline-block;
+    font-size: @font-size-base*1.4;
+    margin-left: .3em;
+	&:focus {
+		.text-decoration-default;   
+	}
+}
+/* Show Hide Help */
+.int-helpDesc {
+    display: block;
+    margin: .3em 0;
+    width: 100%;
+    float: left;
+    font-weight: bold;
+}
+/*Alerts and validation
+..........................................................*/
+.int-alert:before, .int-note:before, .int-alert:after, .int-note:after {
+	display: table;
+	line-height: @line-height-base*0;
+	content: "";
+}
+
+.int-alert, .int-note, .int-togglerFeatureNote {
+    .color-and-background-color(@alert-font,@alert-background);
+	border-bottom: 1px solid @general-border;
+	.box-shadow(inset 0 1px 1px 0 rgba(0,0,0,0.2));
+	.text-shadow(0 1px 0 rgba(255,255,255,0.5));
+    margin: 1em 0;
+    padding: .8em;
+	margin-bottom: 1em;
+    clear: both;
+	&:after {
+		clear: both;
+	}
+}
+.int-alert h1, .int-note h1, .int-togglerFeatureNote h1, .int-alert h2, .int-note h2, .int-togglerFeatureNote h2, .int-alert h3, .int-note h3, .int-togglerFeatureNote h3, .int-alert h4, .int-note h4, .int-togglerFeatureNote h4, .int-alert h5, .int-note h5, .int-togglerFeatureNote h5, .int-alert h6, .int-note h6, .int-togglerFeatureNote h6
+{
+    color: @alert-font;
+}
+.int-alert hr, .int-note hr, .int-togglerFeatureNote hr
+{
+    border-top-color: @alert-font;
+	opacity: .3;
+    filter:alpha(opacity=30)
+}
+.int-formFeature .int-inlineControlBar, [class*="togglerFeature"] .int-inlineControlBar
+{
+                margin: .8em 0 0;
+}
+
+.int-formFeature hr + .int-inlineControlBar, [class*="togglerFeature"] hr + .int-inlineControlBar, .int-tableFeature + .int-inlineControlBar, .int-tableFeature hr + .int-inlineControlBar
+{
+                margin: 0;
+}
+
+.int-error
+{
+	background: @error-background;
+}
+.int-alert.int-error, .int-error h1, .int-error h2, .int-error h3, .int-error h4, .int-error h5, .int-error h6
+{
+	color: @error-font;
+}
+.int-alert.int-error hr
+{
+    border-top-color: @error-font;
+}
+.int-error .int-errorMessage {
+	display: block;
+	margin: .3em 0;
+	color: @error-font;
+	width: 100%;
+	float: left;
+    font-weight: bold;
+    .word-wrap-break-word;
+}
+.int-error input[type="text"], .int-error input[type="search"], .int-error textarea {
+    border-color: @error-font;
+}
+.int-error input[type="text"]:focus, .int-error input[type="search"]:focus, .int-error textarea:focus {
+	.box-shadow(inset 0 1px 2px 0px rgba(0,0,0,0.3));
+}
+.int-success {
+	background: @success-background;
+	hr {
+		border-top-color: @success-font;
+	}
+}
+.int-success, .int-success h1, .int-success h2, .int-success h3, .int-success h4, .int-success h5, .int-success h6 {
+    color: @success-font;
+}
+.int-info {
+	background: @info-background;
+	hr {
+		border-top-color: @info-font;
+	}
+}
+.int-info, .int-info h1, .int-info h2, .int-info h3, .int-info h4, .int-infos h5, .int-info h6 {
+    color: @info-font;
+}
+
+/* Error Page
+..........................................................*/
+.int-errorPage [class*="int-icon"] {
+	font-size: @font-size-base;
+	h1 {
+		font-size: @font-size-base*4.5;
+		margin: .2em 0;
+	}
+	h3, h4 {
+		margin: .8em 0;
+	}
+}
+
+
+/* Sticky Alerts
+..........................................................*/
+.int-alertSticky {
+    position: fixed;
+    width: auto;
+    margin-left: 0;
+    .margin-top-bottom(0,0);
+    top: 6.8em;
+    .position-left-right(24.5%,6.5%);
+    display: block;
+    border-top: 0;
+	.border-radius(0 0 3px 3px);
+	.box-shadow(0 4px 11px -4px rgba(0,0,0,0.3));
+    border-bottom-color: rgba(255,255,255,0.5);
+    z-index: 999999;
+    opacity: .95;
+    filter: alpha(opacity=95);
+}
+.ui-dialog .int-alert.int-alertSticky
+{
+	width: 92%;
+	margin: 0 4%;
+    .position-left-top(0,0);
+	position: absolute;
+	.box-sizing-default;
+}
+.int-mainContentToggle .int-alertSticky
+{
+    width: auto;
+    margin-left: 0;
+    .position-left-right(9%,7.5%);
+    display: block;
+}
+.int-alert a.int-alertClose
+{
+    line-height: @line-height-base*1.2;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    font-size: @font-size-base*1.2;
+	.text-shadow(0 1px 0 @general-shadows);
+    color: @default-font;
+    margin-left: 1em;
+	[class*="int-icon"]:hover
+	{
+		color: @anchor-hover-font;
+		.text-decoration-default;
+	}
+}
+
+
+/* Styled checkboxes and radios to look like 'switches' */
+/* ------------------------------------------
+CSS TOGGLE SWITCHES (Ionuț Colceriu)
+Licensed under Unlicense 
+https://github.com/ghinda/css-toggle-switch
+------------------------------------------ */
+/* Hide by default */
+.int-radioSwitch .int-slideButton, .int-checkToggle p span
+{
+	display: none;
+}
+/* Toggle Switches */
+/* We can't test for a specific feature, so we only target browsers with support for media queries. */
+/* Checkbox */
+.int-checkToggle
+{
+	position: relative;
+	padding: 0;
+	margin-left: 100px;
+	label {
+		position: relative;
+		z-index: 3;
+		display: block;
+		width: 100%;
+	}
+	/* Don't hide the input from screen-readers and keyboard access*/
+	input {
+		position: absolute;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		z-index: 5;
+	}
+	p {
+		position: absolute;
+		left: -100px;
+		width: 100%;
+		margin: 0;
+		padding-right: 100px;
+		text-align: left;
+		color: @default-font;
+		font-weight: normal;
+		.text-shadow(none);
+		span {
+			position: absolute;
+            .position-left-top(0,0);
+			z-index: 5;
+			display: block;
+			width: 50%;
+			margin-left: 100px;
+			text-align: center;
+			&:last-child {
+				left: 50%;
+			}
+		}
+	}
+	.int-slideButton
+	{
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 4;	
+		display: block;
+		width: 50%;
+		height: 100%;
+		padding: 0;
+	}
+}
+
+
+/* Radio Switch */
+.int-radioSwitch
+{
+	position: relative;
+	padding: 0;
+	input
+	{
+		position: absolute;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	input:last-of-type:checked ~ .int-slideButton
+	{
+		left: 50%;
+	}
+	label
+	{
+		position: relative;
+		z-index: 2;
+		float: left;
+		width: 50%;
+		height: 100%;
+		margin: 0;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.int-slideButton
+	{
+		position: absolute;
+        .position-left-top(0,0);
+		padding: 0;
+		z-index: 1;
+		width: 50%;
+		height: 100%;
+	}
+}
+
+
+/* Switch with 3 items */
+.int-radioSwitch.int-radioSwitchThree label, .int-radioSwitch.int-radioSwitchThree .int-slideButton
+{
+	width: 33.3%;
+}
+.int-radioSwitch.int-radioSwitchThree input:checked:nth-of-type(2) ~ .int-slideButton
+{	
+	left: 33.3%;
+}
+.int-radioSwitch.int-radioSwitchThree input:checked:last-of-type ~ .int-slideButton
+{
+	left: 66.6%;
+}
+/* Switch with 4 items */
+.int-radioSwitch.int-radioSwitchFour label, .int-radioSwitch.int-radioSwitchFour .int-slideButton
+{
+	width: 25%;
+}
+.int-radioSwitch.int-radioSwitchFour input:checked:nth-of-type(2) ~ .int-slideButton
+{	
+	left: 25%;
+}
+.int-radioSwitch.int-radioSwitchFour input:checked:nth-of-type(3) ~ .int-slideButton
+{	
+	left: 50%;
+}
+.int-radioSwitch.int-radioSwitchFour input:checked:last-of-type ~ .int-slideButton
+{
+	left: 75%;
+}
+/* Switch with 5 items */
+.int-radioSwitch.int-radioSwitchFive label, .int-radioSwitch.int-radioSwitchFive .int-slideButton
+{
+	width: 20%;
+}
+.switch.switch-five input:checked:nth-of-type(2) ~ .slide-button
+{	
+	left: 20%;
+}
+.int-radioSwitch.int-radioSwitchFive input:checked:nth-of-type(3) ~ .int-slideButton
+{	
+	left: 40%;
+}
+.int-radioSwitch.int-radioSwitchFive input:checked:nth-of-type(4) ~ .int-slideButton
+{	
+	left: 60%;
+}
+.int-radioSwitch.int-radioSwitchFive input:checked:last-of-type ~ .int-slideButton
+{
+	left: 80%;
+}
+/* Shared */
+.int-checkToggle, .int-radioSwitch
+{
+	display: block;
+	height: 30px;
+	-webkit-animation: bugfix infinite 1s;
+	.nav-bg;
+	.border-radius-default;
+	.box-shadow(inset 0 2px 2px 0px rgba(0, 0, 0, 0.3));
+	border-bottom: 1px solid @general-border;
+}
+.int-radioSwitch *, .int-checkToggle *
+{
+	.box-sizing-default;
+}
+.int-radioSwitch .int-slideButton, .int-checkToggle .int-slideButton
+{
+	display: block;
+    .transition(all 0.1s ease-out);
+	border: 1px solid @button-border;
+	background: @button-background url(../img/button-bg.png) repeat-x left top;
+	.box-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+	.border-radius-default;
+}
+.int-checkToggle label, .int-checkToggle p
+{
+	line-height: 30px;
+}
+.int-checkToggle input:checked ~ .int-slideButton
+{
+	right: 50%;
+}
+/* Outline the toggles when the inputs are focused */
+.int-checkToggle input:focus ~ .int-slideButton, .int-radioSwitch input:focus + label
+{
+	.outline-default;
+}
+@-webkit-keyframes bugfix {from { position: relative; } to { position: relative; }
+}
+.int-radioSwitch, .int-checkToggle, .int-checkToggle p span
+{
+	color: @headings;
+	font-weight: bold;
+	text-align: center;
+	.text-shadow(0px 1px 1px rgba(255, 255, 255, 0.8));
+}
+.int-radioSwitch input:checked + label
+{
+	.text-shadow(0px 1px 1px rgba(255, 255, 255, 0.8));
+}	
+.int-radioSwitch p {
+	color: @default-font;	
+	.text-shadow(none);
+}
+
+/*tables
+..........................................................*/
+table {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	caption {
+			font-size: @font-size-base*1.3;
+			.controlbar-bg;
+			border-top: 1px solid @general-border;
+			.border-radius(3px 3px 0 0);
+			padding-top: .6em;
+			padding-bottom: .6em;
+		}
+	select {
+		padding: 2px;
+	}
+}
+
+tr, th, td
+{
+	border: 1px solid @general-grey-border;
+	    border-left: 0;
+        border-right: 0;
+}
+th 
+{
+    .color-and-background-color(@headings,@table-header-background);
+	border-color: @table-header-border;
+	font-weight: bold;
+	&:focus
+	{
+		.outline-default;
+	}
+}
+tr
+{
+    background-color: @table-row-background;   
+	&:nth-child(2n) /*replace with JQuery striping*/
+	{
+		background-color: @table-row-zebra-stripe-background;
+	}
+	&.int-selected {
+		background-color: @table-row-selected-background;
+		border-bottom-color: @table-row-selected-background;
+        border-top: 2px solid @body-background;
+		& > td {
+		   border-bottom-color: @table-row-selected-background;
+		}
+	}
+	&:hover {
+		background-color: @alert-background;
+	}
+
+}
+th, td, caption {
+	padding: 5px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+tr.int-childTable > td {
+    margin: 0;
+   .padding-0;
+    background: @table-row-selected-background;
+    border-bottom-color: @general-border;
+}
+tr.int-childTable, tr.int-childTable > td {
+	    border-left: 0;
+        border-right: 0; 
+}
+td > table {
+    margin: 0 .5% .5% auto;
+    background-color: @table-row-background;
+    width: 99%;
+    max-width: 99%;
+}
+td > table th {
+    font-weight: normal;
+    border-top-color: @button-hover-2-border;  
+}
+td input[type="text"], td input[type="search"], td textarea, tr .int-button {
+    .margin-top-bottom(-1px,-1px);
+}
+table input[type="text"], table input[type="search"], table textarea {
+    padding: 3px 4px;
+}
+
+/* Expanding nested tables
+..........................................................*/
+.int-expandingTable tr td:first-child {
+    padding-left: 22px;
+	i {
+		width: 16px;
+		text-align: center;
+		margin-left: -20px;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: @font-size-base*1.2;
+		color: @button-hover-border;
+	}
+}
+
+.int-expandingTable tr.int-childTable td {
+    padding-left: 5px;
+}
+
+.int-expandingTable tr.int-childTable > td {
+    padding-left: 0;
+}
+/* Table Column Widths
+..........................................................*/
+col.int-c10{width: 10%;}
+col.int-c20{width: 20%;}
+col.int-c30{width: 30%;}
+col.int-c40{width: 40%;}
+col.int-c50{width: 50%;}
+col.int-c60{width: 60%;}
+col.int-c70{width: 70%;}
+col.int-c80{width: 80%;}
+col.int-c90{width: 90%;}
+/* Sortable tables
+..........................................................*/
+table.int-sortableTable thead tr .header
+{
+    cursor: pointer;
+}
+.int-sortableTable th.header:after
+{
+    margin-left: .5em;
+}
+/*Feature blocks
+..........................................................*/
+.int-formFeature, .int-togglerFeature
+{	
+	background: @form-feature-background;
+	border-bottom: 1px solid @general-border;
+	.box-shadow(inset 0 1px 1px 0 rgba(0,0,0,0.2));
+	padding: .8em;
+	margin: 1em 0;
+    .box-sizing-default;
+}
+.int-tableFeature
+{
+	background: @table-feature-background;
+	.box-shadow(0 0px 9px -4px rgba(0, 0, 0, 0.7));
+    width: 100%;
+    margin: 1em 0;
+    border: 1px solid @input-border;
+	padding: 0;
+	display: block;
+	overflow-x: auto;
+	overflow-y:hidden;
+    -webkit-overflow-scrolling: touch;
+	.box-sizing-default;
+}
+.int-wrap.int-formFeature
+{
+    width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;   
+}
+.int-innerFeature
+{
+    .color-and-background-color(@default-font,@table-row-background);
+	padding: 1em;
+	.box-sizing-default;
+	border: 1px solid @general-grey-border;
+	border-top-color: #fff;
+}
+.int-formFeature fieldset
+{
+	margin: 0 0 1em;
+	&:last-child {
+		margin: 0;
+	}
+}
+
+fieldset legend
+{
+	float: left;
+	margin: 0 0 1em 0;
+}
+.int-formFeature h2:first-child, .int-formFeature h3:first-child, .int-formFeature h4:first-child
+{
+    margin-top: .5em;
+}
+.int-innerFeature h2:first-child, .int-innerFeature h3:first-child, .int-innerFeature h4:first-child
+{
+    margin-top: 0;
+}
+.int-formFeature .int-note:first-child, .int-formFeature .int-alert:first-child
+{
+    margin-top: .2em;
+}
+[class*="togglerFeature"] .int-formFeature
+{
+                background: @table-row-background;
+                color: @default-font;
+                border-bottom: 1px solid @general-border;
+                .text-shadow(inset 0 1px 1px 0 rgba(0,0,0,0.2));
+                padding: .8em;
+                margin: 1em 0;
+                .box-sizing-default;
+}
+[class*="togglerFeature"] .ruledList li:first-child
+{
+                border-top: 0;
+                padding-top: 0;
+}
+/* Modal and Tabs
+..........................................................*/
+
+.int-tabContents, .int-dialogContainer
+{
+	.box-shadow(0 0px 9px -4px rgba(0, 0, 0, 0.7));
+	margin: 0 0 1em;
+	.padding-0;
+	background-color: @table-row-background;
+	display: block;
+	clear: both;
+}
+.ui-dialog .int-tabContents
+{
+	background-color: @table-row-background;
+	.padding-0;
+	border: 1px solid @input-border;
+}
+.ui-dialog .int-navTabs > .int-selected > a
+{
+    background-color: @table-row-background;
+}
+.int-tabContents .int-tabHeader
+{
+    padding: .8em 1em;
+	font-size: @font-size-base*1.2;
+	display: block;
+	border-bottom: 1px solid @general-grey-border;
+}
+.int-tabContents.ui-tabs-hide
+{
+    display: none;   
+}
+.int-navPills a[class*="int-disabled"], .int-navPills a[disabled], .int-navPills a[class*="int-disabled"]:hover, .int-navPills a[disabled]:hover, .ui-state-disabled a, .ui-state-disabled a:hover, .ui-state-disabled.ui-menu-item .ui-state-focus, .ui-menu-item a[disabled].ui-state-focus, .ui-menu-item a[class*="int-disabled"], .ui-menu-item a[class*="int-disabled"]:hover, .ui-tabs .ui-tabs-nav li.ui-state-hover a[disabled]
+{
+    color: @disabled-background;
+    .text-decoration-default;
+    cursor: not-allowed;
+    background: none;
+}
+.ui-dialog .int-navPills
+{
+	margin-top: 0;
+	padding: 0;
+}
+.int-navPills li
+{
+    position: relative;
+    display: inline;
+	margin: 0 0 .3em;
+	a
+	{
+		padding: .5em .7em;
+		display: inline-block;
+		.outline-0;
+	}
+}
+
+.int-navPills .int-selected, .int-navPills .ui-state-active a 
+{
+	color: @default-font;   
+}
+.int-navPills.ui-tabs-nav .ui-state-active a
+{
+	border-color: @general-grey-border;
+	border-top-color: @tabs-active-border-top;
+	background-color: @tabs-background;
+}
+.int-formFeature .int-navPills .int-selected, .int-formFeature .int-navPills .ui-state-active a
+{
+	background-color: @table-row-background;
+	border-color: @general-grey-border;
+	border-top-color: @body-background;
+}
+.int-navPills .int-selected:hover
+{
+    color: @default-font;
+}
+.int-tabContainer, .int-dialogContent
+{
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling : touch;
+}
+.int-tabControls
+{
+	padding: .5em 1em;
+	border-bottom: 1px solid @general-grey-border;
+	li {
+		display: inline;
+	}
+}
+
+ .int-dialogInnerContainer
+{
+	padding: .5em 0;
+	margin: 0 1em;
+}
+/*transitions
+-----------------------------------*/
+div#int-region2, div#int-region2.int-sidebarToggle, div#int-region1, div#int-region1.int-mainContentToggle, .int-toggler h3
+{
+    .transition(all .2s);
+    -o-transition: all 0; /*Removed transition from Opera as it cannot animate between different units i.e % to em, ensure '-o-transition' is below 'transition'*/
+}
+#int-navToggle, .int-button[disabled], .int-breadcrumb li.int-active a:active, .int-pagination .int-disabled a:active, .int-alphabet .int-disabled a:active, .int-pagination .int-active a:active, .int-alphabet .int-active a:active, li .int-disabled, .ui-slider-handle.ui-state-focus, .int-navPills a[disabled], .ui-state-disabled a, .int-navPills a[class*="int-disabled"], .ui-state-disabled.ui-menu-item .ui-state-focus, .ui-menu-item a[disabled].ui-state-focus, .ui-menu-item a[disabled], .ui-tabs .ui-tabs-nav li.ui-state-hover a[disabled], .paging_full_numbers a.paginate_button_disabled
+{
+	.transform(none);
+}
+.int-alert.int-alertSticky {
+    .animation(fadein 1s);
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.95;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.95;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.95;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 0.95;
+    }
+}
+/*---------------------------------Lisbox Widget---------------------------------*/
+.int-listboxWidget {
+    float: left; /*Required for div to expand to fit content*/
+    width: 100%;
+    .border-radius-default;
+    border: 1px solid @general-grey-border;
+    padding: 1em;
+    .box-sizing-default;
+}
+
+.int-listboxWidget select {
+    width: 34%;
+    float: left;
+    .border-radius-default;
+}
+
+.int-listboxWidget > div.int-listboxWidgetControls {
+    width: 14%;
+    float: left;
+    padding: 0 1% 0 1%;
+}
+
+.int-listboxWidget > div.int-listboxWidgetControls > div {
+    width: 28px;
+    margin: 0 auto;
+}
+
+.int-listboxWidget > div.int-listboxWidgetControls > div a {
+    margin-bottom: .3em;
+}
+
+.int-listboxWidget > div.int-listboxWidgetExtras {
+    width: 100%;
+    height: 2.6em;
+}
+
+.int-listboxWidget > div.int-listboxWidgetExtras > span {
+    float: left;
+    width: 17%;
+}
+
+.int-listboxWidget > div.int-listboxWidgetExtras > span.int-listboxWidgetSelectAll {
+    margin-right: 16%;
+    position: relative;
+    top: 0em;
+}
+
+.int-listboxWidget > div.int-listboxWidgetExtras > span.int-listboxWidgetLabel {
+    position: relative;
+    top: 1em;
+}
+
+.int-listboxWidget > div.int-listboxWidgetExtras > span > a {
+    float: right;
+    margin-right: 0;
+}
+
+/*---------------------------------Multiselect---------------------------------*/
+.ui-multiselect {
+    width: 100% !important;
+    text-align: left;
+}
+.ui-multiselect-single .ui-multiselect-checkboxes input {
+    position: absolute !important;
+    top: auto !important;
+    left: -9999px;
+}
+.ui-multiselect-header ul li {
+    float: left;
+    padding: 0 .5em 0 0;
+}
+.ui-multiselect-header a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+.ui-multiselect-menu {
+    display: none;
+    position: absolute;
+    z-index: 10000;
+    text-align: left;
+}
+.ui-multiselect-checkboxes {
+    position: relative /* fixes bug in IE6/7 */;
+    overflow-y: auto;
+    label {
+        cursor: pointer;
+        display: block;
+        border: 1px solid transparent;
+        padding: 3px 1px;
+        input {
+            position: relative;
+            top: 1px;
+        }
+    }
+    li {
+        clear: both;
+    }     
+    li.ui-multiselect-optgroup-label {
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 1px solid;
+            a {
+                display: block;
+                padding: 3px;
+                margin: 1px 0;
+                text-decoration: none;
+            }
+    }      
+}
+/* remove label borders in IE6 because IE6 does not support transparency */
+* html .ui-multiselect-checkboxes label {
+border: none;
+}
+/* FILTER */
+.ui-multiselect-hasfilter ul {
+    position: relative;
+}
+.ui-multiselect-filter {
+    float: right;
+    input {
+        width: 105px;
+        margin-left: .3em;
+        -webkit-appearance: textfield;
+        -webkit-box-sizing: content-box;
+    }
+}
+/* Custom */
+button.int-multiselectButton i.int-icon-caret-down {
+    float: right;
+}
+.int-multiselectMenu {
+    margin: 0;
+    background-color: @menu-background;
+    .border-radius-default;
+    border: 1px solid @menu-border;
+    .box-shadow(0 0px 19px -3px rgba(0, 0, 0, 0.3));
+    position: absolute;
+    z-index: 99999;
+    padding: .5em;
+}
+
+.int-multiselectHeader {
+    border-bottom: 1px dotted @button-border;
+    padding-bottom: .5em;
+}
+
+ul.int-multiselectUnorderedList {
+    text-decoration: none;
+    display: block;
+    padding: 0;
+    line-height: 1.5;
+    zoom: 1;
+    font-weight: normal;
+    li {
+        &:hover {
+            background-color: @form-feature-background;
+        }
+        label {
+            span {
+                vertical-align: middle;
+            }
+            input {
+                margin-right: .4em;
+            }
+        }
+    }
+}

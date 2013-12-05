@@ -1,0 +1,403 @@
+﻿/*
+- UI Responsive Styles
+- v1.0 09/09/13
+- Antony McEvoy
+- Antony.McEvoy@open.ac.uk
+- Information Technology
+*/
+
+
+/*@-ms-viewport {
+  width: device-width;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .classname
+  {
+  
+  }
+}
+@media (max-width: 767px) {
+  .classname
+  {
+  
+  }
+}*/
+@media (min-width: 1200px) {
+    /*experiment*/
+    .int-mainContentToggle .int-alertSticky
+    {
+        left: 9%;
+        right: 7.5%; 
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    /*experiment*/
+    /*add div#int-org to layout.css and remove from here*/
+    div#int-org {
+        background: green;
+    }
+    [class*="of3"] {
+        width: 49%;
+    }
+    .int-col3of3 {
+        margin-left: 0;
+    }
+    .int-alertSticky {
+        left: 23%;
+        right: 3.5em;
+    }
+    .int-mainContentToggle .int-alertSticky
+    {
+        left: 4.5em;
+        right: 3em; 
+    }
+    .int-button
+    {
+    	-webkit-appearance: none;
+    	-moz-appearance: none;
+    }
+    .int-button:focus
+    {
+		outline: thin dotted #333;
+  		outline: 5px auto -webkit-focus-ring-color;
+  		outline-offset: -2px;
+    }
+}
+@media (max-width: 767px) {
+    /*experiment*/
+    /*add div#int-org to layout.css and remove from here*/
+    div#int-org {
+        min-width: 480px;
+        background: red;
+    }
+    [class*="int-grid"] {
+        width: 100%;
+        margin-left: 0;
+    }
+    [class*="col"], [class*="/3rd"], [class*="col"] [class*="int-grid"]
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+    [class*="of2"], .int-col3of3 {
+        margin-left: 0;
+    }
+    .int-alertSticky {
+        left: 23%;
+        right: 6.5%;
+    }
+    .int-mainContentToggle .int-alertSticky {
+        left: 4.5em;
+        right: 3em;
+    }
+	
+	/*Form controls*/
+	[class*="int-grid"] .int-button
+	{
+		margin-top: .4em;
+	}
+	.int-button, .int-buttonGroup
+	{
+		width: 100%;
+		display: block;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.int-buttonGroup .int-button
+	{
+		margin-left: 0;
+	}
+	.int-checkboxGroup label, .int-radioGroup label
+	{
+		width: 100%;
+		margin-right: 0;
+	}
+	.int-inputGroup [class*="int-grid"] + [class*="int-grid"]
+	{
+		margin-bottom: .5em;
+	}
+	.int-inputPrepend .int-button, .int-inputAppend .int-button
+	{
+		display: block;
+	}
+	.int-inputPrepend .int-button
+	{
+		margin: 0 0 .4em;
+	}
+	.int-inputAppend .int-button
+	{
+		margin: .4em 0 0;
+	}
+	.int-inputAppend .int-button, .int-inputPrepend .int-button, .int-buttonGroup > .int-button:last-child, .int-inputAppend .int-button:last-child {
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	}
+	.int-prefix, .int-postfix
+	{
+		display: none;
+	}
+
+}
+@media (max-width: 480px) {
+    /*experiment*/
+    /*add div#int-org to layout.css and remove from here*/
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 100%;
+    }
+    div#int-org {
+        max-width: 100%;
+        min-width: 305px;
+        width: auto;  
+        background: blue;
+        margin: 0;
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+    }
+    div#int-site {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        border: 0;
+    }
+    
+    /*navigation*/
+    .int-headerWrap
+    {
+        display: inline-block;
+    }
+    .int-headerWrap .int-title
+    {
+        width: auto;
+        margin: .1em .5em;
+    }
+    .int-headerWrap ul
+    {
+        float: left;
+        text-align: left;
+        width: 100%;
+        padding: .5em;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .int-headerWrap li
+    {
+         margin: 0 .5em 0 0;
+         white-space: nowrap;
+    }
+    .int-headerWrap li a
+    {
+        margin: 0;
+        padding: 0;
+    }
+    nav.int-primary
+    {
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        -o-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        background-image: none;
+    }
+    nav.int-primary ul
+    {
+        padding-right: 0;
+        left: 0;
+        position: relative;
+    }
+    nav.int-primary li a, nav.int-primary li a.int-selected
+    {
+        padding: .5em;
+        margin: 0;
+    }
+    
+    nav.int-primary a.int-selected
+    {
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        -o-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -o-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: 0;        
+    }
+    nav.int-primary li:last-child
+    {
+        margin-bottom: .5em;
+    }
+    nav.int-primary, ul.int-tabs {
+        position: relative;
+    }
+    .int-navSearch
+    {
+        border: 0;
+        width: 100%;
+        float: none;
+        height: auto;
+        padding: .5em;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -o-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+
+
+    }
+    .int-navSearch input.int-search
+    {
+        width: 100%;
+        margin: 0;
+        padding: .5em;    
+    }
+    ul.int-tabs {
+        float: none;
+    }
+    .int-tabs li {
+        float: none;
+        margin: 0 .5em;
+        padding: 0;
+    }
+    div#int-page {
+        position: relative;
+        top: auto;
+    }
+    /*sidebar*/
+    div#int-region2 {
+        position: relative;
+        width: 100%;
+    }
+    #int-navToggle {
+        display: none;
+    }
+    nav.int-secondary {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+    }
+    div#int-region1 {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        overflow: initial;
+        width: 100%;
+    }
+    div#int-content {
+        position: relative;
+        overflow: hidden;
+        margin-left: .3em;
+        margin-right: .3em;
+    }
+    #int-pageControlBar, .int-inlineControlBar {
+        position: relative;
+    }
+    #int-pageControlBar ul, .int-inlineControlBar ul {
+        float: none;
+    }
+    #int-pageControlBar li, #int-pageControlBar form, .int-inlineControlBar li, .int-inlineControlBar form {
+        display: block;
+    }
+    #int-pageControlBar .int-button, .int-inlineControlBar .int-button {
+        display: block;
+        width: 99%;
+    }
+    
+    
+    .int-headerWrap a.int-button:active, .int-button:active, .int-pagination a:hover, .int-alphabet a:hover, .ui-button:hover
+    {
+    	padding: .4em .7em;
+    }
+
+
+    [class*="int-grid"], [class*="of2"], [class*="of3"], [class*="1/3rd"], [class*="2/3rd"] {
+        width: 100% !important;
+        margin-left: 0;
+    }
+    [class*="of2"], .int-col3of3 {
+        margin-left: 0;
+    }
+    .int-inline label {
+        display: block;
+    }
+    span.int-prefix, span.int-postfix {
+        display: none;
+    }
+    .int-inputAppend {
+        white-space: normal;
+    }
+    .int-button {
+        display: block;
+    }
+    .int-button, .int-buttonGroup > .int-button, [class*="int-grid"] .int-button, .int-inputAppend .int-button, [class*="int-grid"] .int-button {
+        margin-left: 0;
+        margin-top: .4em;
+        display: block;
+        border-radius: 3px;
+    }
+    .int-inputAppend .int-button, .int-inputAppend .int-button:last-child, .int-buttonGroup > .int-button:first-child, .int-buttonGroup > .int-button:last-child {
+        border-radius: 3px;
+    }
+    .int-buttonGroup {
+        display: block;
+    }
+    .int-alertSticky {
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .int-mainContentToggle .int-alertSticky
+    {
+        left: 4em;
+        right: 1.5em;
+    }
+    /*.int-checkMenu
+    {
+        display: block;
+        margin-bottom: 1em;    
+    }
+    .int-checkMenu .int-checkContainer, .int-checkMenu > .int-checkContainer + .int-button
+    {
+        display: inline;    
+    }
+    .int-dropMenu
+    {
+        width: 317px;
+    }*/
+}
+@media (max-width: 979px) {
+  .classname
+  {
+  
+  }
+}
+@media (min-width: 980px) {
+  .classname
+  {
+  
+  }
+}
+

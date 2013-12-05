@@ -1,0 +1,2118 @@
+<!DOCTYPE html><html lang="en"><!-- InstanceBegin template="/Templates/indextemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Tables</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="css/uif-fontAwesome.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="css/uif-stylesheet.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="css/uif-responsive.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="css/uif-print.css" media="print"/>
+<!-- DOCS -->
+<link rel="stylesheet" type="text/css" href="docsonly/css/docs.css" media="screen, projection"/>
+<!-- End DOCS -->
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="css/uif-ie.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="css/uif-ie8.css" media="screen, projection" />
+<script type="text/javascript" src="js/html5shiv.js"></script>
+<script type="text/javascript" src="js/html5shiv-printshiv.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/uif-fontAwesome-ie7.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="css/uif-ie7.css" media="screen, projection" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="css/uif-print.css" media="print"/>
+<!--[if lt IE 9]>    
+<link rel="stylesheet" type="text/css" href="../docsonly/css/uif-ie.css" media="screen, projection" />
+<![endif]-->
+<!-- InstanceParam name="Javascript functions" type="boolean" value="true" -->
+</head>
+<body>
+<div id="int-org">
+	<!--Application Header-->
+	<section class="int-headerWrap">
+	<a class="int-vantageLogo" href="#">
+	<span class="int-vantageIcon">Vantage logo</span>
+	</a>
+	<div class="int-titleWrap">
+		<header class="int-title" role="banner">
+			<h1><a id="main-title" href="#"></a></h1>
+        </header>
+		<a class="int-skip" href="#int-content">Skip to content</a>
+	  <ul>
+			<li class="oucu">test4</li>
+			<li><a href="https://msds-test.open.ac.uk/signon/samsoff.aspx">Logout</a></li>
+	  </ul>
+	</div>
+  </section>
+	<div id="int-site">
+		<nav id="int-primary" class="int-primary" role="navigation">
+		<!--nav search-->
+		<form class="int-navSearch" role="search">
+			<label for="search">Application search...</label>
+			<input id="search" type="text" onclick="if(this.value == 'Application search...') this.value='';" onblur="if(this.value.length == 0) this.value='Application search...';" value="Application search..." name="Search" class="int-search ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"/>
+		</form>
+        <ul class="int-tabs">
+          <li class="bfa" id="bfa999999"><a href="#nav-bfa999999">Application Framework</a></li>
+        </ul>
+        </nav>
+		<div id="int-page">
+			<!--Sidebar-->
+            
+		  <div id="int-region2">
+				<a id="int-navToggle" href="#" role="button"><i id="int-showHideTooltip" class="int-icon-reorder int-tooltipW"></i></a>
+				<nav id="nav-bfa999999" class="int-secondary" role="navigation" style="display: none">
+				<ul id="acc-bfa999999">
+					<li class="app" id="app99999"><a href="#">Client Framework</a>
+					<ul>
+						<li class="page" id="page9999"><a href="index.html">Getting Started</a></li>
+						<li class="page" id="page9999"><a href="layouts.html">Layouts: </a></li>
+						<li class="page" id="page9999"><a href="columns.html">- Columns</a></li>
+						<li class="page" id="page9999"><a href="rows.html">- Rows &amp; Grids</a></li>
+						<li class="page" id="page9999"><a href="buttons.html">Buttons &amp; Togglers</a></li>
+						<li class="page" id="page9999"><a href="icons.html">Icons</a></li>
+						<li class="page" id="page9999"><a href="forms.html">Forms</a></li>
+						<li class="page" id="page9999"><a href="jQueryUI/accordion.html">jQuery UI Widgets</a></li>
+						<li class="page" id="page9999"><a href="navigation.html">Navigation</a></li>
+						<li class="page" id="page9999"><a href="notifications.html">Notifications</a></li>
+						<li class="page" id="page9999"><a href="tables.html">Tables</a></li>
+						<li class="page" id="page9999"><a href="typography.html">Typography</a></li>
+						<li class="page" id="page9999"><a href="content.html">Content</a></li>
+						<li class="page" id="page9999"><a href="javascript.html">Javascript</a></li>
+					</ul>
+					</li>
+				</ul>
+				</nav>
+		  </div>
+			<!--Main content area-->
+			<div id="int-region1">
+			  <div id="int-content" class="int-content">
+              	<!-- InstanceBeginEditable name="Main content area" -->
+				<h1>Tables</h1>
+                <ol class="int-jumpLinks">
+                    <li>Jump to:</li>
+                    <li><a href="#basicTable">Basic Table</a></li>
+                    <li><a href="#sortableTable">Sortable Table</a></li>
+                    <li><a href="#tableColumnWidths">Table Column Widths</a></li>
+                    <li><a href="#expandingNestedTable">Expanding Nested Table</a></li>
+                    <li><a href="#otherTableExamples">Other Table Examples</a></li>
+                    <li><a href="#datatables">DataTables</a></li>
+                </ol>
+                <!-- Basic Tables -->
+                <h2 id="basicTable">Basic Table</h2>
+                <div class="int-component">
+                    <div class="example">
+<div class="int-tableFeature">
+    <table>
+    <caption>Basic Table</caption>
+    <thead>
+    <tr>
+        <th class="header">
+            Last Name
+        </th>
+        <th class="header">
+            First Name
+        </th>
+        <th class="header">
+            Email
+        </th>
+        <th class="header">
+            Due
+        </th>
+        <th class="header">
+            Web Site
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            Smith
+        </td>
+        <td>
+            John
+        </td>
+        <td>
+            jsmith@gmail.com
+        </td>
+        <td>
+            $50.00
+        </td>
+        <td>
+            http://www.jsmith.com
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Bach
+        </td>
+        <td>
+            Frank
+        </td>
+        <td>
+            fbach@yahoo.com
+        </td>
+        <td>
+            $50.00
+        </td>
+        <td>
+            http://www.frank.com
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Doe
+        </td>
+        <td>
+            Jason
+        </td>
+        <td>
+            jdoe@hotmail.com
+        </td>
+        <td>
+            $100.00
+        </td>
+        <td>
+            http://www.jdoe.com
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Conway
+        </td>
+        <td>
+            Tim
+        </td>
+        <td>
+            tconway@earthlink.net
+        </td>
+        <td>
+            $50.00
+        </td>
+        <td>
+            http://www.timconway.com
+        </td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active">
+                            <a href="#basicTableRazor">Razor</a>
+                        </div>
+                        <div>
+                            <a href="#basicTableHTML">HTML</a>
+                        </div>
+                        <div>
+                            <a href="#basicTableText">Supporting Text</a>
+                        </div>
+                        <div>
+                            <a href="#basicTableChangelog">Changelog</a>
+                        </div>
+                    </div>
+                    <div class="doc" id="basicTableHTML">
+                        <pre>
+                        </pre>
+                    </div>
+                    <div class="docrazor" id="basicTableRazor">
+                        <pre class="int-toggleCode">
+@using (Html.BeginTable("Basic Table", false, false))
+{
+    using (Html.BeginTableHead())
+    {
+        using (Html.BeginTableRow())
+        {
+            @Html.TableHeadCell("Last Name")
+            @Html.TableHeadCell("First Name")
+            @Html.TableHeadCell("Email")
+            @Html.TableHeadCell("Web Site")
+        }
+    }
+    using (Html.BeginTableBody())
+    {
+        foreach (var row in Model.TableRows)
+        {
+            using (Html.BeginTableRow())
+            {
+                @Html.TableCell(row.FirstName)
+                @Html.TableCell(row.LastName)
+                @Html.TableCell(row.Email)
+                @Html.TableCell(row.Website.AbsoluteUri)
+            }
+        }
+    }
+}
+                        </pre>
+                    </div>
+                    <div class="doc" id="basicTableText">
+                        <p>
+                            The basic table is a standard html table. This includes <code>div.int-tableFeature</code> which adds block style to the table as well as a horizontal scroll bar (auto). The <code>caption</code> is optional and adds the grey bar at the top of the table header.
+                        </p>
+                        <p class="int-note">
+                            Text alignment can be cutomised by adding <code>int-center</code> and <code>int-right</code> class names to <code>th</code> and <code>td</code>s to align text values within table cells.
+                        </p>
+                    </div>
+                    <div class="doc" id="basicTableChangelog">
+                        <table class="changelog">
+                        <colgroup>
+                        <col class="int-c10">
+                        <col class="int-c90">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>
+                                Version
+                            </th>
+                            <th>
+                                Changes
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                v1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                v1.1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Basic Tables -->
+                <!--Sortable Tables-->
+                <h2 id="sortableTable">Sortable Table</h2>
+                <div class="int-component">
+                    <div class="example">
+<div class="int-tableFeature">
+    <table class="int-sortableTable">
+    <caption>Sortable Table</caption>
+    <thead>
+    <tr>
+        <th class="header">
+            Last Name
+        </th>
+        <th class="header">
+            First Name
+        </th>
+        <th class="header">
+            Email
+        </th>
+        <th class="header">
+            Due
+        </th>
+        <th class="header">
+            Web Site
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            Smith
+        </td>
+        <td>
+            John
+        </td>
+        <td>
+            jsmith@gmail.com
+        </td>
+        <td>
+            $50.00
+        </td>
+        <td>
+            http://www.jsmith.com
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Bach
+        </td>
+        <td>
+            Frank
+        </td>
+        <td>
+            fbach@yahoo.com
+        </td>
+        <td>
+            $50.00
+        </td>
+        <td>
+            http://www.frank.com
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Doe
+        </td>
+        <td>
+            Jason
+        </td>
+        <td>
+            jdoe@hotmail.com
+        </td>
+        <td>
+            $100.00
+        </td>
+        <td>
+            http://www.jdoe.com
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Conway
+        </td>
+        <td>
+            Tim
+        </td>
+        <td>
+            tconway@earthlink.net
+        </td>
+        <td>
+            $50.00
+        </td>
+        <td>
+            http://www.timconway.com
+        </td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active">
+                            <a href="#sortableTableRazor">Razor</a>
+                        </div>
+                        <div>
+                            <a href="#sortableTableHTML">HTML</a>
+                        </div>
+                        <div>
+                            <a href="#sortableTableText">Supporting Text</a>
+                        </div>
+                        <div>
+                            <a href="#sortableTableChangelog">Changelog</a>
+                        </div>
+                    </div>
+                    <div class="doc" id="sortableTableHTML">
+                        <pre>
+                        </pre>
+                    </div>
+                    <div class="docrazor" id="sortableTableRazor">
+                        <pre class="int-toggleCode">
+@using (Html.BeginTable("Sortable Table", true, false))
+{
+    using (Html.BeginTableHead())
+    {
+        using (Html.BeginTableRow())
+        {
+            @Html.TableHeadCell("Last Name")
+            @Html.TableHeadCell("First Name")
+            @Html.TableHeadCell("Email")
+            @Html.TableHeadCell("Web Site")
+        }
+    }
+    using (Html.BeginTableBody())
+    {
+        foreach (var row in Model.TableRows)
+        {
+            using (Html.BeginTableRow())
+            {
+                @Html.TableCell(row.FirstName)
+                @Html.TableCell(row.LastName)
+                @Html.TableCell(row.Email)
+                @Html.TableCell(row.Website.AbsoluteUri)
+            }
+        }
+    }
+}
+                        </pre>
+                    </div>
+                    <div class="doc" id="sortableTableText">
+                        <p>
+                            Sortable table is a basic table with an additional <code>.int-sortableTable</code> added to the <code>table</code> tag.
+                        </p>
+                    </div>
+                    <div class="doc" id="sortableTableChangelog">
+                        <table class="changelog">
+                        <colgroup>
+                        <col class="int-c10">
+                        <col class="int-c90">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>
+                                Version
+                            </th>
+                            <th>
+                                Changes
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                v1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                v1.1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Sortable Tables -->
+                <!-- Column Widths -->
+                <h2 id="tableColumnWidths">Table Column Widths</h2>
+                <div class="int-component">
+                    <div class="example">
+<div class="int-tableFeature">
+    <table>
+    <caption>Basic Table</caption>
+    <!-- Colgroup col to set column widths -->
+    <colgroup>
+    <col class="int-c60">
+    <col class="int-c10">
+    <col class="int-c20">
+    <col class="int-c10">
+    </colgroup>
+    <!-- End Colgroup col to set column widths -->
+    <thead>
+    <tr>
+        <th class="header">
+            Last Name
+        </th>
+        <th class="header">
+            First Name
+        </th>
+        <th class="header">
+            Email
+        </th>
+        <th class="header">
+            Due
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            Smith
+        </td>
+        <td>
+            John
+        </td>
+        <td>
+            jsmith@gmail.com
+        </td>
+        <td>
+            $50.00
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Bach
+        </td>
+        <td>
+            Frank
+        </td>
+        <td>
+            fbach@yahoo.com
+        </td>
+        <td>
+            $50.00
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Doe
+        </td>
+        <td>
+            Jason
+        </td>
+        <td>
+            jdoe@hotmail.com
+        </td>
+        <td>
+            $100.00
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Conway
+        </td>
+        <td>
+            Tim
+        </td>
+        <td>
+            tconway@earthlink.net
+        </td>
+        <td>
+            $50.00
+        </td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active">
+                            <a href="#tableColWidthsRazor">Razor</a>
+                        </div>
+                        <div>
+                            <a href="#tableColWidthsHTML">HTML</a>
+                        </div>
+                        <div>
+                            <a href="#tableColWidthsText">Supporting Text</a>
+                        </div>
+                        <div>
+                            <a href="#tableColWidthsChangelog">Changelog</a>
+                        </div>
+                    </div>
+                    <div class="doc" id="tableColWidthsHTML">
+                        <pre>
+                        </pre>
+                    </div>
+                    <div class="docrazor" id="tableColWidthsRazor">
+                        <pre class="int-toggleCode">
+@using (Html.BeginTable("Table Column Widths", false, false, 60, 10, 20, 10))
+{
+    using (Html.BeginTableHead())
+    {
+        using (Html.BeginTableRow())
+        {
+            @Html.TableHeadCell("Last Name")
+            @Html.TableHeadCell("First Name")
+            @Html.TableHeadCell("Email")
+            @Html.TableHeadCell("Web Site")
+        }
+    }
+    using (Html.BeginTableBody())
+    {
+        foreach (var row in Model.TableRows)
+        {
+            using (Html.BeginTableRow())
+            {
+                @Html.TableCell(row.FirstName)
+                @Html.TableCell(row.LastName)
+                @Html.TableCell(row.Email)
+                @Html.TableCell(row.Website.AbsoluteUri)
+            }
+        }
+    }
+}
+                        </pre>
+                    </div>
+                    <div class="doc" id="tableColWidthsText">
+                        <p>
+                            To set the coloumn width, create a <code>colgroup</code> tag with child <code>col</code> tags corresponding to the number of columns you have. The table column width is set by changing the class of the <code>col</code> tag:
+                        </p>
+                        <ul class="list">
+                            <li><code>col.int-c10</code>: 10% width</li>
+                            <li><code>col.int-c20</code>: 20% width</li>
+                            <li><code>col.int-c30</code>: 30% width</li>
+                            <li><code>col.int-c40</code>: 40% width</li>
+                            <li><code>col.int-c50</code>: 50% width</li>
+                            <li><code>col.int-c60</code>: 60% width</li>
+                            <li><code>col.int-c70</code>: 70% width</li>
+                            <li><code>col.int-c80</code>: 80% width</li>
+                            <li><code>col.int-c90</code>: 90% width</li>
+                        </ul>
+                    </div>
+                    <div class="doc" id="tableColWidthsChangelog">
+                        <table class="changelog">
+                        <colgroup>
+                        <col class="int-c10">
+                        <col class="int-c90">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>
+                                Version
+                            </th>
+                            <th>
+                                Changes
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                v1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                v1.1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Column Widths -->
+                <!-- Expanding Nested Tables -->
+                <h2 id="expandingNestedTable">Expanding Nested Table</h2>
+                <div class="int-component">
+                    <div class="example">
+<!-- Optional Expand / Collapse All Buttons -->
+<a href="#" class="int-button int-expandCollapseAll" title="Expand and collapse all expanding nested tables"></a>
+<!-- End Optional Expand / Collapse All Buttons -->
+<div class="int-tableFeature">
+    <table class="int-expandingTable">
+    <caption>Table with expandable nested table</caption>
+    <thead>
+    <tr>
+        <th>
+            Table head column 1
+        </th>
+        <th>
+            Table head column 2
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            Cell info
+        </td>
+        <td>
+            Cell info
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Cell info
+        </td>
+        <td>
+            Cell info
+        </td>
+    </tr>
+    <!--Child Table Trigger Row-->
+    <tr>
+        <td>
+            Cell info
+        </td>
+        <td>
+            Cell info
+        </td>
+    </tr>
+    <!--Child Table-->
+    <tr class="int-childTable">
+        <td colspan="2">
+            <table>
+            <thead>
+            <tr>
+                <th>
+                    Table head column 1
+                </th>
+                <th>
+                    Table head column 2
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    Cell info
+                </td>
+                <td>
+                    Cell info
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cell info
+                </td>
+                <td>
+                    Cell info
+                </td>
+            </tr>
+            </tbody>
+            </table>
+        </td>
+    </tr>
+    <!--End Child Table-->
+    <tr>
+        <td>
+            Cell info
+        </td>
+        <td>
+            Cell info
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Cell info
+        </td>
+        <td>
+            Cell info
+        </td>
+    </tr>
+    <!--2nd Child Table Trigger Row-->
+    <tr>
+        <td>
+            Cell info
+        </td>
+        <td>
+            Cell info
+        </td>
+    </tr>
+    <!--2nd Child Table-->
+    <tr class="int-childTable">
+        <td colspan="2">
+            <table>
+            <thead>
+            <tr>
+                <th>
+                    Table head column 1
+                </th>
+                <th>
+                    Table head column 2
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    Cell info
+                </td>
+                <td>
+                    Cell info
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cell info
+                </td>
+                <td>
+                    Cell info
+                </td>
+            </tr>
+            </tbody>
+            </table>
+        </td>
+    </tr>
+    <!--End Child Table-->
+    <tr>
+        <td>
+            Cell info
+        </td>
+        <td>
+            Cell info
+        </td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active">
+                            <a href="#tableExpandedNestedRazor">Razor</a>
+                        </div>
+                        <div>
+                            <a href="#tableExpandedNestedHTML">HTML</a>
+                        </div>
+                        <div>
+                            <a href="#tableExpandedNestedText">Supporting Text</a>
+                        </div>
+                        <div>
+                            <a href="#tableExpandedNestedChangelog">Changelog</a>
+                        </div>
+                    </div>
+                    <div class="doc" id="tableExpandedNestedHTML">
+                        <pre>
+                        </pre>
+                    </div>
+                    <div class="docrazor" id="tableExpandedNestedRazor">
+                        <pre class="int-toggleCode">
+@using (Html.BeginTable("Expanding Nested Table", false, true))
+{
+    using (Html.BeginTableHead())
+    {
+        using (Html.BeginTableRow())
+        {
+            @Html.TableHeadCell("Last Name")
+            @Html.TableHeadCell("First Name")
+            @Html.TableHeadCell("Email")
+            @Html.TableHeadCell("Web Site")
+        }
+    }
+    using (Html.BeginTableBody())
+    {
+        using (Html.BeginTableRow(true))
+        {
+            @Html.TableCell("Crystal")
+            @Html.TableCell("Robert", 3)
+        }
+        using (Html.BeginNestedTableRow(4))
+        {
+            using (Html.BeginChildTable())
+            {
+                using (Html.BeginTableHead())
+                {
+                    using (Html.BeginTableRow())
+                    {
+                        @Html.TableHeadCell("Last Name")
+                        @Html.TableHeadCell("First Name")
+                    }
+                }
+                using (Html.BeginTableBody())
+                {
+                    foreach (var row in Model.TableRows)
+                    {
+                        using (Html.BeginTableRow())
+                        {
+                            @Html.TableCell(row.FirstName)
+                            @Html.TableCell(row.LastName)
+                        }
+                    }
+                }
+            }
+        }
+        foreach (var row in Model.TableRows)
+        {
+            using (Html.BeginTableRow())
+            {
+                @Html.TableCell(row.FirstName)
+                @Html.TableCell(row.LastName)
+                @Html.TableCell(row.Email)
+                @Html.TableCell(row.Website.AbsoluteUri)
+            }
+        }
+    }
+}
+                        </pre>
+                    </div>
+                    <div class="doc" id="tableExpandedNestedText">
+                        <p>
+                            An expanding nested table is comprised of the parent table and child tables. Each child table requires two rows to function correctly. One row is allocated as the trigger row to expand the child table. The other row is the row containing the child table and is hidden until triggered.
+                        </p>
+                        <p>
+                            The table row that contains the child table has a <code>.int-childTable</code>. The table is contained within a <code>td</code> that spans the whole row.
+                        </p>
+                        <p class="int-note">
+                             Only basic HTML markup will be valid for the child table. <code>Caption</code> and <code>div.int-tableFeature</code> should not be added.
+                        </p>
+                        <p>
+                            As there may be many child tables within the parent table, there is an optional button which toggles all the child tables to expand. The HTML markup for this button <code>a.int-button.int-expandCollapseAll[href="#"]</code>
+                        </p>
+                    </div>
+                    <div class="doc" id="tableExpandedNestedChangelog">
+                        <table class="changelog">
+                        <colgroup>
+                        <col class="int-c10">
+                        <col class="int-c90">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>
+                                Version
+                            </th>
+                            <th>
+                                Changes
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                v1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                v1.1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h2 id="datatables">DataTables</h2>
+                <p class="int-note">
+                    For a full API and list of plugins, go to <a href="http://datatables.net/" target="_blank">DataTables.Net</a>
+                </p>
+                <div class="int-component">
+                    <div class="example">
+<div class="int-tableFeature">
+    <table class="display int-datatables" id="custom_id">
+    <caption>Basic Table</caption>
+    <thead>
+    <tr>
+        <th>
+            Rendering engine
+        </th>
+        <th>
+            Browser
+        </th>
+        <th>
+            Platform(s)
+        </th>
+        <th>
+            Engine version
+        </th>
+        <th>
+            CSS grade
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd gradeX">
+        <td>
+            Trident
+        </td>
+        <td>
+            Internet Explorer 4.0
+        </td>
+        <td>
+            Win 95+
+        </td>
+        <td class="center">
+             4
+        </td>
+        <td class="center">
+            X
+        </td>
+    </tr>
+    <tr class="even gradeC">
+        <td>
+            Trident
+        </td>
+        <td>
+            Internet Explorer 5.0
+        </td>
+        <td>
+            Win 95+
+        </td>
+        <td class="center">
+            5
+        </td>
+        <td class="center">
+            C
+        </td>
+    </tr>
+    <tr class="odd gradeA">
+        <td>
+            Trident
+        </td>
+        <td>
+            Internet Explorer 5.5
+        </td>
+        <td>
+            Win 95+
+        </td>
+        <td class="center">
+            5.5
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="even gradeA">
+        <td>
+            Trident
+        </td>
+        <td>
+            Internet Explorer 6
+        </td>
+        <td>
+            Win 98+
+        </td>
+        <td class="center">
+            6
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="odd gradeA">
+        <td>
+            Trident
+        </td>
+        <td>
+            Internet Explorer 7
+        </td>
+        <td>
+            Win XP SP2+
+        </td>
+        <td class="center">
+            7
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="even gradeA">
+        <td>
+            Trident
+        </td>
+        <td>
+            AOL browser (AOL desktop)
+        </td>
+        <td>
+            Win XP
+        </td>
+        <td class="center">
+            6
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Firefox 1.0
+        </td>
+        <td>
+            Win 98+ / OSX.2+
+        </td>
+        <td class="center">
+            1.7
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Firefox 1.5
+        </td>
+        <td>
+            Win 98+ / OSX.2+
+        </td>
+        <td class="center">
+            1.8
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Firefox 2.0
+        </td>
+        <td>
+            Win 98+ / OSX.2+
+        </td>
+        <td class="center">
+            1.8
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Firefox 3.0
+        </td>
+        <td>
+            Win 2k+ / OSX.3+
+        </td>
+        <td class="center">
+            1.9
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Camino 1.0
+        </td>
+        <td>
+            OSX.2+
+        </td>
+        <td class="center">
+            1.8
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Camino 1.5
+        </td>
+        <td>
+            OSX.3+
+        </td>
+        <td class="center">
+            1.8
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Netscape 7.2
+        </td>
+        <td>
+            Win 95+ / Mac OS 8.6-9.2
+        </td>
+        <td class="center">
+            1.7
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Netscape Browser 8
+        </td>
+        <td>
+            Win 98SE+
+        </td>
+        <td class="center">
+            1.7
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Netscape Navigator 9
+        </td>
+        <td>
+            Win 98+ / OSX.2+
+        </td>
+        <td class="center">
+            1.8
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Mozilla 1.0
+        </td>
+        <td>
+            Win 95+ / OSX.1+
+        </td>
+        <td class="center">
+            1
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Mozilla 1.1
+        </td>
+        <td>
+            Win 95+ / OSX.1+
+        </td>
+        <td class="center">
+            1.1
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Mozilla 1.2
+        </td>
+        <td>
+            Win 95+ / OSX.1+
+        </td>
+        <td class="center">
+            1.2
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Mozilla 1.3
+        </td>
+        <td>
+            Win 95+ / OSX.1+
+        </td>
+        <td class="center">
+            1.3
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Mozilla 1.4
+        </td>
+        <td>
+            Win 95+ / OSX.1+
+        </td>
+        <td class="center">
+            1.4
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Mozilla 1.5
+        </td>
+        <td>
+            Win 95+ / OSX.1+
+        </td>
+        <td class="center">
+            1.5
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Mozilla 1.6
+        </td>
+        <td>
+            Win 95+ / OSX.1+
+        </td>
+        <td class="center">
+            1.6
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Mozilla 1.7
+        </td>
+        <td>
+            Win 98+ / OSX.1+
+        </td>
+        <td class="center">
+            1.7
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Mozilla 1.8
+        </td>
+        <td>
+            Win 98+ / OSX.1+
+        </td>
+        <td class="center">
+            1.8
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Seamonkey 1.1
+        </td>
+        <td>
+            Win 98+ / OSX.2+
+        </td>
+        <td class="center">
+            1.8
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Gecko
+        </td>
+        <td>
+            Epiphany 2.20
+        </td>
+        <td>
+            Gnome
+        </td>
+        <td class="center">
+            1.8
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Webkit
+        </td>
+        <td>
+            Safari 1.2
+        </td>
+        <td>
+            OSX.3
+        </td>
+        <td class="center">
+            125.5
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Webkit
+        </td>
+        <td>
+            Safari 1.3
+        </td>
+        <td>
+            OSX.3
+        </td>
+        <td class="center">
+            312.8
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Webkit
+        </td>
+        <td>
+            Safari 2.0
+        </td>
+        <td>
+            OSX.4+
+        </td>
+        <td class="center">
+            419.3
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Webkit
+        </td>
+        <td>
+            Safari 3.0
+        </td>
+        <td>
+            OSX.4+
+        </td>
+        <td class="center">
+            522.1
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Webkit
+        </td>
+        <td>
+            OmniWeb 5.5
+        </td>
+        <td>
+            OSX.4+
+        </td>
+        <td class="center">
+            420
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Webkit
+        </td>
+        <td>
+            iPod Touch / iPhone
+        </td>
+        <td>
+            iPod
+        </td>
+        <td class="center">
+            420.1
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Webkit
+        </td>
+        <td>
+            S60
+        </td>
+        <td>
+            S60
+        </td>
+        <td class="center">
+            413
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Opera 7.0
+        </td>
+        <td>
+            Win 95+ / OSX.1+
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Opera 7.5
+        </td>
+        <td>
+            Win 95+ / OSX.2+
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Opera 8.0
+        </td>
+        <td>
+            Win 95+ / OSX.2+
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Opera 8.5
+        </td>
+        <td>
+            Win 95+ / OSX.2+
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Opera 9.0
+        </td>
+        <td>
+            Win 95+ / OSX.3+
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Opera 9.2
+        </td>
+        <td>
+            Win 88+ / OSX.3+
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Opera 9.5
+        </td>
+        <td>
+            Win 88+ / OSX.3+
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Opera for Wii
+        </td>
+        <td>
+            Wii
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Nokia N800
+        </td>
+        <td>
+            N800
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Presto
+        </td>
+        <td>
+            Nintendo DS browser
+        </td>
+        <td>
+            Nintendo DS
+        </td>
+        <td class="center">
+            8.5
+        </td>
+        <td class="center">
+            C/A<sup>1</sup>
+        </td>
+    </tr>
+    <tr class="gradeC">
+        <td>
+            KHTML
+        </td>
+        <td>
+            Konqureror 3.1
+        </td>
+        <td>
+            KDE 3.1
+        </td>
+        <td class="center">
+            3.1
+        </td>
+        <td class="center">
+            C
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            KHTML
+        </td>
+        <td>
+            Konqureror 3.3
+        </td>
+        <td>
+            KDE 3.3
+        </td>
+        <td class="center">
+            3.3
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            KHTML
+        </td>
+        <td>
+            Konqureror 3.5
+        </td>
+        <td>
+            KDE 3.5
+        </td>
+        <td class="center">
+            3.5
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeX">
+        <td>
+            Tasman
+        </td>
+        <td>
+            Internet Explorer 4.5
+        </td>
+        <td>
+            Mac OS 8-9
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            X
+        </td>
+    </tr>
+    <tr class="gradeC">
+        <td>
+            Tasman
+        </td>
+        <td>
+            Internet Explorer 5.1
+        </td>
+        <td>
+            Mac OS 7.6-9
+        </td>
+        <td class="center">
+            1
+        </td>
+        <td class="center">
+            C
+        </td>
+    </tr>
+    <tr class="gradeC">
+        <td>
+            Tasman
+        </td>
+        <td>
+            Internet Explorer 5.2
+        </td>
+        <td>
+            Mac OS 8-X
+        </td>
+        <td class="center">
+            1
+        </td>
+        <td class="center">
+            C
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Misc
+        </td>
+        <td>
+            NetFront 3.1
+        </td>
+        <td>
+            Embedded devices
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            C
+        </td>
+    </tr>
+    <tr class="gradeA">
+        <td>
+            Misc
+        </td>
+        <td>
+            NetFront 3.4
+        </td>
+        <td>
+            Embedded devices
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            A
+        </td>
+    </tr>
+    <tr class="gradeX">
+        <td>
+            Misc
+        </td>
+        <td>
+            Dillo 0.8
+        </td>
+        <td>
+            Embedded devices
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            X
+        </td>
+    </tr>
+    <tr class="gradeX">
+        <td>
+            Misc
+        </td>
+        <td>
+            Links
+        </td>
+        <td>
+            Text only
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            X
+        </td>
+    </tr>
+    <tr class="gradeX">
+        <td>
+            Misc
+        </td>
+        <td>
+            Lynx
+        </td>
+        <td>
+            Text only
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            X
+        </td>
+    </tr>
+    <tr class="gradeC">
+        <td>
+            Misc
+        </td>
+        <td>
+            IE Mobile
+        </td>
+        <td>
+            Windows Mobile 6
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            C
+        </td>
+    </tr>
+    <tr class="gradeC">
+        <td>
+            Misc
+        </td>
+        <td>
+            PSP browser
+        </td>
+        <td>
+            PSP
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            C
+        </td>
+    </tr>
+    <tr class="gradeU">
+        <td>
+            Other browsers
+        </td>
+        <td>
+            All others
+        </td>
+        <td>
+            -
+        </td>
+        <td class="center">
+            -
+        </td>
+        <td class="center">
+            U
+        </td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>
+            Rendering engine
+        </th>
+        <th>
+            Browser
+        </th>
+        <th>
+            Platform(s)
+        </th>
+        <th>
+            Engine version
+        </th>
+        <th>
+            CSS grade
+        </th>
+    </tr>
+    </tfoot>
+    </table>
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active">
+                            <a href="#datatablesHTML">HTML</a>
+                        </div>
+                        <div>
+                            <a href="#datatablesJS">JS</a>
+                        </div>
+                        <div>
+                            <a href="#datatablesText">Supporting Text</a>
+                        </div>
+                        <div>
+                            <a href="#datatablesChangelog">Changelog</a>
+                        </div>
+                    </div>
+                    <div class="doc" id="datatablesHTML">
+                        <pre class="int-toggleCode">
+                        </pre>
+                    </div>
+                    <div class="doc" id="datatablesJS"><pre class="int-jsfncall"></pre></div>
+                    <div class="doc" id="datatablesText">
+                        <p>
+                            Create a <code>table.int-datatables</code> with a custom ID. Call the datatables function, either on the <code>.int-datatables</code> or on the custom id. There are optional functions to override the default look of datatables (see JS tab).
+                        </p>
+                    </div>
+                    <div class="doc" id="datatablesChangelog">
+                        <table class="changelog">
+                        <colgroup>
+                        <col class="int-c10">
+                        <col class="int-c90">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>
+                                Version
+                            </th>
+                            <th>
+                                Changes
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                v1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                v1.1
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+		      	<!-- InstanceEndEditable -->
+              </div>
+		    </div>
+			<!--end of Main content area-->
+		</div>
+	</div>
+</div>
+<!--Throbber-->
+<div id="int-throbber" style="display: none;">
+	<div class="int-throbberOverlay">
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-ui-1.9.2.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery/appframework.jquery.validate.unobtrusive.js"></script>
+<!-- DOCS -->
+<script type="text/javascript" src="docsonly/js/widgets/jquery.docs.js"></script>
+<!-- End DOCS -->
+<!-- plugins -->
+<script type="text/javascript" src="js/widgets/jqueryui.combobox.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/widgets/datatables.net/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/widgets/datatables.net/ColVis-dev.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.alert.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.formtips.1.2.6.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.actual.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.multiselect.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.multiselect.filter.js"></script>
+<!-- /plugins -->
+<script type="text/javascript" src="js/uif-global.js"></script>
+<script type="text/javascript" src="js/uif-menus.js"></script>
+<script type="text/javascript" src="js/uif-framework.js"></script>
+<script type="text/javascript" src="js/uif-modal.js"></script>
+<script type="text/javascript" src="js/uif-autocomplete.js"></script>
+<script type="text/javascript" src="js/spin.js"></script>
+<script type="text/javascript" src="js/spin.setup.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/uif-components-ie8.js"></script>
+<![endif]-->
+<!--End Throbber-->
+<script>
+	OU.AppFramework.MenuManager.Initialise();
+	OU.AppFramework.AriaHelper.UpdateAll();
+	OU.AppFramework.UtilityHelper.ApplyValidationStyles('#int-content');
+	OU.AppFramework.UtilityHelper.CalculatePageControlBarHeight();
+</script>
+<!-- InstanceBeginEditable name="EditRegion3" -->
+<script class="int-jsfncall">
+(function ($) {
+	$('.int-datatables').dataTable({
+		"sPaginationType": "full_numbers",
+		"sDom": 'C<"clear">lfrtip'
+	});
+
+	//Optional function which appebds the show entries select to the end of the label
+	OU.AppFramework.AriaHelper.UpdateDatatables();
+})(jQuery);
+</script>  
+<!-- InstanceEndEditable -->
+<script>
+	docs.jsfncall();
+	docs.jsTab();
+	//this fn call has to be below foot scripts
+</script>
+
+</body>
+<!-- InstanceEnd --></html>
+<link href="/Vantage/Docs/SamsDebugging.axd?r=SamsDebugging.css" rel="stylesheet" type="text/css"/>
+<script src="/Vantage/Docs/SamsDebugging.axd?r=SamsDebugging.js" type="text/javascript"></script>
+<script type="text/javascript">window.samsDebuggerApplicationRoot = '/Vantage/Docs';</script>

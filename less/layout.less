@@ -1,0 +1,546 @@
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: @font-size-base-pc; font: inherit; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ol, ul {list-style: none;}
+blockquote, q{quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after{content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+/*
+- UI Screen Styles
+- v1.0 11/11/13
+- Antony McEvoy
+- Antony.McEvoy@open.ac.uk
+- Information Technology
+*/
+/* General styles
+..........................................................*/
+body
+{
+    line-height: 1;
+	font: 80%/1.5em Helvetica, Arial, sans-serif;
+    .gradient-bg;
+    .background-cover-default;
+	color: @default-font;
+	overflow: hidden;
+}
+/* Main Layout
+..........................................................*/
+div#int-org 
+{
+	max-width: 98%;
+	min-width: 42em /* (42 x 12 = 504px */;
+	margin: 0 1%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+div#int-site
+{
+    .box-shadow(0 0 15px 0 rgba(0,0,0,0.3));
+    .border-radius(5px 5px 0 0);
+	position: absolute;
+	top: 3.15em;
+	left: -1px;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	border: 1px solid @site-border;
+	border-bottom: 0;
+}
+div#int-page
+{
+	background: @table-row-background;
+	position: absolute;
+	top: 3.5em;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid @button-hover-border;
+}
+div#int-content
+{
+	padding: .5em 2% 1em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border-top: 1px solid @general-border;
+	-webkit-overflow-scrolling : touch; /*mobile touch scroll event*/
+}
+.int-mainContentToggle #int-content
+{
+	padding-left: 4.5em;
+	padding-right: 1.5em;
+}
+/* Header
+..........................................................*/
+.int-headerWrap
+{
+	width:100%;
+	margin: .5em 0;
+    li {
+	    display: inline;
+	    vertical-align: middle;
+	    margin: 0 .5em;
+        a {
+	        margin: 0;
+	        padding: 0;
+        }
+        &:first-child a
+        {
+	        border: 0;
+        }
+    }
+    li.oucu {
+        max-width: 35%;
+        display: inline-block;
+        overflow: hidden;
+        .text-overflow-default;
+        white-space: nowrap;
+        position: relative;
+    }
+    h1 a {
+	    width: 100%;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    .text-overflow-default;
+    }
+    ul {
+	    float: right;
+	    text-align: right;
+	    width: 45%;
+        margin-top: -.6em;
+    }
+}
+.int-vantageLogo
+{
+    background: rgba(148, 211, 254, 0.15);
+    padding: .4em .5em;
+    width: 25px;
+    position: absolute;
+    top: -.1em;
+}
+.int-vantageIcon
+{
+	background-image: url(../img/vantageicon.svg);
+	width: 25px;
+	height: 32px;
+	display: block;
+	background-position: center;
+    text-indent: -5000em;
+    overflow: hidden;
+}
+.int-titleWrap
+{
+    margin-left: 46px;
+    ul {
+        display: inline-block;
+        float: none;
+    }
+    li {
+        white-space: nowrap;
+        line-height: 1;
+    }
+}
+.int-title, .int-headerWrap, .int-title h1 a#main-title
+{
+	display: block;
+}
+.int-title
+{
+	float: left;
+	position: relative;
+	z-index: 99;
+	margin-top: .1em;
+	width: 55%;
+    h1 {
+	    margin: 0;
+	    color: @main-title-font;
+    }
+}
+/*Primary Navigation
+..........................................................*/
+nav.int-primary {
+	.nav-bg;
+	padding: 0;
+	border-top: 1px solid @gradient-border;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+    .border-radius(3px 3px 0 0);
+	z-index: 6;
+    ul {
+	    overflow: hidden;
+	    left: 20%;
+	    position: absolute;
+	    padding-right: 3px;
+    }
+    li {
+        .box-shadow(none);
+        a
+        {
+            border: 1px solid transparent;
+            &:focus {
+                border: 1px solid @input-focused-border;	
+            }
+            &:hover {
+	            color: @anchor-hover-font;
+                .text-shadow(none);
+            }
+        }
+    }
+    a.int-selected {
+        border: 1px solid @input-border;
+	    background: @form-feature-background;
+        .box-shadow(inset 0 2px 2px rgba(0,0,0,0.4));
+    }
+}
+nav.int-primary, ul.int-tabs
+{
+	position: relative;
+	left: 0;
+	display: block;
+	float: left;
+}
+.int-tabs li 
+{
+	display: block;
+	float: left;
+	padding: 0 1px;
+    &:first-child {
+	    margin-left: .5em;
+    }
+}
+nav.int-primary li a, nav.int-primary a.int-selected
+{
+	padding: .5em 1em;
+	display: block;
+    margin: .4em 0;
+    .border-radius(17px);
+    .outline-0;
+}
+nav.int-primary li a, nav.int-secondary li a
+{
+    .text-shadow(0 1px 0 rgba(255,255,255,0.7));
+}
+.int-navSearch {
+	width: 20%;
+	float: left;
+	height: 3.4em;
+    .box-shadow(inset -1px 0px 0px 0px rgba(255, 255, 255, 0.5));
+	border-right: 1px solid @menu-border;
+    input.int-search {
+	    width: 96%;
+	    margin: .5em 2%;
+	    padding: .5em 1%;
+	    .text-overflow-default;
+	    font-size: @font-size-base;
+    }
+}
+.int-navSearch label, .int-hide /*labels hidden from visual users, do not use display: none*/
+{
+    position: absolute !important;
+    height: 1px;
+    width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+/*Secondary Navigation
+..........................................................*/
+#int-navToggle
+{
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+    .box-shadow(0 3px 9px -4px rgba(0, 0, 0, 0.3));
+	z-index: 2;
+	.outline-0;
+    text-decoration: none;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    color: @default-font;
+}
+#int-navToggle:hover, #int-navToggle:active
+{
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: @anchor-hover-font;
+}
+div#int-region2.int-sidebarToggle {
+    width: 2.7em;
+}
+.int-sidebarToggle #int-navToggle
+{
+	height: 100%;
+    .box-shadow(none);
+}
+div#int-region2.int-sidebarToggle nav
+{
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+#int-showHideTooltip {
+    line-height: @line-height-base*1.4;
+    font-size: @font-size-base*1.65;
+    padding: .15em .35em .15em .4em;
+	display: inline-block;
+}
+/*nav*/
+nav.int-secondary {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 34px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-overflow-scrolling: touch; /*mobile touch event*/
+    .ui-accordion {
+        .ui-accordion-header {
+        padding: .5em;
+        border: 0;
+        margin-top: 2px;
+        }
+    .ui-accordion-header .ui-icon {
+        vertical-align: middle;
+        text-decoration: none;
+        }
+    .ui-accordion-content {
+        padding: 0;
+        overflow: auto;
+        }
+    }
+    ul li {
+        a {
+            .text-overflow-default;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        a.ui-state-active {
+            background: @body-background url(../img/secondary-nav-selected.png) repeat-x left bottom;
+            color: @secondary-nav-active-font;
+            .text-shadow(none);
+        }
+    }
+
+    li > ul {
+        padding: 0 0 .5em 0;
+        border-bottom: 1px dotted @input-border;
+
+        li a {
+            display: block;
+            padding: .4em .5em .4em 2em;
+        }
+    }
+}
+nav.int-secondary .int-selected {
+        background: @region2-selected-item-background;
+}
+/*Possibly Redundant*/
+/*nav.int-secondary ul li a:before, nav.int-secondary ul li span.int-selected:before
+{
+	color: @default-font;
+    .text-shadow2( 0 -1px 0 rgba(0, 0, 0, 1), 0 1px 0 rgba(255,255,255,1));
+	margin-right: .5em;
+}*/
+/*region 1
+..........................................................*/
+div#int-region1
+{
+	width:80%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+}
+div#int-region1.int-mainContentToggle {
+    width: 100%;
+}
+/*region 2
+..........................................................*/
+div#int-region2
+{
+    background: @region2-background;
+	width: 20%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	overflow: visible;
+	border-right: 1px solid @menu-border;
+	border-top: 1px solid @general-border;
+	z-index: 5;
+}
+/*Control Bar
+..........................................................*/
+#int-pageControlBar, .ui-dialog .int-inlineControlBar
+{
+       bottom: 0;
+       left: 0;
+       right: 0;
+        padding: .6em 0 1.2em 0;
+       margin: 0;
+        background: @form-feature-background;
+       border-top-width: 1px;
+       border-top-style: solid;
+       border-top-color: @general-border;
+       .box-shadow (0 -2px 12px -3px rgba(0,0,0,0.3))
+}
+#int-pageControlBar
+{
+       position: fixed;
+       width: 78%;
+       left: 20.6%;
+       padding-right: .4%;
+       z-index: 4;
+}
+.int-inlineControlBar
+{
+       margin: .5em 0;
+       display: inline-block;
+       width: 100%;
+}
+#int-pageControlBar a.intToTop, .int-inlineControlBar a.intToTop
+{
+    position: absolute !important;
+    height: 1px;
+    width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+#int-pageControlBar ul, .ui-dialog .int-inlineControlBar ul
+{
+       margin: 0 2%;
+}
+.int-inlineControlBar ul
+{
+       margin: 0;
+}
+.int-mainContentToggle #int-pageControlBar
+{
+       left: 1%;
+    width: 98%;
+    z-index: 4;
+    padding-right: 0;
+}
+.int-mainContentToggle #int-pageControlBar ul
+{
+       margin-left: 4.5em;
+}
+
+#int-pageControlBar li, #int-pageControlBar form, .int-inlineControlBar li, .int-inlineControlBar form
+{
+       position: relative;
+       display: inline;
+}
+
+/*Grids
+..........................................................*/
+.int-row, .int-wrap
+{
+	width: 100%;
+}
+.int-row:before, .int-row:after, .int-wrap:before, .int-wrap:after, .int-innerFeature:before, .int-innerFeature:after, .int-formFeature:before, .int-formFeature:after, .int-togglerFeature:before, .int-togglerFeature:after, .int-togglerFeatureNote:before, .int-togglerFeatureNote:after
+{
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.int-row:after, .int-wrap:after, .int-innerFeature:after, .int-formFeature:after, .int-togglerFeature:after, .int-togglerFeatureNote:after
+{
+	clear: both;
+}
+[class*="int-grid"], [class*="int-col"]
+{
+	float: left;
+	display: block;
+	width: 100%;
+	margin-left: 2%;
+    .box-sizing-default;
+}
+[class*="int-grid"]:first-child, [class*="int-grid"] .int-grid, [class*="int-col"]:first-child
+{
+	margin-left: 0;
+}
+.int-grid12, [class*="of2"] .int-grid6, [class*="of3"] .int-grid4, [class*="1/3rd"] .int-grid4, [class*="2/3rd"] .int-grid8
+{
+	width: 100%;
+	margin-left: 0;
+}
+.int-grid11
+{
+	width: 91.5%;
+}
+[class*="2/3rd"] .int-grid7
+{
+    width: 87.25%;   
+}
+.int-grid10, [class*="of2"] .int-grid5
+{
+	width: 83%;
+}
+.int-grid9, [class*="of3"] .int-grid3, [class*="1/3rd"] .int-grid3, [class*="2/3rd"] .int-grid6
+{
+	width: 74.5%;
+}
+.int-grid8, [class*="of2"] .int-grid4, [class*="2/3rd"]
+{
+	width: 66%;
+}
+[class*="2/3rd"] .int-grid5
+{
+    width: 61.75%;   
+}
+.int-grid7
+{
+	width: 57.5%;
+}
+.int-grid6, [class*="of2"], [class*="of2"] .int-grid3, [class*="of3"] .int-grid2, [class*="1/3rd"] .int-grid2, [class*="2/3rd"] .int-grid4
+{
+	width: 49%;
+}
+.int-grid5
+{
+	width: 40.5%;
+}
+[class*="2/3rd"] .int-grid3
+{
+    width: 36.25%;   
+}
+.int-grid4, [class*="of2"] .int-grid2, [class*="of3"], [class*="1/3rd"]
+{
+	width: 32%;
+}
+.int-grid3, [class*="of3"] .int-grid1, [class*="1/3rd"] .int-grid1, [class*="2/3rd"] .int-grid2
+{
+	width: 23.5%;
+}
+.int-grid2, [class*="of2"] .int-grid1
+{
+	width: 15%;
+}
+[class*="2/3rd"] .int-grid1
+{
+    width: 10.75%;   
+}
+.int-grid1
+{
+	width: 6.5%;
+}

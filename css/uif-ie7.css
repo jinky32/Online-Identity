@@ -1,0 +1,182 @@
+/*
+- UI IE7 Styles
+- v1.0 29/04/13
+- Antony McEvoy
+- Antony.McEvoy@open.ac.uk
+- Information Technology
+*/
+.int-headerWrap a.int-button, .int-button 
+{
+	padding: .4em .2em;
+}
+.int-navSearch input.int-search
+{
+    width: 93%;
+}
+.int-tabs
+{
+    margin-top: .1em;    
+}
+ol.int-jumpLinks
+{
+    width: 98%;
+}
+legend
+{
+    margin-left: -7px;
+}
+.int-row
+{
+	width: auto;
+	display: inline-block;
+}
+input[type="text"], input[type="search"], textarea, select, .int-dropContent
+{
+    width: 97.8%;
+}
+.int-prefix, .int-postfix
+{
+	display: inline-block;
+}
+.int-pagination:first-child, .int-alphabet:first-child
+{
+    margin-left: 0;   
+}
+table
+{
+    width: 97.8%;
+}
+.int-tableFeature
+{
+	width: 97.8%;
+}	
+.int-tableFeature table
+{
+    width: 100%;   
+}
+table.int-sortableTable thead tr .header
+{
+    background-image: url("../img/bg.gif");
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+#int-controlBar li, #int-controlBar form, .int-controlBar li, .int-controlBar form
+{
+    display: inline;
+    padding: 0;
+    margin: 0; 
+}
+#int-controlBar li, .int-controlBar li
+{
+    margin-right: .5em;
+}
+.int-headerWrap .int-button, #int-controlBar .int-button
+{
+    padding: .4em .3em;
+    display: block;
+}
+/*IE 7 specific grid due to box sizing
+..........................................................*/
+.int-row, .int-wrap
+{
+    width: auto;
+    zoom: 1;   
+}
+[class*="int-grid"]
+{
+   display: inline;
+   margin-left: 2%;
+   margin-right: 2%;  
+}
+[class*="2/3rd"] .int-grid8
+{
+    width: 98.8%;   
+}
+.int-grid12, [class*="of2"] .int-grid6, [class*="of3"] .int-grid4, [class*="1/3rd"] .int-grid4
+{
+    width: 95.8%; 
+}
+.int-grid11
+{
+   width: 85.65%;
+}
+[class*="2/3rd"] .int-grid7
+{
+    width: 85%;    
+}
+.int-grid10, [class*="of2"] .int-grid5
+{
+   width: 77.5%;
+}
+[class*="2/3rd"] .int-grid6
+{
+    width: 72%;   
+}
+.int-grid9, [class*="of3"] .int-grid3, [class*="1/3rd"] .int-grid3
+{
+   width: 69.35%;
+}
+[class*="2/3rd"]
+{
+    width: 63.6%;   
+}
+.int-grid8, [class*="of2"] .int-grid4
+{
+   width: 61.2%;
+}
+[class*="2/3rd"] .int-grid5
+{
+    width: 59.25%;
+}
+.int-grid7
+{
+   width: 53.05%;
+}
+[class*="of2"]
+{
+   width: 48.5%; 
+}
+[class*="2/3rd"] .int-grid4
+{
+   width: 46.8%;   
+}
+.int-grid6, [class*="of2"] .int-grid3, [class*="of3"] .int-grid2, [class*="1/3rd"] .int-grid2
+{
+   width: 44.9%;
+}
+.int-grid5
+{
+   width: 36.75%;
+}
+[class*="2/3rd"] .int-grid3
+{
+   width: 34.25%;   
+}
+[class*="of3"], [class*="1/3rd"]
+{
+   width: 31.4%;   
+}
+.int-grid4, [class*="of2"] .int-grid2
+{
+   width: 28.6%;
+}
+[class*="2/3rd"] .int-grid2
+{
+   width: 21.5%;   
+}
+.int-grid3, [class*="of3"] .int-grid1, [class*="1/3rd"] .int-grid1
+{
+   width: 20.45%;
+}
+.int-grid2, [class*="of2"] .int-grid1
+{
+   width: 12.3%;
+}
+[class*="2/3rd"] .int-grid1
+{
+   width: 8.65%;   
+}
+.int-grid1
+{
+   width: 4.15%;
+}

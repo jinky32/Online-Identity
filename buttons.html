@@ -1,0 +1,904 @@
+<!DOCTYPE html><html lang="en"><!-- InstanceBegin template="/Templates/indextemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Buttons &amp; Togglers</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="css/uif-fontAwesome.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="css/uif-stylesheet.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="css/uif-responsive.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="css/uif-print.css" media="print"/>
+<!-- DOCS -->
+<link rel="stylesheet" type="text/css" href="docsonly/css/docs.css" media="screen, projection"/>
+<!-- End DOCS -->
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="css/uif-ie.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="css/uif-ie8.css" media="screen, projection" />
+<script type="text/javascript" src="js/html5shiv.js"></script>
+<script type="text/javascript" src="js/html5shiv-printshiv.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/uif-fontAwesome-ie7.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="css/uif-ie7.css" media="screen, projection" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="css/uif-print.css" media="print"/>
+<!--[if lt IE 9]>    
+<link rel="stylesheet" type="text/css" href="../docsonly/css/uif-ie.css" media="screen, projection" />
+<![endif]-->
+<!-- InstanceParam name="Javascript functions" type="boolean" value="true" -->
+</head>
+<body>
+<div id="int-org">
+	<!--Application Header-->
+	<section class="int-headerWrap">
+	<a class="int-vantageLogo" href="#">
+	<span class="int-vantageIcon">Vantage logo</span>
+	</a>
+	<div class="int-titleWrap">
+		<header class="int-title" role="banner">
+			<h1><a id="main-title" href="#"></a></h1>
+        </header>
+		<a class="int-skip" href="#int-content">Skip to content</a>
+	  <ul>
+			<li class="oucu">test4</li>
+			<li><a href="https://msds-test.open.ac.uk/signon/samsoff.aspx">Logout</a></li>
+	  </ul>
+	</div>
+  </section>
+	<div id="int-site">
+		<nav id="int-primary" class="int-primary" role="navigation">
+		<!--nav search-->
+		<form class="int-navSearch" role="search">
+			<label for="search">Application search...</label>
+			<input id="search" type="text" onclick="if(this.value == 'Application search...') this.value='';" onblur="if(this.value.length == 0) this.value='Application search...';" value="Application search..." name="Search" class="int-search ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"/>
+		</form>
+        <ul class="int-tabs">
+          <li class="bfa" id="bfa999999"><a href="#nav-bfa999999">Application Framework</a></li>
+        </ul>
+        </nav>
+		<div id="int-page">
+			<!--Sidebar-->
+            
+		  <div id="int-region2">
+				<a id="int-navToggle" href="#" role="button"><i id="int-showHideTooltip" class="int-icon-reorder int-tooltipW"></i></a>
+				<nav id="nav-bfa999999" class="int-secondary" role="navigation" style="display: none">
+				<ul id="acc-bfa999999">
+					<li class="app" id="app99999"><a href="#">Client Framework</a>
+					<ul>
+						<li class="page" id="page9999"><a href="index.html">Getting Started</a></li>
+						<li class="page" id="page9999"><a href="layouts.html">Layouts: </a></li>
+						<li class="page" id="page9999"><a href="columns.html">- Columns</a></li>
+						<li class="page" id="page9999"><a href="rows.html">- Rows &amp; Grids</a></li>
+						<li class="page" id="page9999"><a href="buttons.html">Buttons &amp; Togglers</a></li>
+						<li class="page" id="page9999"><a href="icons.html">Icons</a></li>
+						<li class="page" id="page9999"><a href="forms.html">Forms</a></li>
+						<li class="page" id="page9999"><a href="jQueryUI/accordion.html">jQuery UI Widgets</a></li>
+						<li class="page" id="page9999"><a href="navigation.html">Navigation</a></li>
+						<li class="page" id="page9999"><a href="notifications.html">Notifications</a></li>
+						<li class="page" id="page9999"><a href="tables.html">Tables</a></li>
+						<li class="page" id="page9999"><a href="typography.html">Typography</a></li>
+						<li class="page" id="page9999"><a href="content.html">Content</a></li>
+						<li class="page" id="page9999"><a href="javascript.html">Javascript</a></li>
+					</ul>
+					</li>
+				</ul>
+				</nav>
+		  </div>
+			<!--Main content area-->
+			<div id="int-region1">
+			  <div id="int-content" class="int-content">
+              	<!-- InstanceBeginEditable name="Main content area" -->
+				<h1>Buttons & Toggles</h1>
+
+                <ol class="int-jumpLinks">
+                    <li>Jump to:</li>
+                    <li><a href="#button">Buttons</a></li>
+                    <li><a href="#groupedButtons">Grouped Buttons</a></li>
+                    <li><a href="#colourButtons">Colour Buttons</a></li>
+                    <li><a href="#ButtonWithDropMenu">Button with Drop Menu</a></li>
+                    <li><a href="#dropContent">Drop Content</a></li>
+                    <li><a href="#checkAllwithDropOptions">Check All Button with Drop Down Menu Options</a></li>
+                    <li><a href="#radioSwitches">Radio Switches</a></li>
+                    
+                    <li><a href="#contentToggler">Content Toggler</a></li>
+                    <li><a href="#moreInfoTogglers">More Info Togglers</a></li>
+                    <li><a href="#toggleAllToggler">Toggle All Toggler</a></li>
+                    <li><a href="#switchButtons">Switch Buttons</a></li>
+                </ol>
+                
+                
+                <!--Button-->
+                <h2 id="button">Buttons</h2>
+                <div class="int-component">
+                    <div class="example">
+<h3>Default Buttons</h3>
+<!--Anchor button-->
+<a href="#" class="int-button">Button</a>
+
+<!--Input button-->
+<input type="button" class="int-button" value="Button">
+
+<!--HTML Button-->
+<button class="int-button">Button</button>
+
+<h3>Disabled Buttons</h3>
+<!--Anchor styled as button with disabled class-->
+<a href="#" class="int-button int-disabled">Button</a>
+
+<!--Input button with disabled attribute-->
+<input type="button" class="int-button" disabled value="Button">
+
+<!--HTML Button with disabled attribute-->
+<button class="int-button" disabled>Button</button>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#buttonRazor">Razor</a></div>
+                        <div><a href="#buttonHTML">HTML</a></div>
+                        <div><a href="#buttonText">Supporting Text</a></div>
+                        <div><a href="#buttonChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="buttonHTML"><pre></pre></div>
+                    <div class="docrazor" id="buttonRazor"><pre class="int-toggleCode">
+&#64;HTML.Button("Button with tooltip and id", "/", id:"ButtonWithTooltip", title:"This button has a tooltip")
+&#64;HTML.Button("Button without tooltip or id", "/")
+&#64;HTML.Button("Button with custom class", "/", customClassNames:"int-custom-button")
+&#64;HTML.Button("Disabled button", "/", disabled:true)
+
+&#64;HTML.Button            generates   &lt;button type="button"
+&#64;HTML.ButtonLink      generates   &lt;a
+&#64;HTML.ButtonSubmit  generates   &lt;button type="submit"
+                </pre></div>
+                    <div class="doc" id="buttonText">
+                        <div class="int-note">
+                            <p>HTML <code>button</code> and <code>input type="button" or "submit"</code> can be disabled by applying an attribute of <code>disabled</code>.</p>
+                            <p>For <code>a class="int-button"</code> an additional class of <code>int-disabled</code> is required <code>a class="int-button int-disabled"</code>, this will only give the appearance of a disabled button, the link will still function and requires additional logic to prevent the click event.</p>
+                        </div>
+                    </div>
+                    <div class="doc" id="buttonChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead><tr><th>Version</th><th>Changes</th></tr></thead>
+                            <tbody><tr><td>v1</td><td>-</td></tr><tr><td>v1.1</td><td>-</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End Button-->
+                
+                <!--Grouped Buttons-->
+                <h2 id="groupedButtons">Grouped Buttons</h2>
+                <div class="int-component">
+                    <div class="example">
+<div class="int-buttonGroup">
+    <a class="int-button" title="This is a button" href="#">Button</a>
+    <a class="int-button" title="This is a button" href="#">Button</a>
+    <a class="int-button" title="This is a button" href="#">Button</a>
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#groupedButtonsRazor">Razor</a></div>
+                        <div><a href="#groupedButtonsHTML">HTML</a></div>
+                        <div><a href="#groupedButtonsText">Supporting Text</a></div>
+                        <div><a href="#groupedButtonsChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="groupedButtonsHTML"><pre></pre></div>
+                    <div class="docrazor" id="groupedButtonsRazor"><pre class="int-toggleCode">
+&#64;HTML.GroupedButtons(HTML.Button("Button 1", "/", title:"The first button"), HTML.Button("Button 2", "/", title:"The second button"), HTML.Button("Button 3", "/", customClassNames:"int-custom-button", title:"The third button"))
+                </pre></div>
+                    <div class="doc" id="groupedButtonsText">
+                        <p>A group of buttons is created by wrapping two or more buttons in a <code>div.int-buttonGroup</code>.</p>
+                    </div>
+                    <div class="doc" id="groupedButtonsChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead><tr><th>Version</th><th>Changes</th></tr></thead>
+                            <tbody><tr><td>v1</td><td>-</td></tr><tr><td>v1.1</td><td>-</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End Grouped Buttons-->
+                
+                <!--Colour buttons-->
+                <h2 id="colourButtons">Colour Buttons</h2>
+                <div class="int-component">
+                    <div class="example">
+<a href="#" class="int-button">Standard Button</a>
+<a href="#" class="int-button int-blue">Blue Button</a>
+<a href="#" class="int-button int-green">Green Button</a>
+<a href="#" class="int-button int-orange">Orange Button</a>
+<a href="#" class="int-button int-red">Red Button</a>
+<a href="#" class="int-button int-black">Black Button</a>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#colourButtonsRazor">Razor</a></div>
+                        <div><a href="#colourButtonsHTML">HTML</a></div>
+                        <div><a href="#colourButtonsText">Supporting Text</a></div>
+                        <div><a href="#colourButtonsChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="colourButtonsHTML"><pre ></pre></div>
+                    <div class="docrazor" id="colourButtonsRazor"><pre class="int-toggleCode">
+&#64;HTML.Button("Standard button", "/")
+&#64;HTML.Button("Blue button", "/", colour:ButtonColourOption.Blue)
+&#64;HTML.Button("Green button", "/", colour:ButtonColourOption.Green)
+&#64;HTML.Button("Orange button", "/", colour:ButtonColourOption.Orange)
+&#64;HTML.Button("Red button", "/", colour:ButtonColourOption.Red)
+&#64;HTML.Button("Black button", "/", colour:ButtonColourOption.Black)
+                </pre></div>
+                    <div class="doc" id="colourButtonsText">
+                        <p class="int-note">
+                            <code>Standard grey button</code> should be used for the majority of buttons. <code>Colour buttons</code> are only designed to be used for for prominent 'calls to action' to avoid confusion or provide positive/negative reinforcement to a particular action.
+                        </p>
+                    </div>
+                    <div class="doc" id="colourButtonsChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead><tr><th>Version</th><th>Changes</th></tr></thead>
+                            <tbody><tr><td>v1</td><td>-</td></tr><tr><td>v1.1</td><td>-</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End of colour buttons-->
+                
+                <!--Button with Drop Menu-->
+                <h2 id="ButtonWithDropMenu">Button with Drop Menu</h2>
+                <div class="int-component">
+                    <div class="example">     
+<a class="int-button int-dropButton" href="#">Button <i class="int-icon-caret-down" role="presentation"></i></a>
+<ul class="int-dropMenu">
+    <li><a href="#"><span class="int-icon-step-backward"></span>Prev</a></li>
+    <li><a href="#"><span class="int-icon-stop"></span>Stop</a></li>
+    <li><a href="#"><span class="int-icon-play"></span>Play</a></li>
+    <li><a href="#"><span class="int-icon-step-forward"></span>Next</a></li>
+</ul>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#dropDownButtonsRazor">Razor</a></div>
+                        <div><a href="#dropDownButtonsHTML">HTML</a></div>
+                        <div><a href="#dropDownButtonsText">Supporting Text</a></div>
+                        <div><a href="#dropDownButtonsChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="dropDownButtonsHTML"><pre></pre></div>
+                    <div class="docrazor" id="dropDownButtonsRazor"><pre class="int-toggleCode">
+&#64;HTML.DropMenu(DirectionOption.Down, "Down Menu No Ids", null, null, 
+    HTML.DropMenuItem("Edit", "/", icon:"pencil"), 
+    HTML.DropMenuItem("Delete", "/", disabled:true, icon:"trash"), 
+    HTML.DropMenuItem("Ban", "/", icon:"ban-circle"), 
+    HTML.DropMenuDivider(), 
+    HTML.DropMenuItem("Full Screen", "/", icon:"fullscreen")
+)
+&#64;HTML.DropMenu(DirectionOption.Up, "Up Menu With Ids", "UpContainer", "UpMenu", 
+    HTML.DropMenuItem("Undo", "/", "UpMenu-1", icon:"undo"), 
+    HTML.DropMenuDivider(), 
+    HTML.DropMenuItem("Cut", "/", "UpMenu-2", icon:"cut"), 
+    HTML.DropMenuItem("Copy", "/", "UpMenu-3", icon:"copy"), 
+    HTML.DropMenuItem("Paste", "/", "UpMenu-4", icon:"paste")
+)
+                </pre></div>
+                    <div class="doc" id="dropDownButtonsText">
+                    <h5>Drop Down Menu</h5>
+                        <p>A drop down menu is composed of a button, followed by an unordered list<code>.int-dropMenu</code>.</p>
+                        <p>Each list item will correspond to a menu item.</p>
+                        <p class="int-note">
+                            <strong>Extras</strong> A divider between list items can be created by adding an empty list item of <code>.int-dropMenuDivider</code>.
+                        </p>
+                    </div>
+                    <div class="doc" id="dropDownButtonsChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v3</td>
+                                    <td>Drop Down Menu, and Drop Up Menu, merged so there is only one Drop Menu component. The position of the drop menu is dynamic so will display up of down or to the side depending on the viewport. The new markup has no container, only a button and a menu. The button has a class of <code>.int-dropMenuButton</code>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>       
+                <!--End Button with Drop Down Menu-->
+                
+                <!-- Drop Content-->
+                <h2 id="dropContent">Drop Content</h2>
+                <div class="int-component">
+                    <div class="example">
+<a href="#" class="int-button int-dropDivButton">Drop Content <i class="int-icon-caret-down"></i></a>
+<div class="int-dropDiv">
+    Drop Content
+</div>
+                    </div>
+                        <div class="docTabs">
+                        <div class="active"><a href="#dropContentRazor">Razor</a></div>
+                        <div><a href="#dropContentHTML">HTML</a></div>
+                        <div><a href="#dropContentText">Supporting Text</a></div>
+                        <div><a href="#dropContentChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="dropContentHTML"><pre></pre></div>
+                    <div class="docrazor" id="dropContentRazor">
+                        <p>The content to be toggled must be wrapped in &#64;&lt;text&gt; ... &lt;/text&gt; to allow multi-line markup content to be used. Content without markup can be passed in as a string.</p>
+                        <pre class="int-toggleCode">
+&#64;HTML.DropContent("Drop Content", 
+    &#64;&lt;text&gt;&lt;p&gt;Here is the content&lt;/p&gt;
+      &lt;p&gt;Here is some more content&lt;/p&gt;
+      &lt;p&gt;Hello &#64;User.Identity.Name&lt;/p&gt;&lt;/text&gt;)
+
+&#64;HTML.DropContent("Drop Content", "Here is the content")
+                </pre>
+                    </div>
+                    <div class="doc" id="dropContentText">
+                        <p>A drop content is a cross between a drop menu (above) and a <a href="#contentToggler">content toggler</a>. The drop content is used to toggle hidden content like a content toggler but the content is taken out of the normal flow of the document (i.e. the content appears above current elements on the page), so its appearance is similar to a drop menu.</p>
+                        <p>A drop content is made up of a trigger button and a content section: create an <code>a.int-button.int-dropDivButton</code>, for the trigger; and a <code>div.int-dropDiv</code> for the content section. </p>
+                        <p>The content section will span the full length of its parent element.</p>
+                    </div>
+                    <div class="doc" id="dropContentChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v3</td>
+                                    <td>Container <code>div.int-dropDownContent</code> removed. Button now contains new class <code>.int-dropDivButton</code>. <code>div.dropContent</code> replaced with <code>div.int-dropDiv</code>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+                </div>
+                <!-- End Drop Content-->
+                
+                <!--Check All Buttons-->
+                <h2 id="checkAllwithDropOptions">Check All Button with Drop Menu Options</h2>
+                <div class="int-component">
+                    <div class="example"> 
+<!-- Check All and Drop Menu -->
+<div class="int-checkMenu">
+    <span class="int-checkContainer"><input type="checkbox" class="int-checkAll" name="checkAllCheckboxesAndMenu"></span>
+    <a class="int-button int-dropButton" href="#"><i class="int-icon-caret-down"></i></a>
+    <ul class="int-dropMenu">
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Delete</a></li>
+        <li><a href="#">Ban</a></li>
+    </ul>
+</div>
+
+<!-- Check Boxes -->
+<div><input type="checkbox" name="checkAllCheckboxesAndMenu"></div>
+<div><input type="checkbox" name="checkAllCheckboxesAndMenu"></div>
+<div><input type="checkbox" name="checkAllCheckboxesAndMenu"></div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#checkAllDropRazor">Razor</a></div>
+                        <div><a href="#checkAllDropHTML">HTML</a></div>
+                        <div><a href="#checkAllDropText">Supporting Text</a></div>
+                        <div><a href="#checkAllDropChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="checkAllDropHTML"><pre></pre></div>
+                    <div class="docrazor" id="checkAllDropRazor"><pre class="int-toggleCode">
+&#64;HTML.CheckAllDropMenu(
+    HTML.DropMenuItem("Edit", "/", icon:"pencil"), 
+    HTML.DropMenuItem("Delete", "/", icon:"trash")
+)
+                </pre></div>
+                    <div class="doc" id="checkAllDropText">
+                        <p>To create a check all button with drop down menu options, first create a <code>div.int-checkMenu.int-dropDown</code> containing:</p>
+                        <ul class="int-bulletList">
+                            <li>a button containing checkbox of <code>.int-checkAll</code>;</li>
+                            <li>a button containing a <code>i.int-icon-claret-down</code> (this will be the drop down menu button);</li>
+                            <li>an unordered list of <code>.int-dropMenu</code>, populated with the list items you want for your menu options. </li>
+                        </ul>
+                        <p>Next, add in the number of checkboxs you require, wrapped around <code>div</code> tags (this will stack the inputs; to display inline, omit the div tags).</p>
+                        <p>Lastly, give each of the checkboxes a matching <code>[name="*"]</code> attribute value. </p>
+                    </div>
+                    <div class="doc" id="checkAllDropChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v3</td>
+                                    <td>Added class <code>.int-dropButton</code> for the drop menu button in keeping with changes to the drop menu. Removed <code>.int-dropDown</code> from <code>div.int-checkMenu</code>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End Check All Buttons-->
+                
+                <!--Radio Switches-->
+                <h2 id="radioSwitches">Radio Switches</h2>
+                <p class="int-note">
+                    Radio switches display as typical radio buttons and checkboxes in IE8 and below.
+                </p>
+                <div class="int-component">
+                    <div class="example">
+<div class="int-row">
+    <div class="int-grid3">
+        <label>Frequency</label>
+    </div>
+    <div class="int-grid9 int-radioSwitch int-radioSwitchThree int-radioGroup">
+            <!--Switch 1-->
+            <input id="week" name="radio_group" type="radio">
+            <label for="week">Week</label>
+            
+            <!--Switch 2-->
+            <input id="month" name="radio_group" type="radio">
+            <label for="month">Month</label>
+            
+            <!--Switch 3-->
+            <input id="year" name="radio_group" type="radio">
+            <label for="year">Year</label>
+            
+            <!--Slider-->
+            <span class="int-slideButton"></span>
+    </div>
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#radioSwitchRazor">Razor</a></div>
+                        <div><a href="#radioSwitchHTML">HTML</a></div>
+                        <div><a href="#radioSwitchText">Supporting Text</a></div>
+                        <div><a href="#radioSwitchChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="radioSwitchHTML"><pre></pre></div>
+                    <div class="docrazor" id="radioSwitchRazor">
+                        <p>RadioSwitch accepts between 2 and 5 items and will apply the appropriate class based on the number of items passed in.</p>
+                        <pre class="int-toggleCode">
+&#64;HTML.RadioSwitch("Frequency", 
+    HTML.RadioSwitchItem("day", "radioSwitch1", "Day"), 
+    HTML.RadioSwitchItem("week", "radioSwitch1", "Week"), 
+    HTML.RadioSwitchItem("month", "radioSwitch1", "Month")
+)
+                </pre>
+                    </div>
+                    <div class="doc" id="radioSwitchText">
+                        <p>Create a div with <code>.int-radioSwitch</code>. Add an additional class depending on how many radio buttons you wish to have:</p>
+                        <ul>
+                            <li>For two radio buttons, no additional class is added</li>
+                            <li>For three radio buttons, add the class <code>.int-radioSwitchThree</code></li>
+                            <li>For four radio buttons, add the class <code>.int-radioSwitchFour</code></li>
+                            <li>For five radio buttons (the maximum), add the class <code>.int-radioSwitchFive</code></li>
+                        </ul>
+                        <p>Within the <code>div.int-radioSwitch</code>, create an <code>input[type="radio"]</code> followed by a <code>label</code> for each of the items. 
+                            Each radio button should have an unique id, and all the radio buttons within the group should share the same name. 
+                            The first radio button should have an attribute of <code>[checked]</code>. The label for each radio should have a <code>[for="id"]</code> that matches the id of the corresponding radio.</p> 
+                        <p>The final step is to add a <code>span.int-slideButton</code> which creates the bar for sliding between radio buttons.</p>
+                    </div>
+                    <div class="doc" id="radioSwitchChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End Radio Switches-->
+                
+                <!--Content Toggler-->
+                <h2 id="contentToggler">Content Toggler</h2>
+                <div class="int-component">
+                    <div class="example">
+<a href="#" class="int-button int-toggleTrigger">Show/Hide</a>
+<div class="int-formFeature int-toggle">
+    <p>Content</p>
+</div>
+                    </div>
+                        <div class="docTabs">
+                        <div class="active"><a href="#contentTogglerRazor">Razor</a></div>
+                        <div><a href="#contentTogglerHTML">HTML</a></div>
+                        <div><a href="#contentTogglerText">Supporting Text</a></div>
+                        <div><a href="#contentTogglerChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="contentTogglerHTML"><pre></pre></div>
+                    <div class="docrazor" id="contentTogglerRazor">
+                        <p>The content to be toggled must be wrapped in &#64;&lt;text&gt; ... &lt;/text&gt; to allow multi-line markup content to be used. Content without markup can be passed in as a string.</p>
+                        <pre class="int-toggleCode">
+&#64;HTML.ContentToggler("Show/Hide", 
+    &#64;&lt;text&gt;&lt;p&gt;Here is the content&lt;/p&gt;
+      &lt;p&gt;Here is some more content&lt;/p&gt;
+      &lt;p&gt;Hello &#64;User.Identity.Name&lt;/p&gt;&lt;/text&gt;)
+
+&#64;HTML.ContentToggler("Show/Hide", "Here is the content")
+                		</pre>
+                    </div>
+                    <div class="doc" id="contentTogglerText">
+                        <p>
+                            This is a generic content toggler which can be used to show hide any element on the page (in the above example we are hiding a form feature). 
+                        </p>
+                        <p>
+                            Add <code>.int-toggle</code> to <em>any</em> element to hide the element. Add an <code>a.int-button</code> immediately preceding your hidden element to toggle it into view - 
+                            this order is crucial as the JavaScript looks for the preceeding sibling button to act as the trigger for the hidden element.
+                        </p>
+                    </div>
+                    <div class="doc" id="contentTogglerChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End Content Toggler-->
+                
+                <!--More info Toggler-->
+                <h2 id="moreInfoTogglers">More Info Togglers</h2>
+                <div class="int-component">
+                    <div class="example">
+<!--Button style toggler-->       
+<a class="int-more int-button" href="#">
+    <i class="int-icon-plus"></i> More Info
+</a>
+<p class="int-less">More information</p>
+        
+<!--Only used for demo purposes--><hr/><!--End-->
+
+<!--Link style toggler-->
+<a class="int-more" href="#">
+    <i class="int-icon-plus"></i> More Info
+</a>
+<p class="int-less">More information</p>
+                    </div>
+                        <div class="docTabs">
+                        <div class="active"><a href="#moreInfoRazor">Razor</a></div>
+                        <div><a href="#moreInfoHTML">HTML</a></div>
+                        <div><a href="#moreInfoText">Supporting Text</a></div>
+                        <div><a href="#moreInfoChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="moreInfoHTML"><pre></pre></div>
+                    <div class="docrazor" id="moreInfoRazor"><pre class="int-toggleCode">
+&#64;HTML.MoreInfoToggler(ToggleStyleOption.Button, "More information")
+                </pre></div>
+                    <div class="doc" id="moreInfoText">
+                        <p>This is an info toggler, with dynamic icons and text which change when toggled. Add <code>.int-more</code> to the trigger element. Add <code>.int-less</code> to the element to be hidden and displayed by the trigger. The example above shows the hiding of paragraphs using an anchor tag, although any element can act as the trigger and and any element can be hidden, see Examples tab for more detail.</p>
+                        <p class="int-note">The trigger element must contain <code>&lt;i class=&quot;int-icon-plus&quot;&gt;&lt;/i&gt; More Info</code> as this is replaced with <code>&lt;i class=&quot;int-icon-minus&quot;&gt;&lt;/i&gt; less Info</code> when the trigger is clicked.</p>
+                    </div>
+                    <div class="doc" id="moreInfoChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End More Info Toggler-->
+                
+                <!-- Toggle All Toggler -->
+                <h2 id="toggleAllToggler">Toggle All Toggler</h2>
+                <div class="int-component">
+                    <div class="example">
+<a href="#" class="int-button int-showAllToggler">Show/Hide all Instances of Toggler</a>
+<div class="int-toggler">
+    <h3>Section 1</h3>
+    <div class="int-togglerContentActive">
+        <p>Content</p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+        <p>Content</p>
+    </div>
+    <h3>Section 3</h3>
+    <div>
+        <p>Content</p>
+    </div>
+</div>
+
+<a href="#" class="int-button int-showToggler">Show/Hide all Next Instance of Toggler</a>
+<div class="int-toggler">
+    <h3>Section 1</h3>
+    <div class="int-togglerContentActive">
+        <p>Content</p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+        <p>Content</p>
+    </div>
+    <h3>Section 3</h3>
+    <div>
+        <p>Content</p>
+    </div>
+</div>           
+                    </div>
+                        <div class="docTabs">
+                        <div class="active"><a href="#toggleAllRazor">Razor</a></div>
+                        <div><a href="#toggleAllHTML">HTML</a></div>
+                        <div><a href="#toggleAllText">Supporting Text</a></div>
+                        <div><a href="#toggleAllChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="toggleAllHTML"><pre></pre></div>
+                    <div class="docrazor" id="toggleAllRazor">
+                        <p>The content to be toggled must be wrapped in &#64;&lt;text&gt; ... &lt;/text&gt; to allow multi-line markup content to be used. Content without markup can be passed in as a string.</p>
+                        <pre class="int-toggleCode">
+&#64;HTML.ToggleAllToggler("Show/Hide All", 
+    HTML.ToggleSection("First Section",
+        &#64;&lt;text&gt;&lt;p&gt;Here is the first section of content&lt;/p&gt;
+            &lt;p&gt;Here is some more content&lt;/p&gt;
+            &lt;p&gt;Hello &#64;User.Identity.Name&lt;/p&gt;
+        &lt;/text&gt;),
+    HTML.ToggleSection("Second Section",
+        &#64;&lt;text&gt;&lt;p&gt;Here is the second section of content&lt;/p&gt;
+            &lt;p&gt;Here is some more content&lt;/p&gt;
+            &lt;p&gt;Hello &#64;User.Identity.Name&lt;/p&gt;
+        &lt;/text&gt;),
+    HTML.ToggleSection("Third Section",
+        &#64;&lt;text&gt;&lt;p&gt;Here is the third section of content&lt;/p&gt;
+            &lt;p&gt;Here is some more content&lt;/p&gt;
+            &lt;p&gt;Here is even more content&lt;/p&gt;
+            &lt;p&gt;Here is more content still&lt;/p&gt;
+            &lt;p&gt;Hello &#64;User.Identity.Name&lt;/p&gt;
+        &lt;/text&gt;)
+)
+                		</pre>
+                    </div>
+                    <div class="doc" id="toggleAllText">
+                        <p>
+                            The content toggler uses a <code>div.int-toggler</code> which contains a series of <code>h3+div</code>. The <code>h3</code> creates the toggler header/trigger and the <code>div</code> holds the hidden content. Optionally add a class of <code>int-togglerContentActive</code> to the <code>div</code> you want visible by default.
+                        </p>
+                        <p>
+                            Two types of buttons can be used with the toggler. One allows you to show all the <code>div</code>s of a all instances of togglers on a page, and the second allows you to show all the <code>div</code>s of a single (the next) instance of the toggler.
+                        </p>
+                        <p>
+                            To show all instances, add a button anywhere on the page with the class <code>int-showAllToggler</code>. To show the next instance, place a button directly before the toggler instance and with class <code>int-showToggler</code>.
+                        </p>
+                    </div>
+                    <div class="doc" id="toggleAllChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Toggle All Toggler -->
+                                
+                <!-- Switch Buttons -->
+                <h2 id="switchButtons">Switch Buttons, Grouped and Individual</h2>
+                <div class="int-component">
+                    <div class="example">
+                
+<h4>Radio Switch Buttons</h4>
+<div class="int-buttonGroup int-radioSwitchButtons">
+    <input name="radiobuttons" type="radio">
+    <label class="int-button">Checkbox label 1</label>
+
+    <input name="radiobuttons" type="radio">
+    <label class="int-button">Checkbox label 1</label>
+
+    <input name="radiobuttons" type="radio">
+    <label class="int-button int-selected">Checkbox label 1</label>
+
+    <input name="radiobuttons" type="radio">
+    <label class="int-button">Checkbox label 1</label>
+</div>
+
+
+<hr>
+<h4>Checkbox Switch Buttons</h4>
+
+<div class="int-buttonGroup int-checkboxSwitchButtons">
+    <input type="checkbox">
+    <label class="int-button">Checkbox label 1</label>
+
+    <input type="checkbox">
+    <label class="int-button">Checkbox label 1</label>
+
+    <input type="checkbox">
+    <label class="int-button int-selected">Checkbox label 1</label>
+
+    <input type="checkbox">
+    <label class="int-button">Checkbox label 1</label>
+</div>
+
+<hr />
+<h4>Individual Checkbox Buttons</h4>
+
+<label for="five" class="int-button int-selected">
+    <input id="five" name="three" type="checkbox" class="int-checkboxButton">
+    Checkbox label 1
+</label>
+
+<hr />
+
+<input id="six" name="four" type="checkbox" class="int-hide int-checkboxButton">
+<label for="six" class="int-button">Checkbox label 1</label>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#switchButtonsHTML">HTML</a></div>
+                        <div><a href="#switchButtonsText">Supporting Text</a></div>
+                        <div><a href="#switchButtonsChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="switchButtonsHTML"><pre class="int-toggleCode"></pre></div>
+                    <div class="doc" id="switchButtonsText">
+                <p>Switch buttons are basically radio buttons or checkboxes that have been styled to look like buttons.</p>
+                <p>For groups of radio switch buttons, add a <code>.int-radioSwitchButton</code> to the <code>div</code> which contains the radio buttons and labels.</p>
+                <p>For groups of checkbox switch buttons, add a <code>.int-checkboxSwitchButton</code> to the <code>div</code> which contains the checkboxes and labels.</p>
+                <p class="int-note">For the group of switch buttons, the HTML markup is minimal as the <code>for</code> attribute and <code>ID</code> of the labels and inputs respectively, are added via JS.</p>
+                <p>For individual checkbox buttons, ensure the <code>input</code> has a <code>int-checkboxButton</code>. </p>
+                <p>The individual checkbox buttons comes in two configurations, one where the checkbox is visible inside the button, and one where the checkbox is hidden. </p>
+                <p>To display the checkbox, nest the <code>input</code> inside the <code>label</code>. To hide the <code>input</code>, add a <code>int-hide</code> to the <code>input</code> and ensure the input is nested outside of the label.</p>
+                <p class="int-note">The <code>id</code> and <code>for</code> attributes need to be hardcoded for individual checkbox buttons.</p>
+                <p class="int-note">Add a class of <code>int-selected</code> to the <code>label</code> if you want a default button to be selected initially. For radio switch buttons, this can only be added to one <code>label</code>. For checkboxes, this can be added to any number of <code>labels</code>.</p>
+                    </div>
+                    <div class="doc" id="switchButtonsChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v3</td>
+                                    <td>Added for release <code>v3</code>.</td>
+                                </tr>
+                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Switch Buttons -->
+
+		      	<!-- InstanceEndEditable -->
+              </div>
+		    </div>
+			<!--end of Main content area-->
+		</div>
+	</div>
+</div>
+<!--Throbber-->
+<div id="int-throbber" style="display: none;">
+	<div class="int-throbberOverlay">
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-ui-1.9.2.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery/appframework.jquery.validate.unobtrusive.js"></script>
+<!-- DOCS -->
+<script type="text/javascript" src="docsonly/js/widgets/jquery.docs.js"></script>
+<!-- End DOCS -->
+<!-- plugins -->
+<script type="text/javascript" src="js/widgets/jqueryui.combobox.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/widgets/datatables.net/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/widgets/datatables.net/ColVis-dev.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.alert.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.formtips.1.2.6.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.actual.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.multiselect.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.multiselect.filter.js"></script>
+<!-- /plugins -->
+<script type="text/javascript" src="js/uif-global.js"></script>
+<script type="text/javascript" src="js/uif-menus.js"></script>
+<script type="text/javascript" src="js/uif-framework.js"></script>
+<script type="text/javascript" src="js/uif-modal.js"></script>
+<script type="text/javascript" src="js/uif-autocomplete.js"></script>
+<script type="text/javascript" src="js/spin.js"></script>
+<script type="text/javascript" src="js/spin.setup.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/uif-components-ie8.js"></script>
+<![endif]-->
+<!--End Throbber-->
+<script>
+	OU.AppFramework.MenuManager.Initialise();
+	OU.AppFramework.AriaHelper.UpdateAll();
+	OU.AppFramework.UtilityHelper.ApplyValidationStyles('#int-content');
+	OU.AppFramework.UtilityHelper.CalculatePageControlBarHeight();
+</script>
+<!-- InstanceBeginEditable name="EditRegion3" --><!-- InstanceEndEditable -->
+<script>
+	docs.jsfncall();
+	docs.jsTab();
+	//this fn call has to be below foot scripts
+</script>
+
+</body>
+<!-- InstanceEnd --></html>
+<link href="/Vantage/Docs/SamsDebugging.axd?r=SamsDebugging.css" rel="stylesheet" type="text/css"/>
+<script src="/Vantage/Docs/SamsDebugging.axd?r=SamsDebugging.js" type="text/javascript"></script>
+<script type="text/javascript">window.samsDebuggerApplicationRoot = '/Vantage/Docs';</script>

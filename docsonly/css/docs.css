@@ -1,0 +1,268 @@
+﻿.int-content h2:first-child, .example h3:first-child, .int-iframe h2:first-child
+{
+    margin-top: .5em;
+}
+/*Examples Box*/
+.eg, .code, .codeInjection, .example, .doc, .docrazor
+{
+    padding: 1em;
+    background: #f8f8f8;
+}
+.eg, .code, .codeInjection
+{
+     border: 1px solid #ddd;
+}
+.example
+{
+    border-bottom: 1px dashed #ddd;
+}
+.docrazor .int-toggleCode, .codebuttonWrap
+{
+    margin: 1em 0;       
+}
+pre, .int-toggleCode
+{
+    color: #1E347B;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+}
+/*Documentation Widget*/
+.int-component {
+    border: 1px solid #ddd;
+}
+.doc, .docrazor{
+    border-top: 1px solid #ddd;
+    background: #f1f1f1;
+    clear: both;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.docTabs
+{
+    margin-left: .5em;
+}
+.docTabs div a {
+    margin-top: .5em;
+    float: left;
+    padding: 1em;
+    border: 1px solid transparent;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom:-2px;
+    white-space: nowrap;
+}
+.docTabs div.active a{
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    border-bottom:0px;
+}
+/*Styles for HTML inside the HTML Tabs*/
+.blue
+{
+    color: blue;
+}
+.magenta
+{
+    color: #DA0036;
+}
+.teal
+{
+    color: #007B7B;
+}
+.comment
+{
+    color: #006400;
+}
+/*Tooltip label*/
+.int-tipLabel
+{
+    color: #CC3300;
+    font-weight: bold;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1px 3px;
+    white-space: nowrap;
+}
+/*Styles for code in Supporting Text*/
+code, int-alert code {
+    color: #CC3300;
+    font-weight: bold;
+}
+/*Jquery UI Documentation*/
+iframe, iframe html {
+    background: #F8F8F8;
+}
+.demoframe {
+    width: 100%;
+    height: 3000px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.int-iframeContainer .int-col1/3rd .int-accordionNav
+{
+    margin-left: 2%;    
+}
+.gridexample [class*="grid"]{
+    background-color: #e6e7e8;
+    padding: .2em;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+.icon-library li [class^="int-icon-"], .icon-library li [class*=" int-icon-"] {
+    font-size: 1.3em;
+    vertical-align: middle;
+    line-height: 1.4em;
+}
+/*Intro flow chart*/
+
+.flowchart
+{
+	width: 60%;
+	margin: 0 auto;
+    height: 429px;
+}
+.flowchartBlock
+{
+	text-align: center;
+}
+.flowchart .arrow 
+{
+	width: 16px;
+	background: #ddd;
+	position: relative;
+    -moz-box-shadow: 0 2px 2px 0px rgba(0,0,0,.8);
+    -webkit-box-shadow: 0 2px 2px 0px rgba(0,0,0,.8);
+    -o-box-shadow: 0 2px 2px 0px rgba(0,0,0,.8);
+    -ms-box-shadow: 0 2px 2px 0px rgba(0,0,0,.8);
+	box-shadow: 0 2px 2px 0px rgba(0,0,0,.8);
+	border-top: 1px solid #fff;
+	margin: 0 auto;
+    z-index: 1;
+}
+.flowchart .arrow .int-icon-caret-down
+{
+	position: absolute;
+	font-size: 60px;
+	left: -9px;
+	color: #ddd;
+    -moz-text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+    -webkit-text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+    -o-text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+    -ms-text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+	text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+	margin-top: -12px;
+}
+.flowchart .int-bulletList
+{
+	text-align: left;
+	margin: 0 auto;
+	width: 65%;
+}
+.block1
+{
+	background: #4e247b;
+	height: 4em;
+	margin: 0 0 1.5em 0;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+.block1 h2
+{
+	padding: .5em;
+	margin: 0;
+}
+.block1, .block2 [class="int-col2/3rd"], .block3
+{
+    -moz-box-shadow: inset 0 3px 6px rgba(0,0,0,.4);
+    -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.4);
+    -o-box-shadow: inset 0 3px 6px rgba(0,0,0,.4);
+    -ms-box-shadow: inset 0 3px 6px rgba(0,0,0,.4);
+    box-shadow: inset 0 3px 6px rgba(0,0,0,.4);
+    border-bottom: 1px solid #fff;
+}
+.block1 h2, .block3, .block3 h3
+{
+	color: #fff;
+	-moz-text-shadow: 0 1px 0 #000;
+    -webkit-text-shadow: 0 1px 0 #000;
+    -o-text-shadow: 0 1px 0 #000;
+    -ms-text-shadow: 0 1px 0 #000;
+    text-shadow: 0 1px 0 #000;
+}
+.block1 .arrow
+{
+	margin: .15em 66% 0;
+	font-size: 64px;
+	height: 10px;
+}
+.block2
+{
+	margin: 0 auto;
+}
+.block2 [class="int-col1/3rd"] .arrow
+{
+	width: 16px;
+	height: 212px;
+	margin: -1em auto;
+}
+.block2 [class="int-col1/3rd"] .arrow .int-icon-caret-down
+{
+	margin-top: 189px;
+}
+.block2 [class="int-col2/3rd"]
+{
+	background: #c3e4ef;
+	height: 202px;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    -moz-text-shadow: none;
+    -webkit-text-shadow: none;
+    -o-text-shadow: none;
+    -ms-text-shadow: none;
+    text-shadow: none;
+}
+.block2 [class="int-col2/3rd"] .arrow
+{
+	height: 16px;
+	margin: 1.1em auto;
+}
+.block3
+{
+	background: #1f536b;
+	top: 1.8em;
+	position: relative;
+	border-radius: 3px;
+	padding: .5em;
+	height: 120px;
+}
+.block3 h3
+{
+	margin-top: .5em;
+}
+.block3 ul
+{
+	margin-bottom: .8em;
+}

@@ -1,0 +1,11 @@
+/* CUSTOM CORE FOR REPLACING NON FONT AWESOME ICONS WITH FONT AWESOME ICONS
+ * -------------------------- */
+
+[class*="ui-icon-"], th.header:after, /*Data tables*/.ColVis_MasterButton span:after, .sorting:after, .sorting_asc:after, .sorting_desc:after, .sorting_asc_disabled:after, .sorting_desc_disabled:after, .paginate_enabled_previous:before, .paginate_disabled_previous:before, .paginate_enabled_next:after, .paginate_disabled_next:after {
+  .int-icon-FontAwesome();
+}
+li [class^="int-icon-"], .nav li [class^="int-icon-"], li [class*=" int-icon-"], .nav li [class*=" int-icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}

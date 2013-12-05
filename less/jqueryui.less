@@ -1,0 +1,1189 @@
+/*! jQuery UI - v1.9.1 - 2012-11-15
+* http://jqueryui.com
+* Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css
+* Copyright (c) 2012 jQuery Foundation and other contributors Licensed MIT */
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset, .int-toggler > h3 { margin: 0; padding: 0; border: 0; .outline-0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; }
+.ui-helper-clearfix:after { clear: both; }
+.ui-helper-clearfix { zoom: 1; }
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+/* Icons
+----------------------------------*/
+/* states and images */
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+/* Misc visuals
+----------------------------------*/
+/* Overlays */
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px; display: block; }
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+.ui-selectable-helper { position: absolute; z-index: 100; border:1px dotted @overlays; }
+/* workarounds */
+.ui-button { display: inline-block; position: relative; padding: 0; margin-right: .1em; cursor: pointer; text-align: center; zoom: 1; overflow: visible; } /* the overflow property removes extra width in IE */
+.ui-button, .ui-button:link, .ui-button:visited, .ui-button:hover, .ui-button:active { text-decoration: none; }
+.ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
+button.ui-button-icon-only { width: 2.4em; } /* button elements seem to need a little more width */
+.ui-button-icons-only { width: 3.4em; } 
+button.ui-button-icons-only { width: 3.7em; } 
+/*button text element */
+.ui-button .ui-button-text { display: block;  }
+.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text { padding: .4em; text-indent: -9999999px; }
+.ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 1em .4em 2.1em; }
+.ui-button-text-icon-secondary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 2.1em .4em 1em; }
+.ui-button-text-icons .ui-button-text { padding-left: 2.1em; padding-right: 2.1em; }
+/* no icon support for input elements, provide padding by default */
+input.ui-button { padding: .4em 1em; }
+/*button icon element(s) */
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon { position: absolute; top: 50%; margin-top: -8px; }
+.ui-button-icon-only .ui-icon { left: 50%; margin-left: -8px; }
+.ui-button-text-icon-primary .ui-button-icon-primary, .ui-button-text-icons .ui-button-icon-primary, .ui-button-icons-only .ui-button-icon-primary { left: .5em; }
+.ui-button-text-icon-secondary .ui-button-icon-secondary, .ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
+.ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
+/*button sets*/
+.ui-buttonset { margin-right: 7px; }
+.ui-buttonset .ui-button { margin-left: 0; margin-right: -.3em; }
+/* workarounds */
+button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra padding in Firefox */
+.ui-menu
+{ 
+    list-style:none;
+    padding: .2em;
+    margin: 0;
+    display:block;
+    outline: none; 
+}
+.ui-menu .ui-menu
+{ 
+    margin-top: -3px;
+    position: absolute;
+}
+.ui-menu .ui-menu-item
+{
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+    width: 100%;
+}
+.ui-menu .ui-menu-divider
+{
+    margin: .3em -2px;
+}
+.ui-menu .ui-menu-item a
+{
+    text-decoration: none;
+    display: block;
+    padding: .4em;
+    line-height: 1.5;
+    zoom: 1;
+    font-weight: normal;
+    margin: 0;
+}
+.ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active
+{
+    font-weight: normal;
+}
+.ui-menu .ui-menu-item .ui-state-focus
+{
+    background: @menu-item-background-hover;   
+}
+.ui-menu .ui-state-disabled a
+{
+    cursor: default;
+}
+/* icon support */
+.ui-menu-icons { position: relative; }
+.ui-menu-icons .ui-menu-item a { position: relative; padding-left: 2em; }
+/* left-aligned */
+.ui-menu .ui-icon { position: absolute; top: .2em; left: .2em; }
+/* right-aligned */
+.ui-menu .ui-menu-icon { position: static; float: right; }
+.ui-tooltip {
+	padding: .4em;
+	position: absolute;
+	z-index: 9999;
+    background-color: @tooltip-background;
+    color: @tooltip-font;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    .border-radius-default;
+}
+/* Fades and background-images don't work well together in IE6, drop the image */
+* html .ui-tooltip {
+	background-image: none;
+}
+body .ui-tooltip
+{
+    border-width: 2px;
+}
+/*overrides*/
+.ui-widget-overlay, .int-throbberOverlay
+{
+    background: @overlays;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+/*throbber*/
+.int-throbber
+{
+    top: 50% !important;
+    left: 50% !important;
+    position: absolute !important; 
+}
+.int-throbberOverlay
+{
+    z-index: 9999999;  
+}
+
+/*
+- Reskinned JQuery UI widgets
+- v1.0 29/04/13
+- Antony McEvoy
+- Antony.McEvoy@open.ac.uk
+- Information Technology
+*/
+/*Accordion*/
+.int-content .ui-accordion, .int-toggler
+{
+	padding: 0 0 1px;
+	border: 1px solid @general-grey-border;
+	border-top: 0;
+	margin: 1em 0;
+}
+.ui-accordion .ui-accordion-header, .int-toggler > h3
+{ 
+	display: block; 
+	cursor: pointer;
+	position: relative;
+	padding: .5em;
+	zoom: 1;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.int-content .ui-accordion-header, .int-toggler > h3
+{
+	font-size: @font-size-base*1.3;
+	background: @form-feature-background;
+	border-top: 1px solid @general-grey-border;
+}
+.ui-accordion .ui-accordion-header .ui-icon, .int-toggler h3 [class*="int-icon"]
+{
+    display: inline-block;
+    text-indent: 0;
+    width: 1em;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: .5em;
+}
+.int-content .ui-accordion-header .ui-icon, .int-toggler h3 [class*="int-icon"]
+{
+	font-size: @font-size-base*0.8;
+}
+.ui-accordion .ui-accordionheader-active
+{
+	border-bottom: 0 !important;
+}
+.ui-accordion-header.ui-state-active, .int-toggler .int-togglerHeadActive
+{
+	border-top: 3px solid @body-background;
+	background: transparent;
+}
+.ui-accordion .ui-accordion-li-fix
+{
+	display: block;
+}
+.ui-accordion .ui-accordion-header a
+{
+	display: inline;
+	font-size: @font-size-base;
+	padding: .5em .5em .5em .7em;
+}
+.ui-accordion-icons .ui-accordion-header a
+{
+	padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-content, .int-toggler > div.int-togglerContentActive, .int-toggler > div
+{
+	padding: 0 .8em 1em;
+	border-top: 0;
+	position: relative;
+	overflow: visible;
+	display: none;
+	zoom: 1;
+    .box-sizing-default;
+}
+.ui-accordion .ui-accordion-content-active, .int-toggler > div.int-togglerContentActive
+{
+	display: block;
+}
+.int-toggler .int-formFeature
+{
+            width: 100%;
+}
+.int-toggler .int-tableFeature
+{
+        .box-shadow(none);
+}
+.int-toggler > h3 + [class*="togglerFeature"], .ui-accordion > h3 + [class*="togglerFeature"]
+{
+            padding-top: 1em;
+}
+.int-toggler > h3 + [class*="togglerFeature"], .int-togglerContentActive .int-tableFeature:first-child
+{
+            margin-top: 0;
+}
+.int-toggler [class*="togglerFeature"]:last-child, .ui-accordion [class*="togglerFeature"]:last-child
+{
+            border-bottom: 0;
+}
+.int-toggler .int-togglerFeatureNote:last-child
+{
+            margin-bottom: 0;
+}
+.int-toggler > [class*="togglerFeature"], .ui-accordion > [class*="togglerFeature"]
+{
+            margin: 0;
+}
+[class*="formFeature"]:first-child, [class*="togglerFeature"]:first-child
+{
+            margin-top: 0
+}
+.int-togglerContentActive .int-formFeature:last-child, .ui-accordion-content-active .int-formFeature:last-child, .int-toggler .int-togglerContentActive .int-tableFeature:last-child {
+            margin-bottom: 0;
+}
+.int-togglerContentActive h1, .ui-accordion-content h1
+{
+            font-size: 1.5em;
+}
+.int-togglerContentActive h2, .ui-accordion-content h2
+{
+            font-size: 1.4em;
+}
+.int-togglerContentActive h3, .ui-accordion-content h3
+{
+            font-size: 1.3em;
+}
+.int-togglerContentActive h4, .ui-accordion-content h4
+{
+            font-size: 1.2em;
+}
+.int-togglerContentActive h4, .ui-accordion-content h5
+{
+            font-size: 1.1em;
+}
+.int-togglerContentActive h5, .ui-accordion-content h6
+{
+            font-size: 1em;
+}
+.int-togglerContentActive > h1:first-child, .ui-accordion-content > h1:first-child, .int-togglerContentActive > h2:first-child, .ui-accordion-content > h2:first-child, .int-togglerContentActive > h3:first-child, .ui-accordion-content > h3:first-child, .int-togglerContentActive > h4:first-child, .ui-accordion-content > h4:first-child, .int-togglerContentActive > h5:first-child, .ui-accordion-content > h5:first-child
+{
+            margin-top: .8em;
+} 
+
+.int-accordionNav.ui-accordion
+{
+    border: 0;
+    margin-top:0;
+}
+.int-accordionNav .ui-accordion-header
+{
+    font-size: @font-size-base*1.1;
+    border-top: 1px solid @general-grey-border;
+    .text-overflow-default;
+    white-space: nowrap;
+    overflow: hidden; 
+    background: none;
+}
+.int-accordionNav .ui-accordion-header:first-child
+{
+    border-top: 0; 
+}
+.int-accordionNav li a
+{
+    display: block;
+    padding: .2em 1.1em;
+    .text-overflow-default;
+    white-space: nowrap;
+    overflow: hidden;   
+}
+/* Datepicker*/
+.ui-datepicker
+{ 
+	display: none;
+	width: 259px;
+    .border-radius(3px 3px 0 0);
+    .box-shadow(0 0px 19px -3px rgba(0, 0, 0, 0.3));  
+	background-color: @datepicker-base-background;
+	border: 1px solid @menu-border;
+	z-index: 9999 !important; /*to appear in front of contol bar*/
+    .ui-datepicker-header
+    {
+	    position: relative;
+	    padding: .2em 0;
+	    font-weight: normal;
+	    .nav-bg;
+	    border-bottom: 1px solid @button-hover-border;
+	    border-top: 1px solid @gradient-border;
+        .border-radius(2px 2px 0 0);
+    }
+    .ui-datepicker-prev
+    {
+	    left:2px;
+	    position: absolute;
+    }
+    .ui-datepicker-next 
+    {
+	    right:2px;
+	    position: absolute;
+    }
+    .ui-datepicker-prev-hover
+    {
+	    left:2px;
+    }
+    .ui-datepicker-next-hover
+    {
+	    right:2px;
+    }
+    .ui-datepicker-prev span:before, .ui-datepicker-next span:before
+    {
+        overflow: hidden;
+        display: block;
+    }
+    .ui-datepicker-prev span, .ui-datepicker-next span
+    {
+        text-indent: 0;
+        width: 1.6em;
+        height: 1.6em;
+        display: block;
+        position: absolute;
+        text-align: center;
+        margin: 0;
+        line-height: @line-height-base*1.8;
+        cursor: pointer;
+        font-size: @font-size-base*1.3;
+    }
+    .ui-datepicker-prev span
+    {
+        left: 0;
+    }
+    .ui-datepicker-next span
+    {
+        right: 0;
+    }
+    .ui-datepicker-title
+    {
+	    margin: 0 2.3em;
+	    line-height: @line-height-base*2.2;
+	    text-align: center;
+	    font-weight: bold;
+        select {
+	        font-size:@font-size-base;
+	        margin:1px 0;
+        }
+    }
+    select.ui-datepicker-month-year
+    {
+	    width: 100%;
+    }
+    select.ui-datepicker-month, select.ui-datepicker-year
+    { 
+	    width: 47%;
+    }
+    select.ui-datepicker-year
+    {
+	    margin-left: 2%;
+    }
+    table 
+    {
+	    margin: 0;	
+    }
+    tr
+    {
+	    border: 0;
+        &:hover
+        {
+	        background: none;
+        }
+    }
+    th
+    { 
+	    padding: .5em;
+	    text-align: center;
+	    border: 0;
+	    font-weight: normal;
+	    background: none;
+	    border-bottom: 2px solid @general-grey-border;
+	    border-top: 1px solid @general-border;
+    }  
+    td
+    {
+	    border: 0;
+	    padding: 0;
+    }
+    td span, td a 
+    { 
+	    display: block;
+	    padding: .2em;
+	    text-decoration: none;
+	    font-weight: bold;
+    }
+    .ui-datepicker-buttonpane /* not used in current version, needs testing !!!DO NOT USE BUTTON PANE!!! */
+    {
+	    background-image: none;
+	    margin: .7em 0 0 0;
+	    padding:0 .2em;
+	    border-left: 0;
+	    border-right: 0;
+	    border-bottom: 0;
+    }
+    .ui-datepicker-buttonpane button /* not used in current version, needs testing*/
+    {
+	    float: right;
+	    margin: .5em .2em .4em;
+	    cursor: pointer;
+	    padding: .2em .6em .3em .6em;
+	    width:auto;
+	    overflow:visible;
+    }
+    .ui-datepicker-buttonpane button.ui-datepicker-current /* not used in current version, needs testing*/
+    {
+	    float:left;
+    }
+    th, td.ui-datepicker-week-col
+    {
+	    background: @datepicker-week-row-background;
+    }
+    /*states*/
+    tbody td {  
+        border-right: 1px solid @general-grey-border; 
+	    text-align: center;
+        &:last-child {  
+            border-right: 0px;  
+        }
+    }  
+    tbody tr {  
+        border-bottom: 1px solid @general-grey-border;  
+        &:last-child {  
+            border-bottom: 0px;  
+        }
+    }  
+    td span, td a {  
+        display: inline-block;   
+        width: 36px;  
+        height: 36px;  
+        line-height: 36px;  
+	    padding: 0;
+    }
+}
+.ui-datepicker.int-weekNo td span, .ui-datepicker.int-weekNo td a
+/*When using 'week' numbers must add 'showWeek: true' and $('.ui-datepicker').addClass('int-weekNo'); */
+{
+	width: 31px;  
+    height: 31px;  
+    line-height: 31px;
+}
+.ui-datepicker-calendar .ui-state-default {  
+    background: @datepicker-background;  
+} 
+.ui-datepicker-unselectable .ui-state-default {    
+    color: @datepicker-unselectable-font;
+    font-weight: normal;
+    background-color: @datepicker-unselectable-background;
+    cursor: not-allowed;  
+} 
+.ui-datepicker-calendar .ui-state-hover {  
+    background: @datepicker-hover-background;
+}  
+.ui-datepicker-calendar .ui-state-active {
+	border-color: @button-hover-border @button-hover-2-border @general-border;
+    .box-shadow(inset 0 0 7px 0 rgba(0, 0, 0, 0.7));
+	background: @datepicker-active-background;
+	color: @datepicker-active-font;
+}
+.ui-datepicker-calendar .ui-state-active.ui-state-hover {
+	background: @datepicker-active-hover-background;
+	color: @default-font;
+}
+.ui-datepicker-calendar .ui-priority-secondary {
+    color: @button-hover-border;
+    font-weight: normal
+}
+.ui-datepicker-calendar .ui-state-default.ui-state-active.ui-priority-secondary {
+    color: @datepicker-active-font;
+}
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi { 
+	width:auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float:left;
+	margin-left: .3%;
+	overflow: hidden;
+}
+.ui-datepicker-multi .ui-datepicker-group:first-child {
+	margin-left: 0;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width:100%;
+	margin: 0;
+}
+.ui-datepicker-multi-2 {
+	width: 472px !important;
+	overflow: hidden;
+}
+.ui-datepicker-multi-2 td span, .ui-datepicker-multi-2 td a {
+	width: 32px;  
+    height: 32px;  
+    line-height: 32px;
+}
+.int-weekNo.ui-datepicker-multi-2 {
+	width: 490px !important;
+	overflow: hidden;
+}
+.int-weekNo.ui-datepicker-multi-2 td span, .int-weekNo.ui-datepicker-multi-2 td a {
+	width: 29px;  
+    height: 29px;  
+    line-height: 29px;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group { 
+	width:49.8%;
+}
+.ui-datepicker-multi-3 {
+	width: 640px !important;
+	overflow: hidden;
+}
+.ui-datepicker-multi-3 td span, .ui-datepicker-multi-3 td a {
+	width: 29px;  
+    height: 29px;  
+    line-height: 29px;
+}
+.int-weekNo.ui-datepicker-multi-3 td span, .int-weekNo.ui-datepicker-multi-3 td a {
+	width: 29px;  
+    height: 29px;  
+    line-height: 29px;
+}
+.int-weekNo.ui-datepicker-multi-3 {
+	width: 775px !important;
+	overflow: hidden;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width:33.13%;
+}
+/* !!!DO NOT USE MULITI 4 DATEPICKER!!!*/
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear:left;
+}
+.ui-datepicker-row-break
+{
+	clear:both;
+	width:100%;
+}
+/* RTL support */
+.ui-datepicker-rtl
+{ 
+    direction: rtl;
+    .ui-datepicker-prev
+    {
+        right: 2px;
+        left: auto;
+    }
+    .ui-datepicker-next
+    {
+        left: 2px;
+        right: auto;
+    }
+    .ui-datepicker-prev:hover
+    {
+        right: 1px;
+        left: auto;
+    }
+    .ui-datepicker-next:hover
+    { 
+        left: 1px;
+        right: auto;
+    }
+    .ui-datepicker-buttonpane
+    {
+        clear:right;
+    }
+    .ui-datepicker-buttonpane button
+    {
+        float: left;
+    }
+    .ui-datepicker-buttonpane button.ui-datepicker-current
+    {
+        float:right;
+    }
+    .ui-datepicker-group
+    {
+        float:right;
+    }
+    .ui-datepicker-group-last .ui-datepicker-header
+    {
+        border-right-width:0;
+        border-left-width:1px;
+    }
+    .ui-datepicker-group-middle .ui-datepicker-header
+    {
+        border-right-width:0;
+        border-left-width:1px;
+    }
+}
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
+/* Dialog*/
+.ui-dialog
+{
+	position: absolute;
+	padding: 0;
+	width: 450px;
+	overflow: hidden;
+    .box-shadow(0 0px 40px -6px rgba(0,0,0,.7));
+	background: @dialog-background;
+	color: @default-font;
+    .border-radius-default;
+	border: 1px solid @site-border;
+    .ui-dialog-titlebar
+    {
+	    position: relative;
+	    padding: .7em 1em;
+        .nav-bg;
+        border-bottom: 1px solid @button-hover-border;
+        .border-radius(3px 3px 0 0); 
+    }
+    .ui-dialog-title
+    {
+	    float: left;
+	    font-size: @font-size-base*1.3;
+	    text-decoration: none;
+	    margin: 0 0.5em;
+	    color: @default-font;
+        margin: .1em 16px .1em 0;
+        .text-shadow(0 1px 0 rgba(255,255,255,0.5));
+    } 
+    .ui-dialog-titlebar-close {
+        display: block;
+        top: .8em;
+        right: .7em;
+        position: absolute;  
+    }
+    .ui-dialog-titlebar-close .ui-icon-closethick {
+        text-indent: 0;
+        width: 1.3em;
+        height: 1.1em;
+        font-size: @font-size-base*1.3;
+        text-align: center;
+        margin: 0;
+    &:before {
+        overflow: hidden;
+        display: block;    
+    }
+    }
+    .ui-dialog-content {
+	    margin: 0;
+	    padding: 0;
+	    position: relative;
+	    border: 0;
+	    background: none;
+	    zoom: 1;
+	    border-top: 1px solid @general-border;
+	    overflow: hidden;
+    }
+    .ui-dialog-buttonpane /*button pane untested*/
+    {	
+        padding: .5em 1em 1em;
+        margin: 0;
+        .controlbar-bg;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: @general-border;
+        .box-shadow(0 -2px 12px -3px rgba(0, 0, 0, 0.2));
+        .ui-dialog-buttonset /*button pane untested*/{
+	        float: left;
+        }
+        button /*button pane untested*/{
+	        margin-right: .4em;
+        }
+    }
+    .ui-resizable-se /*untested*/
+    {
+	    width: 14px;
+	    height: 14px;
+	    right: 3px;
+	    bottom: 3px;
+    }
+    .int-controlBar {
+          z-index: auto;
+     }
+}
+.int-dialogContainer
+{
+    margin: 1em 0;
+    border: 1px solid @menu-border;
+    padding: 0;
+    background: @table-row-background;
+    display: block;
+    clear: both;
+}
+.int-modalForm .int-dialogContainer
+{
+    .box-shadow(0 0px 9px -4px rgba(0, 0, 0, 0.7));
+}
+.sst-preferences .int-dialogContent, .int-dialogWrap
+{
+	margin: 1em;
+	padding: 0;
+}
+.modalAlert .int-dialogWrap
+{	
+	margin: 0;
+	padding: 0 1em;
+	overflow-y: auto;
+	-webkit-overflow-scrolling : touch;
+}
+/*Diff*/
+.ui-dialog .ui-dialog-buttonpane /*button pane untested*/
+{	
+    padding: .5em 1em 1em;
+    margin: 0;
+    background: @datatables-top-toolbar-background url(../img/controlbar-bg.png) repeat-x left top;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: @white;
+    .box-shadow (0 -2px 12px -3px rgba(0, 0, 0, 0.2));
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset /*button pane untested*/
+{
+	float: left;
+}
+.ui-dialog .ui-dialog-buttonpane button /*button pane untested*/
+{
+	margin-right: .4em;
+}
+.ui-dialog .ui-resizable-se /*untested*/
+{
+	width: 14px;
+	height: 14px;
+	right: 3px;
+	bottom: 3px;
+}
+.ui-draggable .ui-dialog-titlebar /*untested*/
+{
+	cursor: move;
+}
+.ui-dialog-content > .int-alert
+{
+       margin-left: 1em;
+       margin-right: 1em;
+}
+.ui-dialog .int-dialogInnerContainer > h2:first-child, .ui-dialog .int-dialogInnerContainer > h3:first-child
+{
+       margin-top: .5em;
+}
+
+.ui-dialog .int-inlineControlBar
+{
+	position: absolute;
+	width: 100%;
+    z-index: auto;
+}
+/*End Diff*/
+ /*Autocomplete*/
+.ui-autocomplete {
+    &.ui-menu
+    {
+	    overflow-y: auto;
+	    /* prevent horizontal scrollbar */
+	    overflow-x: hidden;
+	    /* add padding to account for vertical scrollbar */
+	    top: 0; /* #8656 */
+	    cursor: default;
+	    position: absolute;
+	    background-color: @menu-background;
+	    left: 0;
+	    bottom: 0;
+        .box-shadow(0 3px 13px -3px rgba(0, 0, 0, 0.3));
+	    border: 1px solid @menu-border;
+        max-height: 250px; 
+	    z-index: 99999 !important
+    }
+    li
+    {
+	    margin: 0;
+	    padding: 0;
+	    zoom: 1;
+	    float: left;
+	    clear: left;
+	    width: 100%;
+	    display: block;
+        a {
+	        display: block;
+	        padding: .3em;
+	        zoom: 1;
+	        line-height: @line-height-base*1.5;
+        }
+    }
+}
+/*Combobox*/
+.int-combobox {
+    /*position: relative;*/
+    display: table;
+    width: 100%;
+    .int-comboboxToggle {
+        top: 0;
+        bottom: 0;
+        padding: 0 .7em;
+        .border-radius(0 3px 3px 0);
+		display: table-cell;
+		vertical-align: middle;
+		width: 1%;
+		position: inherit;
+		z-index: 1;
+        /* support: IE7 */
+        *height: 1.7em;
+        *top: 0.1em;
+    }
+}
+.int-comboboxToggle [class*="int-icon"]
+{
+    font-size: @font-size-base*1.2;
+}
+/*Progress bar*/
+.ui-progressbar, 
+.ui-slider
+{
+    background: @progressbar-and-slider-background;
+    text-align: left;
+    border-bottom: 1px solid @general-border;
+    margin: 1.5em 0;
+    .box-shadow(inset 0 1px 1px 0 rgba(0,0,0,0.2));
+}
+.ui-progressbar
+{
+    height: 2.2em;
+    overflow: hidden; 
+    .ui-progressbar-value
+    {
+        margin: 0;
+        height: 100%;
+    }
+    .ui-progressbar-value
+    {
+	    .value-bg;
+        .box-shadow(inset 0 1px 1px 0 rgba(0,0,0,0.3));
+    }
+}
+/*Slider*/
+.ui-slider
+{
+    position: relative;
+    text-align: left;
+    .ui-slider-handle
+    {
+        position: absolute;
+        z-index: 2;
+        width: 1.3em;
+        height: 1.4em;
+        cursor: default;
+        background: @button-background url(../img/button-bg.png) repeat-x left bottom;
+	    border: 1px solid @button-border;
+	    color: @default-font;
+        &.ui-state-hover
+        {
+	        background: @gradient-background;
+	        color: @button-hover-font;
+            .box-shadow2(0 1px 1px rgba(0,0,0,0.3), 0 0 2px rgba(0,0,0,0.1));
+	        border-color: @button-hover-border; 
+	        text-decoration: none;
+        }
+     }
+        .ui-slider-range
+        {
+            position: absolute;
+            z-index: 1;
+            font-size: @font-size-base*0.7;
+            display: block;
+            border: 0;
+	        .value-bg;
+        }
+}
+.ui-slider, .ui-slider .ui-slider-handle, .ui-slider .ui-slider-range
+{
+    .border-radius(5px);
+}
+.ui-slider-horizontal{
+    height: .95em;
+    .ui-slider-handle{ 
+        margin-left: -.7em;
+        top: -.4em;
+     }
+    .ui-slider-range{
+        top: 0;
+        height: 100%;
+    }
+    .ui-slider-range-min{ 
+        left: 0;
+    }
+    .ui-slider-range-max{
+        right: 0;
+    }
+}
+.ui-slider-vertical {
+    width: .9em;
+    height: 100px;
+    .ui-slider-handle{ 
+        left: -.3em;
+        margin-left: 0;
+        margin-bottom: -.7em;
+    }
+    .ui-slider-range{
+        left: 0;
+        width: 100%;
+    }
+    .ui-slider-range-min{
+        bottom: 0;
+    }
+    .ui-slider-range-max{
+        top: 0;
+    }
+}
+/* tabs*/
+.ui-tabs
+{
+    position: relative;
+    padding: .2em;
+    zoom: 1;
+     .ui-tabs-nav li
+    {
+        list-style: none;
+        float: left;
+        position: relative;
+        top: 0;
+        margin: 1px .2em -2px 0;
+        border-bottom: 0;
+        padding: 0;
+        white-space: nowrap;
+        .outline-0;
+         &.ui-state-hover a
+        {
+            .text-decoration-underline;   
+        }
+         a
+        {
+            float: left;
+            padding: .5em 1em .7em;
+            text-decoration: none;
+	        border: 1px solid transparent;
+	        border-top-width: 2px;
+	        border-bottom-width: 0;
+        }
+         &.ui-tabs-active
+        {
+            padding-bottom: 1px;
+        }
+         &.ui-tabs-active a, 
+         &.ui-state-disabled a, 
+         &.ui-tabs-loading a
+        {
+            cursor: text;
+        }
+    }
+    .ui-tabs-nav li a, 
+    .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a
+    {
+        cursor: pointer;
+    } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+    .ui-tabs-panel
+    {
+        display: block;
+        border-width: 0;
+        padding: 0;
+        background: none;
+    }
+    .ui-tabs-nav
+    {
+        margin: 0 0 -1px;
+        padding: .2em .5em 0;
+	    border-bottom: 1px solid @general-grey-border;
+    }
+} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.int-formFeature .ui-tabs .ui-tabs-nav, .ui-dialog .ui-tabs .ui-tabs-nav
+{
+	border-bottom: 0;
+	margin: 0;
+}
+.ui-dialog .ui-tabs .ui-tabs-nav
+{
+    .margin-left-right(.5em,.5em)
+}
+
+/*spinner*/
+.ui-spinner
+{
+    /*position:relative;*/
+    /*display: inline-block;*/
+    padding: 0;
+    vertical-align: middle;
+
+	display: table;
+	height: auto !important;
+
+	input
+	{
+		display: table-cell;
+	}
+    a.ui-spinner-button
+    {
+        color: @anchor-font;
+        /*border-top: none;
+        border-bottom: none;
+        border-right: none;
+        position :absolute;*/
+
+		top: 0;
+		display: table-cell;
+		width: 1%;
+		padding: 0 .7em;
+		vertical-align: middle;
+		position: inherit;
+		z-index: 1;
+
+        margin: 0;
+        /*padding: 0;
+        bottom: 2px;*/
+        background: @spinner-button-background;
+        border: 1px solid @button-border;
+        .border-radius(0);
+        .box-shadow(none);
+        &:hover{
+            box-shadow: none;
+            color: @anchor-hover-font;     
+        }
+        .ui-button-text
+        {
+            position: relative;
+        }
+    } 
+    /* more specificity required here to overide default borders */
+    .ui-icon {
+        /*position: absolute;
+        margin-top: -9px;
+        font-size: 14px;*/
+        text-indent: 0;
+        /*margin-right: 0;*/
+        overflow: hidden;
+        /*width: 1.2em;
+        height: 13px;
+        .position-left-top(5px,9px);*/
+
+		font-size: 1.2em;
+		width: .8em;
+		height: .97em;
+
+    } 
+    /* TR overrides */
+    .ui-icon-triangle-1-s
+    {/* need to fix icons sprite */
+        background-position:-65px -16px;
+    }
+}
+.ui-spinner-input
+{
+    border: none;
+    background: none;
+    padding: 0;
+    margin: .2em 0;
+    vertical-align: middle;
+    .margin-left-right(.4em,22px);
+    background-color: @spinner-input-background;
+}
+.ui-spinner-button
+{
+    width: 25px;
+    height: 48%;
+    font-size: @font-size-base*0.5;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    cursor: default;
+    display: block;
+    overflow: hidden;
+    right: 2px;
+}
+/* vertical centre icon */
+.ui-spinner-up
+{
+    top: 1px;
+}
+.ui-spinner-down
+{
+    bottom: 1px;
+}
+/* Menu */
+.ui-menu {
+    width: 230px;
+    .border-radius-default;
+    .box-shadow(0 0px 19px -3px rgba(0, 0, 0, 0.3));
+    background-color: @menu-background;
+    border: 1px solid @menu-border;
+    z-index: 9999;
+    .ui-menu-item {
+        [class*="int-icon"] {
+            font-size: @font-size-base;
+            width: 1.3em;
+            height: 1.3em;
+            margin: 0 .3em 0 0;
+            line-height: @line-height-base*1.2;
+        }
+        a {
+            padding: .3em .4em;
+            color: @default-font;
+            text-decoration: none;
+            &:hover {
+                color: @default-font;
+                text-decoration: none;
+            }
+        }
+        .ui-icon {
+            text-indent: 0;
+            line-height: 1.6;
+        }
+    }
+    &.ui-menu-icons .ui-menu-item a {
+        padding-left: 0;
+    }
+}

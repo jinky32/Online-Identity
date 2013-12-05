@@ -1,0 +1,175 @@
+/*Mixins*/
+.border-radius (@arg) {
+  -moz-border-radius: @arg;
+  -webkit-border-radius: @arg;
+  border-radius: @arg;
+}
+.text-shadow (@arg) {
+	-moz-text-shadow: @arg;
+    -webkit-text-shadow: @arg;
+    -o-text-shadow: @arg;
+    -ms-text-shadow: @arg;
+    text-shadow: @arg;
+}
+.text-shadow2 (@arg,@arg2) {
+	-moz-text-shadow: @arg;
+    -webkit-text-shadow: @arg,@arg2;
+    -o-text-shadow: @arg,@arg2;
+    -ms-text-shadow: @arg,@arg2;
+    text-shadow: @arg,@arg2;
+}
+.box-shadow (@arg) {
+    -webkit-box-shadow: @arg;
+	-moz-box-shadow: @arg;
+	-o-box-shadow: @arg;
+    -ms-box-shadow: @arg;
+	box-shadow: @arg;
+}
+.box-shadow2 (@arg,@arg2) {
+    -webkit-box-shadow: @arg,@arg2;
+	-moz-box-shadow: @arg,@arg2;
+	-o-box-shadow: @arg,@arg2;
+    -ms-box-shadow: @arg,@arg2;
+	box-shadow: @arg,@arg2;
+}
+.transform(@arg) {
+	-webkit-transform: @arg;
+	-moz-transform: @arg;
+	-o-transform: @arg;
+    -ms-transform: @arg;
+	transform: @arg;
+}
+.transition(@arg) {
+    -webkit-transition: @arg;
+	-moz-transition: @arg;
+	-o-transition: @arg;
+	transition: @arg;
+}
+.animation(@args) {
+    -moz-animation: @args;
+    -o-animation: @args;
+    -webkit-animation: @args;
+    animation: @args;
+}
+//Defaults
+.border-radius-default {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.box-sizing-default {
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.outline-default {
+    outline: 1px solid @input-focused-border;
+}
+.text-decoration-default {text-decoration: none;}
+.text-overflow-default {
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.user-select-default {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    user-select:none; 
+}
+//Other Properties
+.text-decoration-underline{
+    text-decoration: underline;
+}
+.outline-0 {
+    outline: 0;
+}
+.outline-none {
+    outline: none;
+}
+.padding-0 {padding: 0;}
+.word-wrap-break-word {
+    -ms-word-wrap: break-word; 
+    word-wrap: break-word;
+}
+.background-cover-default {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+//Img Backgrounds
+.nav-bg {
+    background: @gradient-background url("../img/nav-bg.png") repeat-x bottom left;
+}
+.controlbar-bg {
+    background: @gradient-background url(../img/controlbar-bg.png) repeat-x left top;
+}
+.value-bg{
+    background: @progressbar-and-slider-value-background url(../img/secondary-nav-selected.png) repeat-x left bottom;
+}
+.gradient-bg {
+    background: @body-background url("../img/gradient-bg.jpg") no-repeat center center fixed;
+}
+
+
+//Margins
+.margin-left-right(@left,@right){
+    margin-left: @left;
+	margin-right: @right;
+}
+.margin-top-bottom(@top,@bottom){
+    margin-top: @top;
+	margin-bottom: @bottom;
+}
+//Positioning
+.position-left-right(@left,@right){
+    left: @left;
+    right: @right;
+}
+.position-left-top(@left,@top){
+    left: @left;
+    top: @top;
+}
+.position-vertical-align-display(@position,@vertical-align,@display) {
+    position: @position;
+    vertical-align: @vertical-align;
+    display: @display;
+}
+//Font and Background
+.color-and-background-color(@color,@background-colour) {
+	color: @color;
+	background-color:@background-colour;
+}
+
+
+//buttons
+@base-start: "../img/button-";
+@base-end: "-bg.png";
+@string-blue: "blue";
+@string-orange: "orange";
+@string-green: "green";
+@string-red: "red";
+@string-black: "black";
+.coloured-button-base(@bg,@string,@bc,@c){
+    background: @bg url("@{base-start}@{string}@{base-end}") repeat-x left top;
+	border-color: @bc;
+    color: @c;
+}
+.coloured-button-hover (@bg,@bc,@c) {
+    &:hover {
+        background: @bg;
+        border-color: @bc;
+        color: @c;
+    }
+}
+.coloured-button-active(@bg,@bc1,@bc2,@bc3) {
+    &:active {
+        background: @bg;
+        border-color: @bc1 @bc2 @bc3;
+    }
+}
+/*End Mixins*/

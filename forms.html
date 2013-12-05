@@ -1,0 +1,1596 @@
+<!DOCTYPE html><html lang="en"><!-- InstanceBegin template="/Templates/indextemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Forms</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="css/uif-fontAwesome.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="css/uif-stylesheet.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="css/uif-responsive.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="css/uif-print.css" media="print"/>
+<!-- DOCS -->
+<link rel="stylesheet" type="text/css" href="docsonly/css/docs.css" media="screen, projection"/>
+<!-- End DOCS -->
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="css/uif-ie.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="css/uif-ie8.css" media="screen, projection" />
+<script type="text/javascript" src="js/html5shiv.js"></script>
+<script type="text/javascript" src="js/html5shiv-printshiv.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/uif-fontAwesome-ie7.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="css/uif-ie7.css" media="screen, projection" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="css/uif-print.css" media="print"/>
+<!--[if lt IE 9]>    
+<link rel="stylesheet" type="text/css" href="../docsonly/css/uif-ie.css" media="screen, projection" />
+<![endif]-->
+<!-- InstanceParam name="Javascript functions" type="boolean" value="true" -->
+</head>
+<body>
+<div id="int-org">
+	<!--Application Header-->
+	<section class="int-headerWrap">
+	<a class="int-vantageLogo" href="#">
+	<span class="int-vantageIcon">Vantage logo</span>
+	</a>
+	<div class="int-titleWrap">
+		<header class="int-title" role="banner">
+			<h1><a id="main-title" href="#"></a></h1>
+        </header>
+		<a class="int-skip" href="#int-content">Skip to content</a>
+	  <ul>
+			<li class="oucu">test4</li>
+			<li><a href="https://msds-test.open.ac.uk/signon/samsoff.aspx">Logout</a></li>
+	  </ul>
+	</div>
+  </section>
+	<div id="int-site">
+		<nav id="int-primary" class="int-primary" role="navigation">
+		<!--nav search-->
+		<form class="int-navSearch" role="search">
+			<label for="search">Application search...</label>
+			<input id="search" type="text" onClick="if(this.value == 'Application search...') this.value='';" onBlur="if(this.value.length == 0) this.value='Application search...';" value="Application search..." name="Search" class="int-search ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"/>
+		</form>
+        <ul class="int-tabs">
+          <li class="bfa" id="bfa999999"><a href="#nav-bfa999999">Application Framework</a></li>
+        </ul>
+        </nav>
+		<div id="int-page">
+			<!--Sidebar-->
+            
+		  <div id="int-region2">
+				<a id="int-navToggle" href="#" role="button"><i id="int-showHideTooltip" class="int-icon-reorder int-tooltipW"></i></a>
+				<nav id="nav-bfa999999" class="int-secondary" role="navigation" style="display: none">
+				<ul id="acc-bfa999999">
+					<li class="app" id="app99999"><a href="#">Client Framework</a>
+					<ul>
+						<li class="page" id="page9999"><a href="index.html">Getting Started</a></li>
+						<li class="page" id="page9999"><a href="layouts.html">Layouts: </a></li>
+						<li class="page" id="page9999"><a href="columns.html">- Columns</a></li>
+						<li class="page" id="page9999"><a href="rows.html">- Rows &amp; Grids</a></li>
+						<li class="page" id="page9999"><a href="buttons.html">Buttons &amp; Togglers</a></li>
+						<li class="page" id="page9999"><a href="icons.html">Icons</a></li>
+						<li class="page" id="page9999"><a href="forms.html">Forms</a></li>
+						<li class="page" id="page9999"><a href="jQueryUI/accordion.html">jQuery UI Widgets</a></li>
+						<li class="page" id="page9999"><a href="navigation.html">Navigation</a></li>
+						<li class="page" id="page9999"><a href="notifications.html">Notifications</a></li>
+						<li class="page" id="page9999"><a href="tables.html">Tables</a></li>
+						<li class="page" id="page9999"><a href="typography.html">Typography</a></li>
+						<li class="page" id="page9999"><a href="content.html">Content</a></li>
+						<li class="page" id="page9999"><a href="javascript.html">Javascript</a></li>
+					</ul>
+					</li>
+				</ul>
+				</nav>
+		  </div>
+			<!--Main content area-->
+			<div id="int-region1">
+			  <div id="int-content" class="int-content">
+              	<!-- InstanceBeginEditable name="Main content area" -->
+				<h1>Forms</h1>
+
+                <ol class="int-jumpLinks">
+                    <li>Jump to:</li>
+                    <li><a href="#accessibilityGuidlines">General Form Accessibility Guidlines</a></li>
+                    <li><a href="#basicFormStructure">Basic Form Structure</a></li>
+                    <li><a href="#basicFormComponents">Basic Form Components</a></li>
+                    <li><a href="#additionalFormComponents">Additional Form Components</a></li>
+                    <li><a href="#formValidationStates">Form Validation and States</a></li>
+                    <li><a href="#checkAll">Check All</a></li>
+                    <li><a href="#inputsPrePostfix">Inputs with Pre, Postfix and associated components</a></li>
+                    <li><a href="#largeSearch">Large Search</a></li>
+                    <li><a href="#listbox">Listbox Widget</a></li>
+                    <li><a href="#features">Feature Blocks</a></li>
+                    <li><a href="#inlineControlbar">Inline Control Bar</a></li>
+                    <li><a href="#pageControlbar">Page Control Bar</a></li>
+                </ol>
+                
+                <div class="int-formFeature">
+                    <h2 id="accessibilityGuidlines">General Form Accessibility Guidlines</h2>
+                    <p>Form elements are generally already accessible to screen readers as they use semantic markup. Most of the necessary ARIA markups are automatically injected in by javascript. For some components, and application page layouts, some hard-coding is necessary to make them accessible.</p>
+                    
+                    <h4>Labels for Individual Form Elements</h4>
+                    <p>Each form element, i.e. inputs, textareas, selects, checkboxes, radio buttons, is typically associated with a <code>label</code>. There are two ways to associate a label to a form element:</p>
+                    <ol class="int-numberedList">
+                        <li>Explicitly by giving the form element an <code>[id="*"]</code>, and giving the label a <code>[for="*"]</code>, where <code>*</code> designates identical values. This is common where you have the label in a separate grid from the form element.</li>
+                        <li>Implicitly by placing the form element inside the label. In this case you will not need to apply an ID and For attribute. This is common when using radio buttons and checkboxes.</li>
+                    </ol>
+                    <p>In browsers supporting HTML5, clicking the label will cause the corresponding form element to gain focus.</p>
+                        <a href="#" class="int-button int-toggleTrigger">Example</a>
+                    <div class="int-toggle" style="padding-top: .8em;">
+                        <div class="eg">
+<h5>Explicit Association</h5>
+<label for="inputExplicit">Label</label>
+<input id="inputExplicit" type="text" value="" />
+
+<h5>Implicit Association</h5>
+<label>
+    Checkbox:
+    <input type="checkbox" value="" />
+    You can put the label text in front of the checkbox, behind, or both
+</label>         
+                        </div>
+                        <pre class="code"></pre>
+                    </div>
+                    <h4>Labels for Grouped Form Elements</h4>
+                    <p>In some situations, you may use a label to describe a group of elements i.e. you may have a label in one grid describing a collection of inputs in an adjacent grid. In this case a label does not need a <code>for</code> attribute linked to a specific form <code>id</code>. Instead, the label itself will need an <code>id</code>.</p>
+                    <h4>Using Icons</h4>
+                    <p>When using icons in the place of text for buttons, links etc, ensure that a title attribute is added to the control so screen readers can pick up on the function. By default, elements with title attributes cause a dark tooltip to appear. To prevent this occuring, you can add a <code>.int-noTooltip</code>.</p>
+                    <a href="#" class="int-button int-toggleTrigger">Example</a>
+                    <div class="int-toggle" style="padding-top: .8em;">
+                        <div class="eg">
+<a href="#" class="int-button int-noTooltip" title="This is a search button"><i class="int-icon-search"></i></a>
+
+and 
+
+<a href="#" class="int-noTooltip" title="This is a search button"><i class="int-icon-search"></i></a>
+                        </div>
+                        <pre class="code"></pre>
+                    </div>
+                </div>
+                <hr />
+                
+                <h2 id="basicFormStructure">Basic Form Structure</h2>
+                <div class="int-component">
+                    <div class="example">
+<form>
+    <fieldset>
+
+        <!--Fieldsets must contain legend-->
+        <legend><span>Legend</span></legend>
+
+        <div class="int-row">
+            <!--Content here-->
+        </div>
+
+    </fieldset>
+</form>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#basicFormRazor">Razor</a></div>
+                        <div><a href="#basicFormHTML">HTML</a></div>
+                        <div><a href="#basicFormText">Supporting Text</a></div>
+                        <div><a href="#basicFormChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="basicFormHTML">
+                        <pre></pre>
+                    </div>
+                    <div class="docrazor" id="basicFormRazor">
+                        <pre class="int-toggleCode">
+&#64;using (Html.BeginForm("ExampleForm", "Home"))
+{
+    using (Html.BeginFieldset("Legend"))
+    {
+        // Form content here
+    }
+}
+                </pre>
+                    </div>
+                    <div class="doc" id="basicFormText">
+                        <p>A <code>fieldset</code> element is used to group related elements in a form. Each fieldset must contain a <code>legend</code>. A legend is effectively a header within a fieldset which requires a meaningful title related to the form, for instance 'Delivery Address'. </p>
+                        <p>Submission <code>buttons</code> should be placed outside of the fieldset but before the closing <code>form</code> tag.</p>
+                    </div>
+                    <div class="doc" id="basicFormChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <h2 id="basicFormComponents">Basic Form Components</h2>
+                <div class="int-component">
+                    <div class="example">
+                
+<h3>Input and Text Area</h3>
+
+<!--Label with input-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="basicInput1">Label with input</label>
+    </div>
+    <div class="int-grid5">
+        <input name="{input name}" id="basicInput1" type="text">
+    </div>
+</div>
+<!--End of label with input-->
+
+<!--label with textarea-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="basicTextarea1">label with textarea</label>
+    </div>
+    <div class="int-grid5">
+        <textarea name="{input name}" id="basicTextarea1"></textarea>
+    </div>
+</div>
+<!--End of label with textarea-->
+
+<h3>Select</h3>
+
+<!--Label with drop down menu-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="basicDropdown1">Label with drop down menu</label>
+    </div>
+    <div class="int-grid5">
+        <select name="{select name}" id="basicDropdown1">
+            <option value="Slower" selected="selected">Slower</option>
+            <option value="Slow">Slow</option>
+            <option value="Medium">Medium</option>
+            <option value="Fast">Fast</option>
+            <option value="Faster">Faster</option>
+            <option value="Slower">Slower</option>
+        </select>
+    </div>
+</div>
+<!--End of label with drop down menu-->
+
+
+<h2>Grouped Inputs</h2>
+<h3>Radio Buttons</h3>
+
+<!--Label with inline radio buttons-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label>Label with inline radio buttons</label>
+    </div>
+    <div class="int-grid9 int-inline int-radioGroup">
+        <label>
+            <input name="name1" type="radio">
+            Radio label 1
+        </label>
+        <label>
+            <input name="name1" type="radio">
+            Radio label 2
+        </label>
+    </div>
+</div>
+<!--End of label with inline radio buttons-->
+
+<!--Label with 'stacked' radio buttons-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label>Label with 'stacked' radio buttons</label>
+    </div>
+    <div class="int-grid9 int-stacked int-radioGroup">
+        <label>
+            <input name="name2" type="radio">
+            Radio label 1
+        </label>
+        <label>
+            <input name="name2" type="radio">
+            Radio label 2
+        </label>
+    </div>
+</div>
+<!--End of label with 'stacked' radio buttons-->
+
+<h3>Checkboxes</h3>
+
+<!--Label with inline checkboxes-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label>Label with inline checkboxes</label>
+    </div>
+    <div class="int-grid9 int-inline int-checkboxGroup">
+        <label>
+            <input name="name3" type="checkbox">
+            Checkbox label 1
+        </label>
+        <label>
+            <input name="name3" type="checkbox">
+            Checkbox label 2
+        </label>
+    </div>
+</div>
+<!--End of label with inline checkboxes-->
+
+<!--Label with 'stacked' checkboxes-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label>Label with 'stacked' checkboxes</label>
+    </div>
+    <div class="int-grid9 int-stacked int-checkboxGroup">
+        <label>
+            <input name="name4" type="checkbox">
+            Checkbox label 1
+        </label>
+        <label>
+            <input name="name4" type="checkbox">
+            Checkbox label 2
+        </label>
+    </div>
+</div>
+<!--End of label with 'stacked' checkboxes-->
+
+<h3>Multiple Inline Inputs</h3>
+
+<!--Label with inline inputs-->
+<div class="int-row int-inputGroup">
+    <div class="int-grid3">
+        <label>Label with inline inputs</label>
+    </div>
+    <div class="int-grid2">
+        <label class="int-label int-hide" for="inlineGroupInput1">{Label}</label>
+        <input name="{input name}" id="inlineGroupInput1" type="text">
+    </div>
+    <div class="int-grid2">
+        <label class="int-label int-hide" for="inlineGroupInput2">{Label}</label>
+        <input name="{input name}" id="inlineGroupInput2" type="text">
+    </div>
+    <div class="int-grid2">
+        <label class="int-label int-hide" for="inlineGroupInput3">{Label}</label>
+        <input name="{input name}" id="inlineGroupInput3" type="text">
+    </div>
+</div>
+<!--End of label with inline inputs-->
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#basicFormComponentsRazor">Razor</a></div>
+                        <div><a href="#basicFormComponentsHTML">HTML</a></div>
+                        <div><a href="#basicFormComponentsText">Supporting Text</a></div>
+                        <div><a href="#basicFormComponentsAccessibility">Accessibility</a></div>
+                        <div><a href="#basicFormComponentsChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="basicFormComponentsHTML">
+                        <pre></pre>
+                    </div>
+                    <div class="docrazor" id="basicFormComponentsRazor">
+                        <pre class="int-toggleCode">
+&#64;* Label with input *&#64;
+&#64;using (Html.BeginRow())
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabelFor(m => m.FormInput, "Label with input")
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuTextBoxFor(m => m.FormInput)
+    }
+}
+&#64;* End of label with input *&#64;
+
+&#64;* Label with textarea *&#64;
+&#64;using (Html.BeginRow())
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabelFor(m => m.FormTextarea, "Label with textarea")
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuTextAreaFor(m => m.FormTextarea)
+    }
+}
+&#64;* End of label with textarea *&#64;
+
+&#64;* Label with drop down menu *&#64;
+&#64;using (Html.BeginRow())
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabelFor(m => m.FormSelectItemsKey, "Label with drop down menu")
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuDropDownListFor(m => m.FormSelectItemsKey, Model.FormSelectItems)
+    }
+}
+&#64;* End of label with drop down menu *&#64;
+
+&#64;* Label with multi select list box *&#64;
+&#64;using (Html.BeginRow())
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabelFor(m => m.FormMultiSelectItemsKeys, "Label with multi select list box")
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuListBoxFor(m => m.FormMultiSelectItemsKeys, Model.FormMultiSelectItems)
+    }
+}
+&#64;* End of label with multi select list box *&#64;
+
+&#64;* Form inline radio buttons *&#64;
+&#64;Html.RadioGroupRowFor(m => m.FormInlineRadioGroupItemsKey, Model.FormInlineRadioGroupItems, 3, 5, "Form inline radio buttons")
+&#64;* End of form inline radio buttons *&#64;
+
+&#64;* Form stacked radio buttons *&#64;
+&#64;Html.RadioGroupRowFor(m => m.FormStackedRadioGroupItemsKey, Model.FormStackedRadioGroupItems, 3, 5, "Form stacked radio buttons", DisplayTypeOption.Stacked)
+&#64;* End of form stacked radio buttons *&#64;
+
+&#64;* Form inline checkboxes *&#64;
+&#64;Html.CheckBoxGroupRowFor(m => m.FormInlineCheckboxGroupItemsKeys, Model.FormInlineCheckboxGroupItems, 3, 5, "Form inline checkboxes")
+&#64;* End of form inline checkboxes *&#64;
+
+&#64;* Form stacked checkboxes *&#64;
+&#64;Html.CheckBoxGroupRowFor(m => m.FormStackedCheckboxGroupItemsKeys, Model.FormStackedCheckboxGroupItems, 3, 5, "Form stacked checkboxes", DisplayTypeOption.Stacked)
+&#64;* End of form stacked checkboxes *&#64;
+
+&#64;* Label with inline textboxes *&#64;
+&#64;using (Html.BeginRow())
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabel("InlineInputLabel", "Label with inline textboxes")
+    }
+    using (Html.BeginGrid(2))
+    {
+        &#64;Html.OuTextBox("InlineInputTextBox1", inlineLabelText: "Inline textbox 1")
+    }
+    using (Html.BeginGrid(2))
+    {
+        &#64;Html.OuTextBox("InlineInputTextBox2", inlineLabelText: "Inline textbox 2")
+    }
+}
+&#64;* End of label with inline textboxes *&#64;
+                
+                </pre>
+                    </div>
+                    <div class="doc" id="basicFormComponentsText">
+                        <h5>Input and Text Area</h5>
+                        To turn the text area into a multiline text area, add the <code>[rows="*"]</code> where <code>*</code> designates a positive integer.
+                    </div>
+                    <div class="doc" id="basicFormComponentsAccessibility">
+                        <h5>Radio Buttons</h5>
+                        <p>Ensure the <code>div.int-grid</code> wrapping the radio buttons contains a <code>.int-radioGroup</code> and the first <code>div.int-grid</code> contains the label for the group.</p>
+                        <h5>Checkboxes</h5>
+                        <p>Ensure the <code>div.int-grid</code> wrapping the checkboxes contains a <code>.int-checkboxGroup</code> and the first <code>div.int-grid</code> contains the label for the group.</p>
+                        <h5>Multiple Inline Inputs</h5>
+                        <p>Ensure that the <code>div.int-row</code> containing the multiple inputs has a <code>.int-inputGroup</code> and the first <code>div.int-grid</code> contains the label for the group.</p>
+                    </div>
+                    <div class="doc" id="basicFormComponentsChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <h2 id="additionalFormComponents">Additional Form Components</h2>
+                
+                <div class="int-component">
+                    <div class="example">
+                
+<h3>Watermarks</h3>
+
+<!--Label with watermark and input-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="watermark1">label and input with watermark</label>
+    </div>
+    <div class="int-grid5">
+        <input name="watermark1" class="int-watermark" id="watermark1" type="text" title="Watermark">
+    </div>
+</div>
+<!--End of label with watermark and input-->
+
+<!--Hidden label with left margin and input with watermark-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="HiddenLabelWithInput1"><span class="int-hide">Hidden label with left margin and input with watermark</span></label>
+    </div>
+    <div class="int-grid5">
+        <input name="HiddenLabelWithInput1" class="int-watermark" id="HiddenLabelWithInput1" type="text" title="Hidden label with left margin and input">
+    </div>
+</div>
+<!--End of hidden label with left margin and input with watermark-->
+
+
+<h4>Date of Birth Inputs with Watermark</h4>
+
+<!--Date of Birth inputs with Watermark-->
+<div class="int-row int-inputGroup">
+    <div class="int-grid3">
+        <label>Date of birth</label>
+    </div>
+    <div class="int-grid1">
+        <label class="int-label int-hide" for="inlineGroup2Input1">Day</label>
+        <input name="inlineGroup2Input1" class="int-watermark" id="inlineGroup2Input1" type="text" title="DD">
+    </div>
+    <div class="int-grid1">
+        <label class="int-label int-hide" for="inlineGroup2Input2">Month</label>
+        <input name="inlineGroup2Input2" class="int-watermark" id="inlineGroup2Input2" type="text" title="MM">
+    </div>
+    <div class="int-grid1">
+        <label class="int-label int-hide" for="inlineGroup2Input3">Year</label>
+        <input name="inlineGroup2Input3" class="int-watermark" id="inlineGroup2Input3" type="text" title="YYYY">
+    </div>
+</div>
+<!-- End of date of Birth inputs with Watermark-->
+
+<h4>Help</h4>
+
+<!--Label with contextual 'help' and input-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="inputWithHelp1">Label with 'help' and input<a class="int-help " href="#" title="Help"><i class="int-icon-question-sign"></i></a></label>
+    </div>
+    <div class="int-grid5">
+        <input name="{input name}" id="inputWithHelp1" type="text">
+    </div>
+    <span class="int-helpDesc">Help description</span>
+</div>
+<!--End of label with contextual 'help' and input-->
+
+<!--Label with contextual 'help' and input-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="inputWithHelp2">Duplicate of above to demonstrate behaviour<a class="int-help " href="#" title="Help"><i class="int-icon-question-sign"></i></a></label>
+    </div>
+    <div class="int-grid5">
+        <input name="{input name}" id="inputWithHelp2" type="text">
+    </div>
+    <div class="int-helpDesc">Help description</div>
+</div>
+<!--End of label with contextural 'help' and input-->
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#additionalFormComponentsRazor">Razor</a></div>
+                        <div><a href="#additionalFormComponentsHTML">HTML</a></div>
+                        <div><a href="#additionalFormComponentsText">Supporting Text</a></div>
+                        <div><a href="#additionalFormComponentsAccessibility">Accessibility</a></div>
+                        <div><a href="#additionalFormComponentsChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="additionalFormComponentsHTML">
+                        <pre></pre>
+                    </div>
+                    <div class="docrazor" id="additionalFormComponentsRazor">
+                        <pre class="int-toggleCode">
+&#64;* Label and input with watermark *&#64;
+&#64;using (Html.BeginRow())
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabelFor(m => m.InputWatermark, "Label and input with watermark")
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuTextBoxFor(m => m.InputWatermark, watermarkText: "Watermark")
+    }
+}
+&#64;* End of label and input with watermark *&#64;
+
+&#64;* Hidden input with watermark *&#64;
+&#64;using (Html.BeginRow())
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabelFor(m => m.HiddenInputWatermark, "Hidden input with watermark", hidden: true)
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuTextBoxFor(m => m.HiddenInputWatermark, watermarkText: "Hidden input with watermark")
+    }
+}
+&#64;* End of hidden input with watermark *&#64;
+
+&#64;* Label with help *&#64;
+&#64;Html.OuLabelFor(m => m.FormTextarea, "Label with textarea and help", includeHelp: true)
+&#64;Html.OuLabelHelpFor(m => m.FormTextarea, "Here is some help text")
+&#64;* End of label with help *&#64;
+                		</pre>
+                    </div>
+                    <div class="doc" id="additionalFormComponentsText">
+                        <h5>Watermarks</h5>
+                        <p>
+                            Use where either additional information is required in order to populate a form control or where a visual <code>label</code> is not required.
+                        </p>
+                        <h5>Help</h5>
+                        <p>
+                            Where a label can't be described within the label itself a <strong>help</strong> button and description can be used.
+                        </p>
+                        <p class="int-note">
+                            Standard date format: <strong>dd/mm/yyyy</strong> for datepicker see <code>Client Framework > jQuery UI Widgets > Datepicker</code>
+                        </p>
+                    </div>
+                    <div class="doc" id="additionalFormComponentsAccessibility">
+                        <h5>Watermarks</h5>
+                        <p>
+                            When using <code>watermarks</code> it is important to ensure a meaningful <code>label</code> corresponds to the input. The <code>label</code> can be hidden if necessary by using <code>int-hide</code>.
+                        </p>
+                        <p class="int-note">
+                            A <code>label</code> must always correspond to an input whether visible or not.
+                        </p>
+                        <h5>Date of Birth Inputs with Watermark</h5>
+                        <p>Ensure that the <code>div.int-row</code> containing the multiple inputs has a <code>.int-inputGroup</code> and the first <code>div.int-grid</code> contains the label for the group.</p>
+                    </div>
+                    <div class="doc" id="additionalFormComponentsChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <h2 id="formValidationStates">Form Validation and States</h2>
+                
+                <div class="int-component">
+                    <div class="example">
+<h3>Required Field</h3>
+
+<!--To be placed at the top of any form with 'required' fields-->
+<p class="int-required"><span class="int-requiredAsterisk">*</span> denotes required field</p>
+
+<!--Required input field-->
+<div class="int-row">
+    <div class="int-row">
+        <div class="int-grid3">
+            <label for="requiredInput1">Label with input<span class="int-requiredAsterisk">*</span></label>
+        </div>
+        <div class="int-grid5">
+            <input name="{input name}" id="requiredInput1" type="text" required>
+        </div>
+    </div>
+</div>
+<!--End of required input-->
+
+<h3>Required Field with Help</h3>
+
+<!--Required input field with help-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="requiredInputWithHelp1">Duplicate of above to demonstrate behaviour<span class="int-requiredAsterisk">*</span><a class="int-help " href="#" title="Help"><i class="int-icon-question-sign"></i></a></label>
+    </div>
+    <div class="int-grid5">
+        <input name="{input name}" id="requiredInputWithHelp1" type="text" required>
+    </div>
+    <span class="int-helpDesc">Help description</span>
+</div>
+<!--End of required input field with help-->
+
+<h3>Validation</h3>
+
+<!--Label with input and error message-->
+<div class="int-row int-error">
+    <div class="int-grid3">
+        <label for="inputWithError1">Label with input and error message</label>
+    </div>
+    <div class="int-grid5">
+        <input name="{input name}" id="inputWithError1" type="text" aria-describedby="inputWithErrorMessage">
+    </div>
+    <span class="int-errorMessage" id="inputWithErrorMessage">Contextual error message here</span>
+</div>
+<!--End of label with input and error message-->
+
+<h3>Read only and Disabled Form Fields</h3>
+
+<!--Label with read only input-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="readOnlyInput1">Label with read only input</label>
+    </div>
+    <div class="int-grid5">
+        <input name="{input name}" id="readOnlyInput1" type="text" value="This is read only" readonly>
+    </div>
+</div>
+<!--End of label with read only input-->
+
+<!--Label with disabled input-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="disabledInput1">Label with disabled input</label>
+    </div>
+    <div class="int-grid5">
+        <input name="{input name}" id="disabledInput1" type="text" value="This is disabled" disabled>
+    </div>
+</div>
+<!--End of label with disabled input-->
+
+<!--Label with disabled textarea-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="disabledTextarea1">Label with disabled textarea</label>
+    </div>
+    <div class="int-grid5">
+        <textarea name="{input name}" id="disabledTextarea1" disabled>This is readonly</textarea>
+    </div>
+</div>
+<!--End of label with disabled textarea-->
+
+<h4>Read only plain text</h4>
+<!--Read only plain text-->
+<div class="int-row">
+    <div class="int-grid3">
+        <p class="int-label">Read only plain text label</p>
+    </div>
+    <div class="int-grid5">
+        <p class="int-readOnlyText">Read only plain text</p>
+    </div>
+</div>
+<!--End of Read only plain text-->
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#formValidationStatesRazor">Razor</a></div>
+                        <div><a href="#formValidationStatesHTML">HTML</a></div>
+                        <div><a href="#formValidationStatesText">Supporting Text</a></div>
+                        <div><a href="#formValidationStatesAccessibility">Accessibility</a></div>
+                        <div><a href="#formValidationStatesChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="formValidationStatesHTML">
+                        <pre></pre>
+                    </div>
+                    <div class="docrazor" id="formValidationStatesRazor">
+                        <p>You can use standard MVC validation messages as normal. The validation message must be the last item in the row and must be outside the grids.</p>
+                        <pre class="int-toggleCode">
+&#64;* Required form fields *&#64;
+using (Html.BeginRow())
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabelFor(m => m.FormInputRequired, "Required input", "This is required", required: true)
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuTextBoxFor(m => m.FormInputRequired)
+    }
+    &#64;Html.ValidationMessageFor(m => m.FormInputRequired)
+}
+&#64;* End of required form fields *&#64;
+
+&#64;* Readonly and disabled form fields *&#64;
+&#64;Html.OuTextBox("ReadOnlyInputTextBox", isReadonly: true)
+&#64;Html.OuTextBox("DisabledInputTextBox", isDisabled: true)
+&#64;* End of readonly and disabled form fields *&#64;
+                		</pre>
+                    </div>
+                    <div class="doc" id="formValidationStatesText">
+                        <h5>Required Field</h5>
+                        <p class="int-note">
+                            <code>* denotes required field</code> must be included at the top of any form containing 'required' fields.
+                        </p>
+                        <p>
+                            <code>label</code> - include a <code>span</code> containing <code>*</code> with a class of <code>int-requiredAsterisk</code>.
+                        </p>
+                        <p>
+                            <code>input</code> - include an attribute of <code>required</code>.
+                        </p>
+                        <p class="int-note">
+                            HTML5 attributes do not require an attribute value i.e. <code>required</code> versus <code>required="true"</code>
+                        </p>
+                        <h5>Validation</h5>
+                        <p>
+                            To render a validation error inject a class of <code>int-error</code> in to <code>int-row</code> to form <code>int-row int-error</code> this adds the pink background colour to the row. Add the error message itself by including a <code>span</code> with a class of <code>int-errorMessage</code> and ensure the <code>span</code> with message is located before the the closing <code>int-row</code> tag.
+                        </p>
+                        <p class="int-note">
+                            Error messages should not be placed directly within an <code>int-grid</code>.
+                        </p>
+                        <h5>Read only and Disabled Form Fields</h5>
+                        <p>
+                            Add a <code>readonly</code> attribute to any input to change state to read only.
+                        </p>
+                        <p>
+                            Add a <code>disabled</code> attribute to any input to disable.
+                        </p>
+                        <p>
+                            For data that is <code>read only</code> within a form but that will never be editable use <code>Read only plain text</code>.
+                        </p>
+                    </div>
+                    <div class="doc" id="formValidationStatesAccessibility">
+                        <h5>Validation</h5>
+                        <p>Each <code>span.int-errorMessage</code> requires unique ID.</p>
+                        <p>
+                            An <code>input</code> with validation error must include <code>[aria-describedby="*"]</code>, where <code>*</code> is the unqiue ID of <code>span.int-errorMessage</code>.
+                        </p>
+                    </div>
+                    <div class="doc" id="formValidationStatesChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Check All -->
+                <h2 id="checkAll">Check All</h2>
+                <div class="int-component">
+                    <div class="example">
+<div class="int-row">
+    <div class="int-grid3">
+        <label>Try Selecting the 'Check All' Box</label>
+    </div>
+    <div class="int-grid9 int-stacked int-checkboxGroup">
+        <!-- these will be affected by check all -->
+        <label>
+            <input name="name5" class="int-checkAll" type="checkbox">
+            Check all
+        </label>
+        <label>
+            <input name="name5" type="checkbox">
+            Option b
+        </label>
+        <label>
+            <input name="name5" type="checkbox">
+            Option c
+        </label>
+        <label>
+            <input name="name5" type="checkbox">
+            Option d
+        </label>
+    </div>
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#checkAllRazor">Razor</a></div>
+                        <div><a href="#checkAllHTML">HTML</a></div>
+                        <div><a href="#checkAllText">Supporting Text</a></div>
+                        <div><a href="#checkAllAccessibility">Accessibility</a></div>
+                        <div><a href="#checkAllChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="checkAllHTML">
+                        <pre></pre>
+                    </div>
+                    <div class="docrazor" id="checkAllRazor">
+                        <p>Check all checkboxes only appear if DisplayTypeOption is Stacked</p>
+                        <pre class="int-toggleCode">
+&#64;Html.CheckBoxGroupRowFor(m => m.FormCheckAllCheckboxGroupItemsKeys, Model.FormCheckAllCheckboxGroupItems, 3, 5, "Form check all checkboxes", DisplayTypeOption.Stacked, true)
+                		</pre>
+                    </div>
+                
+                    <div class="doc" id="checkAllText">
+                        <p>The check all checkbox allows users to select a group of check boxes with one selection. Create a series of checkboxes. Add class of <code>.int-checkAll</code> to the first checkbox in the series. Give the entire series of checkboxes the same <code>name</code> attribute value. As you can see from the example, only the checkboxes with the same <code>name</code> will be affected by the selection of the <code>.int-checkAll</code> checkbox.</p>
+                    </div>
+                    <div class="doc" id="checkAllAccessibility">
+                        <p>Ensure the <code>div.int-grid</code> wrapping the checkboxes contains a <code>.int-checkboxGroup</code> and the first <code>div.int-grid</code> contains the label for the group. The label for the group requires an unique ID.</p>
+                    </div>
+                    <div class="doc" id="checkAllChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!--Inputs with pre, postfix and associated-->
+                <h2 id="inputsPrePostfix">Inputs with Pre, Postfix and associated components</h2>
+                <div class="int-component">
+                    <div class="example">
+<h3>Prefix</h3>
+
+<!--Input with prefix text-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="prefixInput1">Input with prefix text</label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputPrepend">
+            <span class="int-prefix">ID</span>
+            <input type="text" id="prefixInput1">
+        </div>
+    </div>
+</div>
+<!--End of input with prefix text-->
+
+<!--Input with prefix icon-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="prefixInput2">Input with prefix icon</label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputPrepend">
+            <span class="int-prefix" title="Flag"><i class="int-icon-flag"></i></span>
+            <input type="text" id="prefixInput2">
+        </div>
+    </div>
+</div>
+<!--End of input with prefix icon-->
+
+<h3>Postfix</h3>
+
+<!--Input with postfix text-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="postfixInput1">Input with postfix text</label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputPrepend">
+            <input type="text" id="postfixInput1">
+            <span class="int-postfix">.com</span>
+        </div>
+    </div>
+</div>
+<!--End of input with postfix text-->
+
+<!--Input with postfix icon-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="postfixInput3">Input with postfix icon</label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputPrepend">
+            <input type="text" id="postfixInput3">
+            <span class="int-postfix" title="Flag"><i class="int-icon-flag"></i></span>
+        </div>
+    </div>
+</div>
+<!--End of input with postfix icon-->
+
+<!--Input with postfix text button-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="postfixInput4">Input with postfix text button</label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputAppend">
+            <input type="text" id="postfixInput4">
+            <a href="#" class="int-button">Look up</a>
+        </div>
+    </div>
+</div>
+<!--End of input with postfix text button-->
+
+<!--Input with postfix icon button-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="postfixInput5">Input with postfix icon button</label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputAppend">
+            <input type="text" id="postfixInput5">
+            <a href="#" class="int-button" title="Search"><i class="int-icon-search"></i></a>
+        </div>
+    </div>
+</div>
+<!--End of input with postfix icon button-->
+
+<!--Input with postfix icon and text button-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="postfixInput6">Input with postfix icon and text button</label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputAppend">
+            <input type="text" id="postfixInput6">
+            <a href="#" class="int-button"><i class="int-icon-search"></i>&nbsp;Look up</a>
+        </div>
+    </div>
+</div>
+<!--End of input with postfix icon and text button-->
+
+<!--Input with postfix grouped buttons-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="postfixInput7">Input with postfix grouped buttons</label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputAppend">
+            <input type="text" id="postfixInput7">
+            <a href="#" class="int-button" title="Find"><i class="int-icon-search"></i></a>
+            <a href="#" class="int-button">Search</a>
+        </div>
+    </div>
+</div>
+<!--End of input with postfix grouped buttons-->
+
+<h3>Associated</h3>
+
+<!--Input with associated buttons-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="InputWithButton1">Input with associated buttons</label>
+    </div>
+    <div class="int-grid5">
+        <input type="text" id="InputWithButton1">
+    </div>
+    <div class="int-grid4">
+        <a href="#" class="int-button" title="edit" aria-controls="InputWithButton1"><i class="int-icon-pencil"></i>&nbsp;Edit</a>
+    </div>
+</div>
+<!--End of input with associated buttons-->
+
+<!--Input with associated grouped buttons-->
+<div class="int-row">
+    <div class="int-grid3">
+        <label for="InputWithButton2">Input with associated grouped buttons</label>
+    </div>
+    <div class="int-grid5">
+        <input type="text" id="InputWithButton2">
+    </div>
+    <div class="int-grid4">
+        <div class="int-buttonGroup">
+            <a href="#" class="int-button" title="Edit" aria-controls="InputWithButton2"><i class="int-icon-pencil"></i></a>
+            <a href="#" class="int-button" title="Remove" aria-controls="InputWithButton2"><i class="int-icon-remove"></i></a>
+        </div>
+    </div>
+</div>
+<!--End of input with associated grouped buttons-->
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#inputsPrePostfixRazor">Razor</a></div>
+                        <div><a href="#inputsPrePostfixHTML">HTML</a></div>
+                        <div><a href="#inputsPrePostfixText">Supporting Text</a></div>
+                        <div><a href="#inputsPrePostfixAccessibility">Accessibility</a></div>
+                        <div><a href="#inputsPrePostfixChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="inputsPrePostfixHTML">
+                        <pre></pre>
+                    </div>
+                    <div class="doc" id="inputsPrePostfixRazor">
+                        <pre class="int-toggleCode">
+&#64;* Input with prefix text *&#64;
+&#64;Html.OuTextBox("InputPrefixText", appendPrependMode: AppendPrependModeOption.Prepend, affixText: "ID")
+&#64;* End of input with prefix text *&#64;
+
+&#64;* Input with prefix icon *&#64;
+&#64;Html.OuTextBox("InputPrefixIcon", appendPrependMode: AppendPrependModeOption.Prepend, affixIcon: "flag")
+&#64;* End of input with prefix icon *&#64;
+
+&#64;* Input with postfix text *&#64;
+&#64;Html.OuTextBox("InputPostfixText", appendPrependMode: AppendPrependModeOption.Append, affixText: ".com")
+&#64;* End of input with postfix text *&#64;
+
+&#64;* Input with postfix icon *&#64;
+&#64;Html.OuTextBox("InputPostfixIcon", appendPrependMode: AppendPrependModeOption.Append, affixIcon: "flag")
+&#64;* End of input with postfix icon *&#64;
+
+&#64;* Input with postfix text button *&#64;
+&#64;Html.OuTextBox("InputPostfixTextButton", appendPrependMode: AppendPrependModeOption.Append, postfixButtons: HTML.Button("Look up", "#"))
+&#64;* End of input with postfix text button *&#64;
+
+&#64;* Input with postfix icon button *&#64;
+&#64;Html.OuTextBox("InputPostfixIconButton", appendPrependMode: AppendPrependModeOption.Append, postfixButtons: HTML.SearchButton("#", ""))
+&#64;* End of input with postfix icon button *&#64;
+
+&#64;* Input with postfix icon and text button *&#64;
+&#64;Html.OuTextBox("InputPostfixIconTextButton", appendPrependMode: AppendPrependModeOption.Append, postfixButtons: HTML.SearchButton("#", "Look up"))
+&#64;* End of input with postfix icon and text button *&#64;
+
+&#64;* Input with postfix grouped buttons *&#64;
+&#64;Html.OuTextBox("InputPostfixGroupedButtons", appendPrependMode: AppendPrependModeOption.Append, postfixButtons: new[]{HTML.SearchButton("#", ""), HTML.Button("Look up", "#")})
+&#64;* End of input with postfix grouped buttons *&#64;
+                		</pre>
+                    </div>
+                    <div class="doc" id="inputsPrePostfixText">
+                        <p class="int-note">
+                            Pre and postfix can only be applied to <code>int-row</code> containing one single <code>input</code> field. Attempting to apply pre/postfix to multiple inline <code>inputs</code> will break the layout. 
+                        </p>
+                    </div>
+                    <div class="doc" id="inputsPrePostfixAccessibility">
+                        <h4>Associated</h4>
+                        <p>
+                            For associated buttons, if the button relates to an input control, then an attribute of <code>[aria-controls="*"]</code> needs to be added to the button with <code>*</code> being the ID of the input.
+                        </p>
+                    </div>
+                    <div class="doc" id="inputsPrePostfixChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Inputs with pre and postfix-->
+                
+                <!--Large search-->
+                <h2 id="largeSearch">Large Search</h2>
+                <div class="int-component">
+                    <div class="example">
+<!--Large search with visible label-->
+<div class="int-row int-large">
+    <div class="int-grid3">
+        <label for="largeSearchInput1">Large search with visible label</label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputAppend">
+            <input type="text" id="largeSearchInput1">
+            <a href="#" class="int-button"><i class="int-icon-search"></i>&nbsp;Search</a>
+        </div>
+    </div>
+</div>
+<!--End of large search with visible label-->
+
+<!--Large search with hidden label-->
+<div class="int-row int-large">
+    <div class="int-grid3">
+        <label for="largeSearchInput2">
+            <span class="int-hide">Large search with hidden label</span>
+        </label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputAppend">
+            <input type="text" id="largeSearchInput2">
+            <a href="#" class="int-button"><i class="int-icon-search"></i>&nbsp;Search</a>
+        </div>
+    </div>
+</div>
+<!--End of large search with hidden label-->
+
+<!--Large search with hidden label and watermark-->
+<div class="int-row int-large">
+    <div class="int-grid3">
+        <label for="largeSearchInput3">
+            <span class="int-hide">Large search with hidden label and watermark</span>
+        </label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputAppend">
+            <input type="text" id="largeSearchInput3" class="int-watermark" title="Large search with hidden label and watermark">
+            <a href="#" class="int-button"><i class="int-icon-search"></i>&nbsp;Search</a>
+        </div>
+    </div>
+</div>
+<!--End of large search with hidden label and watermark-->
+
+<!--Large search with hidden label and feature block-->
+<div class="int-row int-formFeature int-large">
+    <div class="int-grid3">
+        <label for="largeSearchInput4">
+            <span class="int-hide">Large search with hidden label and feature block</span>
+        </label>
+    </div>
+    <div class="int-grid5">
+        <div class="int-inputAppend">
+            <input type="text" id="largeSearchInput4">
+            <a href="#" class="int-button"><i class="int-icon-search"></i>&nbsp;Search</a>
+        </div>
+    </div>
+</div>
+<!--End of large search with hidden label and feature block-->
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#largeSearchRazor">Razor</a></div>
+                        <div><a href="#largeSearchHTML">HTML</a></div>
+                        <div><a href="#largeSearchText">Supporting Text</a></div>
+                        <div><a href="#largeSearchAccessibility">Accessibility</a></div>
+                        <div><a href="#largeSearchChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="largeSearchHTML">
+                        <pre></pre>
+                    </div>
+                    <div class="doc" id="largeSearchRazor">
+                        <p>Large search and feature block parameters are passed into BeginRow. They are both optional and default to false.</p>
+                        <pre class="int-toggleCode">
+&#64;* Large search *&#64;
+using (Html.BeginRow(true))
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabel("LargeSearch", "Large search")
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuTextBox("LargeSearch", appendPrependMode: AppendPrependModeOption.Append, postfixButtons: HTML.SearchButton("#"))
+    }
+}
+&#64;* End of large search *&#64;
+
+&#64;* Large search with hidden label *&#64;
+using (Html.BeginRow(true))
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabel("LargeSearchHidden", "Large search with hidden label", hidden: true)
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuTextBox("LargeSearchHidden", appendPrependMode: AppendPrependModeOption.Append, postfixButtons: HTML.SearchButton("#"))
+    }
+}
+&#64;* End of large search with hidden label *&#64;
+
+&#64;* Large search with hidden label and watermark *&#64;
+using (Html.BeginRow(true))
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabel("LargeSearchHiddenWatermark", "Large search with hidden label and watermark", hidden: true)
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuTextBox("LargeSearchHiddenWatermark", watermarkText: "Large search with hidden label and watermark", appendPrependMode: AppendPrependModeOption.Append, postfixButtons: HTML.SearchButton("#"))
+    }
+}
+&#64;* End of large search with hidden label and watermark *&#64;
+
+&#64;* Large search with hidden label and feature block *&#64;
+using (Html.BeginRow(true, true))
+{
+    using (Html.BeginGrid(3))
+    {
+        &#64;Html.OuLabel("LargeSearchFeature", "Large search with hidden label and feature block", hidden: true)
+    }
+    using (Html.BeginGrid(5))
+    {
+        &#64;Html.OuTextBox("LargeSearchFeature", appendPrependMode: AppendPrependModeOption.Append, postfixButtons: HTML.SearchButton("#"))
+    }
+}
+&#64;* End of large search with hidden label and feature block *&#64;
+                		</pre>
+                    </div>
+                    <div class="doc" id="largeSearchText">
+                        <p>
+                            Large search should be used where greater emphasis is required. For instance if search is the first feature at the top of an application page, using a large search gives the feature prominence in a similar way to that of search engines, who use large search components to capture the initial search query.
+                        </p>
+                        <p class="int-note">
+                            Search <code>inputs</code> require a type with a value of <code>search</code>.
+                        </p>
+                    </div>
+                    <div class="doc" id="largeSearchAccessibility">
+                        <p class="int-note">
+                            A <code>label</code> must always correspond to an form element, or group of form elements whether visible or not.
+                        </p>
+                    </div>
+                    <div class="doc" id="largeSearchChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--end of large search-->
+
+                <!--Features-->
+                <h2 id="features">Form Feature Blocks</h2>
+                <div class="int-component">
+                    <div class="example">
+                
+<!--Form feature Block-->
+<h3>Form Feature Block</h3>
+
+<div class="int-formFeature">
+    <p>Content</p>
+</div>
+<!--end of Form Feature Block-->
+
+<!--Form Feature Block with Inner Feature Block-->
+<h3>Form Feature Block with Inner Feature Block</h3>
+
+<div class="int-formFeature">
+    <div class="int-innerFeature">
+        <p>Content</p>
+    </div>
+</div>
+<!--end of Form Feature Block with Inner Feature Block-->
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#featuresHTML">HTML</a></div>
+                        <div><a href="#featuresText">Supporting Text</a></div>
+                    </div>
+                    <div class="doc" id="featuresHTML">
+                        <pre class="int-toggleCode"></pre>
+                    </div>
+                    <div class="doc" id="featuresText">
+                        <p><code>Feature blocks</code> are used to give emphasis to key areas of form controls or information such as search bars</p>
+                        <p><code>Feature Blocks with Inner Feature Blocks</code> are designed to give clear definition of fieldsets</p>
+                
+                        <p>A <code>fieldset</code> element is used to group related elements in a form. Each fieldset must contain a <code>legend</code>. A legend is effectively a header within a fieldset which requires a meaningful title related to the form, for instance 'Delivery Address'. </p>
+                        <p>Submission <code>buttons</code> should be placed outside of the fieldset but before the closing <code>form</code> tag.</p>
+                    </div>
+                </div>
+                <!--end of Features-->
+                
+                <!--Inline Control Bar-->
+                <h2 id="inlineControlbar">Inline Control Bar</h2>
+                <div class="int-component">
+                    <div class="example">        
+<div class="int-inlineControlBar">
+    <!--Controls/buttons-->
+    <ul class="int-sections">
+        <li><button id="FormHelperSubmit" type="submit" class="int-button"> Save</button></li>
+    </ul>
+    <!--end of Controls/buttons-->
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#inlineControlbarRazor">Razor</a></div>
+                        <div><a href="#inlineControlbarHTML">HTML</a></div>
+                        <div><a href="#inlineControlbarText">Supporting Text</a></div>
+                        <div><a href="#inlineControlbarAccessibility">Accessibility</a></div>
+                        <div><a href="#inlineControlbarChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="inlineControlbarHTML"><pre class="int-toggleCode"></pre></div>
+                    <div class="doc" id="inlineControlbarRazor">
+                    	<pre class="int-toggleCode">
+&#64;using(Html.BeginInlineControlBar())
+{
+    &lt;li&gt;&lt;button id="FormHelperSubmit" type="submit" class="int-button"&gt; Save&lt;/button&gt;&lt;/li&gt;
+}
+               			</pre>
+                    </div>
+                    <div class="doc" id="inlineControlbarText">
+                        <p>The inline control bar is designed to contain buttons and controls for individual components such as a table, custom modal or fieldset.</p>
+                        <p class="int-note">If a control bar for page wide buttons and controls is required please see <code>Page Control Bar</code> below.</p>
+                    </div>
+                    <div class="doc" id="inlineControlbarAccessibility">
+                        
+                    </div>
+                    <div class="doc" id="inlineControlbarChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--end of Inline Control Bar-->
+                
+                <!--Control Bar-->
+                <h2 id="pageControlbar">Page Control Bar</h2>
+                <div class="int-component">
+                    <div class="example">        
+<p>The page control bar is fixed to the foot of the page (so don't go looking here for it) and is designed to be used to contain page wide buttons and controls.</p>
+<div id="int-pageControlBar">
+    <a class="intToTop" href="#int-page">Back to top</a>
+    <ul class="int-sections">
+        <li><button id="FormHelperSubmit" type="submit" class="int-button"> Save</button></li>
+    </ul>
+</div>
+                    </div>
+                    <div class="docTabs">
+                        <div class="active"><a href="#pageControlbarRazor">Razor</a></div>
+                        <div><a href="#pageControlbarHTML">HTML</a></div>
+                        <div><a href="#pageControlbarText">Supporting Text</a></div>
+                        <div><a href="#pageControlbarAccessibility">Accessibility</a></div>
+                        <div><a href="#pageControlbarChangelog">Changelog</a></div>
+                    </div>
+                    <div class="doc" id="pageControlbarHTML"><pre class="int-toggleCode"></pre></div>
+                    <div class="doc" id="pageControlbarRazor">
+                    	<pre class="int-toggleCode">
+&#64;using(Html.BeginPageControlBar())
+{
+    &lt;li&gt;&lt;button id="FormHelperSubmit" type="submit" class="int-button"&gt; Save&lt;/button&gt;&lt;/li&gt;
+}
+                		</pre>
+                    </div>
+                    <div class="doc" id="pageControlbarText">
+                        
+                    </div>
+                    <div class="doc" id="pageControlbarAccessibility">
+                        
+                    </div>
+                    <div class="doc" id="pageControlbarChangelog">
+                        <table class="changelog">
+                            <colgroup>
+                                <col class="int-c10">
+                                <col class="int-c90">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Version</th>
+                                    <th>Changes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>v1</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>v1.1</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--end of Control Bar-->
+
+		      	<!-- InstanceEndEditable -->
+              </div>
+		    </div>
+			<!--end of Main content area-->
+		</div>
+	</div>
+</div>
+<!--Throbber-->
+<div id="int-throbber" style="display: none;">
+	<div class="int-throbberOverlay">
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-ui-1.9.2.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery/appframework.jquery.validate.unobtrusive.js"></script>
+<!-- DOCS -->
+<script type="text/javascript" src="docsonly/js/widgets/jquery.docs.js"></script>
+<!-- End DOCS -->
+<!-- plugins -->
+<script type="text/javascript" src="js/widgets/jqueryui.combobox.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/widgets/datatables.net/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/widgets/datatables.net/ColVis-dev.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.alert.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.formtips.1.2.6.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.actual.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.multiselect.js"></script>
+<script type="text/javascript" src="js/widgets/jquery.multiselect.filter.js"></script>
+<!-- /plugins -->
+<script type="text/javascript" src="js/uif-global.js"></script>
+<script type="text/javascript" src="js/uif-menus.js"></script>
+<script type="text/javascript" src="js/uif-framework.js"></script>
+<script type="text/javascript" src="js/uif-modal.js"></script>
+<script type="text/javascript" src="js/uif-autocomplete.js"></script>
+<script type="text/javascript" src="js/spin.js"></script>
+<script type="text/javascript" src="js/spin.setup.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/uif-components-ie8.js"></script>
+<![endif]-->
+<!--End Throbber-->
+<script>
+	OU.AppFramework.MenuManager.Initialise();
+	OU.AppFramework.AriaHelper.UpdateAll();
+	OU.AppFramework.UtilityHelper.ApplyValidationStyles('#int-content');
+	OU.AppFramework.UtilityHelper.CalculatePageControlBarHeight();
+</script>
+<!-- InstanceBeginEditable name="EditRegion3" --><!-- InstanceEndEditable -->
+<script>
+	docs.jsfncall();
+	docs.jsTab();
+	//this fn call has to be below foot scripts
+</script>
+
+</body>
+<!-- InstanceEnd --></html>
+<link href="/Vantage/Docs/SamsDebugging.axd?r=SamsDebugging.css" rel="stylesheet" type="text/css"/>
+<script src="/Vantage/Docs/SamsDebugging.axd?r=SamsDebugging.js" type="text/javascript"></script>
+<script type="text/javascript">window.samsDebuggerApplicationRoot = '/Vantage/Docs';</script>
